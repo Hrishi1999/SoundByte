@@ -1,0 +1,73 @@
+﻿<ContentDialog
+    x:Class="SoundByte.UWP.Dialogs.FilterDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ShellBackground}">
+
+    <ScrollViewer HorizontalAlignment="Stretch"
+                  VerticalScrollBarVisibility="Hidden">
+        <StackPanel>
+            <TextBlock Text="&#xE710;" 
+                       FontFamily="Segoe MDL2 Assets" 
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="65" 
+                       Padding="5"
+                       Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"
+                       Margin="20,20,20,10" />
+
+            <TextBlock Text="Filter Search" 
+                       TextAlignment="Center" 
+                       FontWeight="SemiBold"
+                       FontSize="22"
+                       Margin="5"
+                       VerticalAlignment="Center" />
+
+            <TextBlock TextWrapping="Wrap" 
+                       Opacity="0.8"
+                       FontWeight="SemiLight"
+                       TextAlignment="Center"
+                       MaxWidth="200"
+                       HorizontalAlignment="Center"
+                       Margin="2,2,2,14"
+                       Text="(Tracks)" />
+
+            <TextBox Header="Tags or Genres" BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" Margin="0,0,0,10" BorderThickness="0" x:Name="SearchTags" Background="{StaticResource SecondaryBackgroundColor}"  PlaceholderText="Comma Separated List" />
+
+            <ComboBox Header="License" BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" BorderThickness="0" Margin="0,0,0,10" x:Name="SearchLicense" Background="{StaticResource SecondaryBackgroundColor}" HorizontalAlignment="Stretch">
+                <ComboBoxItem Content="Any" IsSelected="True" />
+                <ComboBoxItem Content="CC by" />
+                <ComboBoxItem Content="CC by ND" />
+                <ComboBoxItem Content="CC by SA" />
+                <ComboBoxItem Content="CC by NC ND" />
+                <ComboBoxItem Content="CC by NC SA" />
+            </ComboBox>
+
+
+            <ComboBox Header="Type" BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" Margin="0,0,0,10" BorderThickness="0" x:Name="SearchType" HorizontalAlignment="Stretch" Background="{StaticResource SecondaryBackgroundColor}">
+                <ComboBoxItem Content="Any" IsSelected="True" />
+                <ComboBoxItem Content="Original" />
+                <ComboBoxItem Content="Remix" />
+                <ComboBoxItem Content="Live" />
+                <ComboBoxItem Content="Recording" />
+                <ComboBoxItem Content="Spoken" />
+                <ComboBoxItem Content="Podcast" />
+                <ComboBoxItem Content="Demo" />
+                <ComboBoxItem Content="In Progress" />
+                <ComboBoxItem Content="Stem" />
+                <ComboBoxItem Content="Loop" />
+                <ComboBoxItem Content="Sound Effect" />
+                <ComboBoxItem Content="Sample" />
+            </ComboBox>
+            <TextBox Header="BPM" BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" Margin="0,0,0,10" x:Name="SearchBPM" Background="{StaticResource SecondaryBackgroundColor}" BorderThickness="0" x:Uid="SearchFilter_BPM" />
+
+
+            <HyperlinkButton Content="Apply" 
+                             Margin="0,15,0,0"
+                             Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                             ContentTemplate="{StaticResource HyperlinkClean}"
+                             Click="{x:Bind Apply}"
+                             HorizontalAlignment="Center" />
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>

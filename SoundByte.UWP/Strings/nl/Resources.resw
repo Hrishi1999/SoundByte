@@ -1,0 +1,793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutPivotHeader.Label" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="AppBarUI_Login.Label" xml:space="preserve">
+    <value>Accounts beheren</value>
+  </data>
+  <data name="AppBarUI_Notifications.Label" xml:space="preserve">
+    <value>Meldingen</value>
+  </data>
+  <data name="AppBarUI_Offline.Label" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="AppBarUI_Playing.Label" xml:space="preserve">
+    <value>Afspelen</value>
+  </data>
+  <data name="AppBarUI_Refresh.Label" xml:space="preserve">
+    <value>Vernieuwen</value>
+  </data>
+  <data name="AppBarUI_Search.Label" xml:space="preserve">
+    <value>Zoeken</value>
+  </data>
+  <data name="AppBarUI_Settings.Label" xml:space="preserve">
+    <value>Instellingen / ongeveer</value>
+  </data>
+  <data name="AppBarUI_Upload.Label" xml:space="preserve">
+    <value>Upload geluid</value>
+  </data>
+  <data name="AppBar_Login" xml:space="preserve">
+    <value>Aanmelden</value>
+  </data>
+  <data name="AppBar_Logout" xml:space="preserve">
+    <value>Afmelden</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestBuy" xml:space="preserve">
+    <value>Koop nu ({0})</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestCancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestExist" xml:space="preserve">
+    <value>U kocht reeds SoundByte en hebt alle extra opties geopend.</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestExistTitle" xml:space="preserve">
+    <value>Al gekocht</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestFail" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens een poging om te kopen van de app. ervoor te zorgen dat u met internet verbonden bent en probeer het opnieuw.</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestFailTitle" xml:space="preserve">
+    <value>Er ging iets mis</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestOtherCancel" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestSuccess" xml:space="preserve">
+    <value>Dank u voor de aankoop van SoundByte! U kunt nu genieten van geweldige functies zoals uploaden geluiden, messaging gebruikers en uitgebreide aanpassing.</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestSuccessTitle" xml:space="preserve">
+    <value>Geslaagd</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestText" xml:space="preserve">
+    <value>Door te upgraden naar SoundByte Pro zal u de volgende functies inschakelen: uploaden geluiden, Geavanceerd tegel aanpassen (blik, kleuren, naam), uitgebreid App Theme Options (3 RGB schuiven voor u om een kleur te kiezen), geavanceerde instellingen voor meldingen (het veranderen van wat voor soort berichten die u ontvangt en hoe zij moeten worden weergegeven) en nog veel meer.</value>
+  </data>
+  <data name="AppMonitizeHelper_PurchaseRequestTitle" xml:space="preserve">
+    <value>Aankoop volledige App voor {0}?</value>
+  </data>
+  <data name="BackgroundTask_CleanUp_NotificationDescription" xml:space="preserve">
+    <value>{0} MB van de ruimte is gewist uit uw apparaat. Schakel deze meldingen, ga naar de pagina-instellingen in de SoundByte app.</value>
+  </data>
+  <data name="BackgroundTask_CleanUp_NotificationTitle" xml:space="preserve">
+    <value>Gewiste {0} Cached Images</value>
+  </data>
+  <data name="ChangelogPivotHeader.Label" xml:space="preserve">
+    <value>Nieuw</value>
+  </data>
+  <data name="CloseButton.Content" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="ErrorControl_LoginFalse_Content" xml:space="preserve">
+    <value>U moet ingelogd zijn om deze inhoud te bekijken.</value>
+  </data>
+  <data name="ErrorControl_LoginFalse_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="ExploreGenreCombo_AllMusicGenres.Content" xml:space="preserve">
+    <value>Alle muziekgenres</value>
+  </data>
+  <data name="ExploreGenreCombo_AllAudioGenres.Content" xml:space="preserve">
+    <value>Alle Audio Genres</value>
+  </data>
+  <data name="ExplorePivotHeader.Label" xml:space="preserve">
+    <value>Grafieken</value>
+  </data>
+  <data name="ExploreTracks_Content" xml:space="preserve">
+    <value>Dat is vreemd?</value>
+  </data>
+  <data name="ExploreTracks_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="ExtraBackgroundSettingsButton.Content" xml:space="preserve">
+    <value>Aanpassen</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Audio.Content" xml:space="preserve">
+    <value>Achtergrondgeluid</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Background.Content" xml:space="preserve">
+    <value>ACHTERGROND</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Cleanup.Content" xml:space="preserve">
+    <value>Achtergrond Cleanup</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Default.PlaceholderText" xml:space="preserve">
+    <value>Kies...</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Design.Content" xml:space="preserve">
+    <value>App ontwerp</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Features.Content" xml:space="preserve">
+    <value>App kenmerken</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Feedback.Content" xml:space="preserve">
+    <value>Feedbackpagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_General.Content" xml:space="preserve">
+    <value>ALGEMEEN</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Home.Content" xml:space="preserve">
+    <value>Startpagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Notifications.Content" xml:space="preserve">
+    <value>Achtergrond meldingen</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Pages.Content" xml:space="preserve">
+    <value>PAGINA 'S</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Performance.Content" xml:space="preserve">
+    <value>App prestaties</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Playlist.Content" xml:space="preserve">
+    <value>Instellen pagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Search.Content" xml:space="preserve">
+    <value>Zoekpagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Settings.Content" xml:space="preserve">
+    <value>Pagina-instellingen</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Track.Content" xml:space="preserve">
+    <value>Nu spelen pagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Translation.Content" xml:space="preserve">
+    <value>App vertaling</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Upload.Content" xml:space="preserve">
+    <value>Uploaden van de pagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_User.Content" xml:space="preserve">
+    <value>Gebruikerspagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Combo_Welcome.Content" xml:space="preserve">
+    <value>Welkomstpagina</value>
+  </data>
+  <data name="FeedbackPage_Cat_Title.Text" xml:space="preserve">
+    <value>Welke categorie/gebied?</value>
+  </data>
+  <data name="FeedbackPage_Extra_Input.PlaceholderText" xml:space="preserve">
+    <value>Geef je gedachten...</value>
+  </data>
+  <data name="FeedbackPage_Extra_Title.Text" xml:space="preserve">
+    <value>Alle extra informatie? (Typ uw contactgegevens wenst u een antwoord.)</value>
+  </data>
+  <data name="FeedbackPage_Feel_1.Content" xml:space="preserve">
+    <value>Goed</value>
+  </data>
+  <data name="FeedbackPage_Feel_2.Content" xml:space="preserve">
+    <value>Gemiddelde</value>
+  </data>
+  <data name="FeedbackPage_Feel_3.Content" xml:space="preserve">
+    <value>Matig</value>
+  </data>
+  <data name="FeedbackPage_Privacy.Text" xml:space="preserve">
+    <value>Let op: Anonieme gegevens toegestuurd samen met uw feedback. Welke gegevens worden ingediend, Raadpleeg het privacybeleid van de SoundByte in de 'About' pagina.</value>
+  </data>
+  <data name="FeedbackPage_Send.Content" xml:space="preserve">
+    <value>Verzenden</value>
+  </data>
+  <data name="FeedbackPage_Subtitle.Text" xml:space="preserve">
+    <value>Hoe voelt u over uw ervaring met SoundByte?</value>
+  </data>
+  <data name="FeedbackPage_Title.Text" xml:space="preserve">
+    <value>FEEDBACK</value>
+  </data>
+  <data name="GeneralText_Today" xml:space="preserve">
+    <value>Vandaag</value>
+  </data>
+  <data name="GeneralText_Yesterday" xml:space="preserve">
+    <value>Gisteren</value>
+  </data>
+  <data name="InfoPivotHeader.Label" xml:space="preserve">
+    <value>Basisgegevens</value>
+  </data>
+  <data name="LikesPivotHeader.Label" xml:space="preserve">
+    <value>Leuk</value>
+  </data>
+  <data name="LikeTracks_Content" xml:space="preserve">
+    <value>Start wens geluiden aan de slag.</value>
+  </data>
+  <data name="LikeTracks_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="MetaPivotHeader.Label" xml:space="preserve">
+    <value>Metagegevens</value>
+  </data>
+  <data name="NotificationsPivotHeader.Label" xml:space="preserve">
+    <value>Meldingen</value>
+  </data>
+  <data name="PermissionsPivotHeader.Label" xml:space="preserve">
+    <value>Machtigingen</value>
+  </data>
+  <data name="PlaylistDialog_CreateSet.Content" xml:space="preserve">
+    <value>Set maken</value>
+  </data>
+  <data name="PlaylistDialog_SaveAndClose.Content" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PlaylistNavigateError_Button" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PlaylistNavigateError_Content" xml:space="preserve">
+    <value>Er is een fout opgetreden terwijl het proberen om te navigeren naar de set, probeer het later opnieuw.</value>
+  </data>
+  <data name="PlaylistNavigateError_Title" xml:space="preserve">
+    <value>Kan niet navigeren</value>
+  </data>
+  <data name="PlaylistPivotHeader.Label" xml:space="preserve">
+    <value>Sets</value>
+  </data>
+  <data name="PurchasePivotHeader.Label" xml:space="preserve">
+    <value>Bijwerken</value>
+  </data>
+  <data name="SearchBoxText.PlaceholderText" xml:space="preserve">
+    <value>Zoek...</value>
+  </data>
+  <data name="SettingsBackgroundExtraOption.Text" xml:space="preserve">
+    <value>Geavanceerde instellingen voor meldingen wijzigen</value>
+  </data>
+  <data name="SettingsPivotHeader.Label" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="Settings_AccentColorCustomLabel.Content" xml:space="preserve">
+    <value>Aangepast</value>
+    <comment>Used in the accent color combo box</comment>
+  </data>
+  <data name="Settings_AccentColorDefaultLabel.Content" xml:space="preserve">
+    <value>Standaard</value>
+    <comment>Used in the accent color combo box</comment>
+  </data>
+  <data name="Settings_AccentColorLabel.Text" xml:space="preserve">
+    <value>Accentkleur</value>
+    <comment>Used in the accent color combo box</comment>
+  </data>
+  <data name="Settings_AccentColorSoundcloudLabel.Content" xml:space="preserve">
+    <value>SoundCloud oranje</value>
+    <comment>Used in the accent color combo box</comment>
+  </data>
+  <data name="Settings_AccentColorSystemLabel.Content" xml:space="preserve">
+    <value>Systeem Accent</value>
+    <comment>Used in the accent color combo box</comment>
+  </data>
+  <data name="Settings_BackgroundDescription.Text" xml:space="preserve">
+    <value>De opties hieronder laat u bepalen welke berichten u ontvangt, en als u SoundByte Pro koopt, kunt u bepaalde soorten meldingen of inschakelen gegroepeerd meldingen uitschakelen. Doordat opruimen meldingen, ontvangt u een kennisgeving everytime die app een schone omhoog voert. Deze melding wordt weergegeven hoeveel ruimte was schoongemaakt off van uw apparaat.</value>
+  </data>
+  <data name="Settings_BackgroundLabel.Text" xml:space="preserve">
+    <value>ACHTERGROND</value>
+  </data>
+  <data name="Settings_BackgroundNotificationsToggle.Header" xml:space="preserve">
+    <value>Achtergrond meldingen inschakelen</value>
+  </data>
+  <data name="Settings_BackgroundNotificationsToggle.OffContent" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="Settings_BackgroundNotificationsToggle.OnContent" xml:space="preserve">
+    <value>Ja</value>
+    <comment>The on position of the track number toggle label</comment>
+  </data>
+  <data name="Settings_CleanupNotificationToggle.Header" xml:space="preserve">
+    <value>Cleanup meldingen inschakelen</value>
+  </data>
+  <data name="Settings_CleanupNotificationToggle.OffContent" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="Settings_CleanupNotificationToggle.OnContent" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Settings_HighQualityImagesToggle.Header" xml:space="preserve">
+    <value>Inschakelen van afbeeldingen van hoge kwaliteit</value>
+  </data>
+  <data name="Settings_HighQualityImagesToggle.OffContent" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="Settings_HighQualityImagesToggle.OnContent" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Settings_LanguageLabel.Text" xml:space="preserve">
+    <value>Taal</value>
+    <comment>The label for the language combo box</comment>
+  </data>
+  <data name="Settings_SilentNotificationToggle.Header" xml:space="preserve">
+    <value>Geluidssignalen voor meldingen inschakelen</value>
+  </data>
+  <data name="Settings_SilentNotificationToggle.OffContent" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="Settings_SilentNotificationToggle.OnContent" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Settings_ThemeDarkLabel.Content" xml:space="preserve">
+    <value>Donker</value>
+    <comment>Used in theme combo box</comment>
+  </data>
+  <data name="Settings_ThemeDefaultLabel.Content" xml:space="preserve">
+    <value>Standaard</value>
+    <comment>Used in theme combo box</comment>
+  </data>
+  <data name="Settings_ThemeLabel.Text" xml:space="preserve">
+    <value>Thema</value>
+    <comment>Label for theme combo box</comment>
+  </data>
+  <data name="Settings_ThemeLightLabel.Content" xml:space="preserve">
+    <value>Licht</value>
+    <comment>Used in theme combo box</comment>
+  </data>
+  <data name="Settings_TrackNumberToggle.Header" xml:space="preserve">
+    <value>Schakel Track item</value>
+    <comment>The title text for the tile number toggle </comment>
+  </data>
+  <data name="Settings_TrackNumberToggle.OffContent" xml:space="preserve">
+    <value>Nee</value>
+    <comment>The off position of the track number toggle label</comment>
+  </data>
+  <data name="Settings_TrackNumberToggle.OnContent" xml:space="preserve">
+    <value>Ja</value>
+    <comment>The on position of the track number toggle label</comment>
+  </data>
+  <data name="Settings_UserInterfaceDescription.Text" xml:space="preserve">
+    <value>De onderstaande opties wijzigen verschillende aspecten van de gebruikersinterface van de SoundByte. Voor meer accentkleuren (om het even welk van uw keuze) upgraden naar SoundByte Pro.</value>
+    <comment>Description for the user interface settings</comment>
+  </data>
+  <data name="Settings_UserInterfaceLabel.Text" xml:space="preserve">
+    <value>USER INTERFACE</value>
+    <comment>Label header for the user interface settings</comment>
+  </data>
+  <data name="ShareDialog_CloseCaption.Text" xml:space="preserve">
+    <value>Sluit het menu delen.</value>
+  </data>
+  <data name="ShareDialog_CloseTitle.Text" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="ShareDialog_LinkCaption.Text" xml:space="preserve">
+    <value>Een koppeling naar het Klembord kopiëren.</value>
+  </data>
+  <data name="ShareDialog_LinkTitle.Text" xml:space="preserve">
+    <value>Koppeling kopiëren</value>
+  </data>
+  <data name="ShareDialog_SoundByteLinkCaption.Text" xml:space="preserve">
+    <value>Kopieer een link voor andere gebruikers van de SoundByte.</value>
+  </data>
+  <data name="ShareDialog_SoundByteLinkTitle.Text" xml:space="preserve">
+    <value>Kopieer de Link SoundByte</value>
+  </data>
+  <data name="ShareDialog_WindowCharmDescription" xml:space="preserve">
+    <value>Deel dit artikel met je vrienden hieronder:</value>
+  </data>
+  <data name="ShareDialog_WindowsCaption.Text" xml:space="preserve">
+    <value>Gebruik het dialoogvenster Windows aandeel.</value>
+  </data>
+  <data name="ShareDialog_WindowsTitle.Text" xml:space="preserve">
+    <value>Delen met Windows</value>
+  </data>
+  <data name="StreamPivotHeader.Label" xml:space="preserve">
+    <value>Stream</value>
+  </data>
+  <data name="StreamTracks_Content" xml:space="preserve">
+    <value>Volg gebruikers om updates over wat ze post te krijgen.</value>
+  </data>
+  <data name="StreamTracks_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="TileManagerPreviewText" xml:space="preserve">
+    <value>Voorbeeld:</value>
+  </data>
+  <data name="TileManagerPrimeButton" xml:space="preserve">
+    <value>PIN tegel</value>
+  </data>
+  <data name="TileManagerSecondButton" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="TileManagerTitle" xml:space="preserve">
+    <value>Tegel aanpassen:</value>
+  </data>
+  <data name="TileManagerTitleText" xml:space="preserve">
+    <value>Tegel tekst:</value>
+  </data>
+  <data name="TileManager_ForegoundHeader" xml:space="preserve">
+    <value>Tegel tekstkleur:</value>
+  </data>
+  <data name="TileManager_ForegoundOffContent" xml:space="preserve">
+    <value>Licht</value>
+  </data>
+  <data name="TileManager_ForegoundOnContent" xml:space="preserve">
+    <value>Donker</value>
+  </data>
+  <data name="UIUpdateError_Button" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="UIUpdateError_Content" xml:space="preserve">
+    <value>Het item is verwijderd, maar er is een fout opgetreden tijdens het bijwerken van de UI.</value>
+  </data>
+  <data name="UIUpdateError_Title" xml:space="preserve">
+    <value>UI Update fout</value>
+  </data>
+  <data name="UpgradeInfo.Text" xml:space="preserve">
+    <value>INFO VAN DE VERBETERING</value>
+  </data>
+  <data name="UpgradeInfoMore.Text" xml:space="preserve">
+    <value>Om deze app draait, worden sommige functies betaald. Alleen een paar extra functies worden betaald. Deze functies niet nodig zijn om de app gebruiken, maar ze zijn mooi addons.</value>
+  </data>
+  <data name="UserPlaylists_Content" xml:space="preserve">
+    <value>U hebt geen sets nog niet geboekt.</value>
+  </data>
+  <data name="UserPlaylists_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="WelcomePageBrowse.Content" xml:space="preserve">
+    <value>Browsen</value>
+  </data>
+  <data name="WelcomePageDescription.Text" xml:space="preserve">
+    <value>Vind de muziek die je liefde. Ontdek nieuwe tracks. Rechtstreeks verbinding maken met uw favoriete artiesten.</value>
+  </data>
+  <data name="WelcomePageError.ErrorText" xml:space="preserve">
+    <value>SoundByte is een fout opgetreden tijdens een poging om in te loggen. Probeer het opnieuw.</value>
+  </data>
+  <data name="WelcomePageLogin.Content" xml:space="preserve">
+    <value>Aan de slag</value>
+  </data>
+  <data name="WelcomePageError.ErrorHeader" xml:space="preserve">
+    <value>Fout bij aanmelding</value>
+  </data>
+  <data name="ExploreGenreCombo_alternativerock.Content" xml:space="preserve">
+    <value>Alternatieve Rock</value>
+  </data>
+  <data name="ExploreGenreCombo_ambient.Content" xml:space="preserve">
+    <value>Ambient</value>
+  </data>
+  <data name="ExploreGenreCombo_audio.Content" xml:space="preserve">
+    <value>AUDIO</value>
+  </data>
+  <data name="ExploreGenreCombo_audiobooks.Content" xml:space="preserve">
+    <value>Audioboeken</value>
+  </data>
+  <data name="ExploreGenreCombo_business.Content" xml:space="preserve">
+    <value>Zakelijk</value>
+  </data>
+  <data name="ExploreGenreCombo_classical.Content" xml:space="preserve">
+    <value>Klassiek</value>
+  </data>
+  <data name="ExploreGenreCombo_comedy.Content" xml:space="preserve">
+    <value>Comedy</value>
+  </data>
+  <data name="ExploreGenreCombo_country.Content" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="ExploreGenreCombo_danceedm.Content" xml:space="preserve">
+    <value>Dansen van &amp;EDM</value>
+  </data>
+  <data name="ExploreGenreCombo_dancehall.Content" xml:space="preserve">
+    <value>Dancehall</value>
+  </data>
+  <data name="ExploreGenreCombo_deephouse.Content" xml:space="preserve">
+    <value>Deep House</value>
+  </data>
+  <data name="ExploreGenreCombo_disco.Content" xml:space="preserve">
+    <value>Disco</value>
+  </data>
+  <data name="ExploreGenreCombo_drumbass.Content" xml:space="preserve">
+    <value>&amp;Bass Drum</value>
+  </data>
+  <data name="ExploreGenreCombo_dubstep.Content" xml:space="preserve">
+    <value>Dubstep</value>
+  </data>
+  <data name="ExploreGenreCombo_electronic.Content" xml:space="preserve">
+    <value>Elektronisch</value>
+  </data>
+  <data name="ExploreGenreCombo_entertainment.Content" xml:space="preserve">
+    <value>Entertainment</value>
+  </data>
+  <data name="ExploreGenreCombo_folksingersongwriter.Content" xml:space="preserve">
+    <value>Folk &amp;Singer-Songwriter</value>
+  </data>
+  <data name="ExploreGenreCombo_hiphoprap.Content" xml:space="preserve">
+    <value>Hip Hop &amp;Rap</value>
+  </data>
+  <data name="ExploreGenreCombo_house.Content" xml:space="preserve">
+    <value>Huis</value>
+  </data>
+  <data name="ExploreGenreCombo_indie.Content" xml:space="preserve">
+    <value>Indie</value>
+  </data>
+  <data name="ExploreGenreCombo_jazzblues.Content" xml:space="preserve">
+    <value>Jazz &amp;Blues</value>
+  </data>
+  <data name="ExploreGenreCombo_latin.Content" xml:space="preserve">
+    <value>Latijns</value>
+  </data>
+  <data name="ExploreGenreCombo_learning.Content" xml:space="preserve">
+    <value>Learning</value>
+  </data>
+  <data name="ExploreGenreCombo_metal.Content" xml:space="preserve">
+    <value>Metaal</value>
+  </data>
+  <data name="ExploreGenreCombo_music.Content" xml:space="preserve">
+    <value>MUZIEK</value>
+  </data>
+  <data name="ExploreGenreCombo_newspolitics.Content" xml:space="preserve">
+    <value>Nieuws &amp;politiek</value>
+  </data>
+  <data name="ExploreGenreCombo_piano.Content" xml:space="preserve">
+    <value>Piano</value>
+  </data>
+  <data name="ExploreGenreCombo_pop.Content" xml:space="preserve">
+    <value>Pop</value>
+  </data>
+  <data name="ExploreGenreCombo_rbsoul.Content" xml:space="preserve">
+    <value>R&amp;B &amp;ziel</value>
+  </data>
+  <data name="ExploreGenreCombo_reggae.Content" xml:space="preserve">
+    <value>Reggae</value>
+  </data>
+  <data name="ExploreGenreCombo_reggaeton.Content" xml:space="preserve">
+    <value>Reggaeton</value>
+  </data>
+  <data name="ExploreGenreCombo_religionspirituality.Content" xml:space="preserve">
+    <value>Godsdienst &amp;Spirtuality</value>
+  </data>
+  <data name="ExploreGenreCombo_rock.Content" xml:space="preserve">
+    <value>Rock</value>
+  </data>
+  <data name="ExploreGenreCombo_science.Content" xml:space="preserve">
+    <value>Wetenschap</value>
+  </data>
+  <data name="ExploreGenreCombo_soundtrack.Content" xml:space="preserve">
+    <value>Soundtrack</value>
+  </data>
+  <data name="ExploreGenreCombo_sports.Content" xml:space="preserve">
+    <value>Sport</value>
+  </data>
+  <data name="ExploreGenreCombo_storytelling.Content" xml:space="preserve">
+    <value>Storytelling</value>
+  </data>
+  <data name="ExploreGenreCombo_techno.Content" xml:space="preserve">
+    <value>Techno</value>
+  </data>
+  <data name="ExploreGenreCombo_technology.Content" xml:space="preserve">
+    <value>Technologie</value>
+  </data>
+  <data name="ExploreGenreCombo_trance.Content" xml:space="preserve">
+    <value>Trance</value>
+  </data>
+  <data name="ExploreGenreCombo_trap.Content" xml:space="preserve">
+    <value>Trap</value>
+  </data>
+  <data name="ExploreGenreCombo_triphop.Content" xml:space="preserve">
+    <value>Triphop</value>
+  </data>
+  <data name="ExploreGenreCombo_world.Content" xml:space="preserve">
+    <value>Wereld</value>
+  </data>
+  <data name="ExploreTypeCombo_top.Content" xml:space="preserve">
+    <value>Top 50</value>
+  </data>
+  <data name="ExploreTypeCombo_trending.Content" xml:space="preserve">
+    <value>Nieuwe &amp;heet</value>
+  </data>
+  <data name="AppBarUI_Home.Label" xml:space="preserve">
+    <value>Thuis</value>
+  </data>
+  <data name="Close_Button" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="FeedbackPage_ErrorNoCat" xml:space="preserve">
+    <value>Categorie moet u een cateory invoeren.</value>
+  </data>
+  <data name="FeedbackPage_ErrorNoFeel" xml:space="preserve">
+    <value>U moet een optie op hoe je je over de app voelt voort te zetten.</value>
+  </data>
+  <data name="FeedbackPage_ErrorTitle" xml:space="preserve">
+    <value>Feedback fout</value>
+  </data>
+  <data name="Notifications_Content" xml:space="preserve">
+    <value>Start volgen en interactie met geluiden en mensen aan de slag.</value>
+  </data>
+  <data name="Notifications_Header" xml:space="preserve">
+    <value>Niets te horen hier</value>
+  </data>
+  <data name="Notification_CommentOnSound.Text" xml:space="preserve">
+    <value> commentaar op een geluid.</value>
+  </data>
+  <data name="Notification_Follow.Text" xml:space="preserve">
+    <value> u volgt.</value>
+  </data>
+  <data name="Notification_Followers.Text" xml:space="preserve">
+    <value>Volgers</value>
+  </data>
+  <data name="Notification_Followings.Text" xml:space="preserve">
+    <value>Achterban</value>
+  </data>
+  <data name="Notification_HasLikedSound.Text" xml:space="preserve">
+    <value> graag uw geluid.</value>
+  </data>
+  <data name="Notification_Sounds.Text" xml:space="preserve">
+    <value>Geluiden</value>
+  </data>
+  <data name="NowPlayingNavigate_Button" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="NowPlayingNavigate_Header" xml:space="preserve">
+    <value>SoundByte informatie</value>
+  </data>
+  <data name="NowPlayingNavigate_InternetAvaliableText" xml:space="preserve">
+    <value>U moet worden aangesloten op het internet voor het uitvoeren van deze taak.</value>
+  </data>
+  <data name="NowPlayingNavigate_NotAvaliableText" xml:space="preserve">
+    <value>Er zijn momenteel geen geluiden afspelen of in de wachtrij.</value>
+  </data>
+  <data name="AppBarUI_Pin.Label" xml:space="preserve">
+    <value>Pincode</value>
+  </data>
+  <data name="AppBarUI_Pin_Raw" xml:space="preserve">
+    <value>Pincode</value>
+  </data>
+  <data name="AppBarUI_Shuffle.Label" xml:space="preserve">
+    <value>Willekeurige volgorde</value>
+  </data>
+  <data name="AppBarUI_Unpin_Raw" xml:space="preserve">
+    <value>Losmaken</value>
+  </data>
+  <data name="DeleteConfirm_FailContent" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens een poging om dit item te verwijderen. Probeer het later opnieuw.</value>
+  </data>
+  <data name="DeleteConfirm_FailTitle" xml:space="preserve">
+    <value>Verwijderen van de fout</value>
+  </data>
+  <data name="DeleteConfirm_OfflineTitle" xml:space="preserve">
+    <value>Verwijder off line geluid?</value>
+  </data>
+  <data name="DeleteConfirm_PlaylistContent" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van deze set?</value>
+  </data>
+  <data name="DeleteConfirm_PlaylistTitle" xml:space="preserve">
+    <value>Set verwijderen?</value>
+  </data>
+  <data name="DeleteConfirm_TrackButtonPrimary" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="DeleteConfirm_TrackButtonSecondary" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="DeleteConfirm_TrackContent" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van dit geluid?</value>
+  </data>
+  <data name="DeleteConfirm_TrackTitle" xml:space="preserve">
+    <value>Geluid verwijderen?</value>
+  </data>
+  <data name="DeletePlaylist_OfflineContent" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen van dit off line geluid?</value>
+  </data>
+  <data name="OfflinePivotHeader.Label" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Offline_Content" xml:space="preserve">
+    <value>U hebt nog niet alle geluiden off line opgeslagen.</value>
+  </data>
+  <data name="Offline_Header" xml:space="preserve">
+    <value>Geen off line geluiden</value>
+  </data>
+  <data name="PlaylistTracks_Content" xml:space="preserve">
+    <value>Er zijn geen geluiden in deze set.</value>
+  </data>
+  <data name="PlaylistTracks_Header" xml:space="preserve">
+    <value>Geen geluiden</value>
+  </data>
+  <data name="SoundsPivotHeader.Label" xml:space="preserve">
+    <value>Geluiden</value>
+  </data>
+  <data name="GeneralError_Content" xml:space="preserve">
+    <value>Foutbericht: {0}.</value>
+  </data>
+  <data name="GeneralError_Header" xml:space="preserve">
+    <value>Algemene fout</value>
+  </data>
+  <data name="HttpError_Header" xml:space="preserve">
+    <value>Verbindingsfout</value>
+  </data>
+  <data name="HttpError_JsonError" xml:space="preserve">
+    <value>Er is een fout opgetreden tijdens een poging om de gegevens te lezen. Contact opnemen met de ontwikkelaar.</value>
+  </data>
+  <data name="HttpError_NoInternet" xml:space="preserve">
+    <value>Zorg ervoor dat u met internet verbonden bent en probeer het opnieuw.</value>
+  </data>
+  <data name="HttpError_TaskCancel" xml:space="preserve">
+    <value>De taak werd geannuleerd voordat het klaar.</value>
+  </data>
+  <data name="PlaylistNavigate_FailButton" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="SearchPlaylist_Content" xml:space="preserve">
+    <value>Geen sets gevonden overeenkomende '{0}'.</value>
+  </data>
+  <data name="SearchPlaylist_Header" xml:space="preserve">
+    <value>Niets hier te zien</value>
+  </data>
+  <data name="SearchTrack_Content" xml:space="preserve">
+    <value>Geen geluiden gevonden overeenkomende '{0}'.</value>
+  </data>
+  <data name="SearchTrack_Header" xml:space="preserve">
+    <value>Niets hier te zien</value>
+  </data>
+  <data name="SearchUser_Content" xml:space="preserve">
+    <value>Geen gebruikers gevonden overeenkomende '{0}'.</value>
+  </data>
+  <data name="SearchUser_Header" xml:space="preserve">
+    <value>Niets hier te zien</value>
+  </data>
+  <data name="AppBarUI_Filter.Label" xml:space="preserve">
+    <value>Filteren</value>
+  </data>
+  <data name="SetsPivot.Label" xml:space="preserve">
+    <value>Sets</value>
+  </data>
+  <data name="SoundsPivot.Label" xml:space="preserve">
+    <value>Geluiden</value>
+  </data>
+  <data name="UsersPivot.Label" xml:space="preserve">
+    <value>Gebruikers</value>
+  </data>
+  <data name="LanguageRestart_Button" xml:space="preserve">
+    <value>App sluiten</value>
+  </data>
+  <data name="LanguageRestart_Content" xml:space="preserve">
+    <value>De app moet opnieuw opstarten om de taal te worden gewijzigd.</value>
+  </data>
+  <data name="LanguageRestart_Title" xml:space="preserve">
+    <value>Opnieuw opstarten is vereist</value>
+  </data>
+  <data name="SearchFilter_Apply.Content" xml:space="preserve">
+    <value>Toepassen</value>
+  </data>
+  <data name="SearchFilter_BPM.PlaceholderText" xml:space="preserve">
+    <value>Nummer (bv. 160)</value>
+  </data>
+  <data name="SearchFilter_BPMText.Text" xml:space="preserve">
+    <value>BPM (+/-10)</value>
+  </data>
+  <data name="Raw_Follow" xml:space="preserve">
+    <value>Volgen</value>
+  </data>
+  <data name="Raw_Unfollow" xml:space="preserve">
+    <value>Niet meer volgen</value>
+  </data>
+  <data name="PlaylistPage_NoSetsClose" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="PlaylistPage_NoSetsContent" xml:space="preserve">
+    <value>Er zijn geen geluiden in de huidige set.</value>
+  </data>
+  <data name="PlaylistPage_NoSetsTitle" xml:space="preserve">
+    <value>Geen geluiden</value>
+  </data>
+</root>

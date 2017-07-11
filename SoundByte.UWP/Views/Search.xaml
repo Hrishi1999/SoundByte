@@ -1,0 +1,186 @@
+﻿<Page
+    x:Class="SoundByte.UWP.Views.Search"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:uiElements="using:SoundByte.UWP.UserControls"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+    xmlns:stateTriggers="using:SoundByte.UWP.StateTriggers"
+    NavigationCacheMode="Enabled"
+    Transitions="{StaticResource MainTransition}">
+
+    <Grid Background="{ThemeResource ShellBackground}" x:Name="RootGrid">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="DeviceStates">
+                <VisualState x:Name="Xbox">
+                    <VisualState.StateTriggers>
+                        <stateTriggers:DeviceStateTrigger DeviceFamily="Windows.Xbox"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootGrid.Background" Value="Transparent"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="WindowSize">
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="768" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Header.Margin" Value="50,0" />
+                        <Setter Target="TextHeader.FontSize" Value="55" />
+                        <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
+                        <Setter Target="MainPivot.Margin" Value="50,170,50,0"  />
+                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="DesktopCommandBar.Visibility" Value="Visible" />
+                        <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
+                        <Setter Target="MainSearchBox.Visibility" Value="Collapsed" />
+                        <Setter Target="MobileCommandBar.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid x:Name="MobileGrid" Visibility="Visible" Background="{ThemeResource ShellNavigationBackground}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="48" Canvas.ZIndex="100">
+            <TextBlock Text="Search" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
+        </Grid>
+
+        <CommandBar x:Name="MobileCommandBar" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Canvas.ZIndex="100" Height="48">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="Filter Results" Click="{x:Bind ViewModel.ShowFilterMenu}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE71C;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <AppBarButton Label="Refresh" Click="{x:Bind ViewModel.RefreshAll}">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE72C;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+        
+        <!-- Title -->
+        <StackPanel Margin="10,0" x:Name="Header">
+            <TextBlock Opacity="0" x:Name="TextHeader" Text="Search" FontWeight="SemiBold" FontSize="25" Margin="0,18,0,0"/>
+
+            <!-- Main Search Bar -->
+            <uiElements:SearchBox SearchSubmitted="{x:Bind ViewModel.Search}" 
+                                Height="38" 
+                                Background="Black"
+                                Margin="-25,10,0,10" 
+                                HorizontalAlignment="Stretch"
+                                x:Name="MainSearchBox" />
+
+            <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed"  Orientation="Horizontal" Margin="10,10,0,20" VerticalAlignment="Top">
+                <uiElements:CircleButton  Margin="0,0,5,0" Label="Filter Results" Glyph="&#xE71C;" Click="{x:Bind ViewModel.ShowFilterMenu}" />
+                <uiElements:CircleButton  Margin="0,0,5,0" Label="Refresh" Glyph="&#xE72C;" Click="{x:Bind ViewModel.RefreshAll}" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Main pivot that is used to view all the content -->
+        <Pivot x:Name="MainPivot" Margin="10,110,10,0" >
+
+            <PivotItem x:Name="TrackPivot" Header="Tracks">
+                <Grid>
+                    <!-- Used to display any errors that may occur when loading the content -->
+                    <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="TracksError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <!-- Displays searched tracks -->
+                    <GridView x:Name="TracksView"
+                              ItemsSource="{x:Bind Path=ViewModel.SearchTracks}"
+                              ItemTemplate="{StaticResource TrackItem}"
+                              SelectionMode="None"
+                              IsSwipeEnabled="False"
+                              IsItemClickEnabled="True"
+                              ItemClick="{x:Bind ViewModel.NavigateItem}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ShowsScrollingPlaceholders="False"
+                              IsMultiSelectCheckBoxEnabled="False"
+                              animations:ReorderGridAnimation.Duration="150"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch" />
+                </Grid>
+            </PivotItem>
+            <!-- Display the searched playlist objects -->
+            <PivotItem x:Name="PlaylistPivot" Header="Playlists">
+                <Grid>
+                    <!-- Used to display any errors that may occur when loading the content -->
+                    <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="PlaylistsError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <!-- Displays searched sets -->
+                    <GridView x:Name="PlaylistsView"
+                              ItemsSource="{x:Bind Path=ViewModel.SearchPlaylists}"
+                              ItemTemplate="{StaticResource PlaylistItem}"
+                              SelectionMode="None"
+                              IsSwipeEnabled="False"
+                              IsItemClickEnabled="True"
+                              ItemClick="{x:Bind ViewModel.NavigateItem}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ShowsScrollingPlaceholders="False"
+                              IsMultiSelectCheckBoxEnabled="False"
+                              animations:ReorderGridAnimation.Duration="150"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch" />
+                </Grid>
+            </PivotItem>
+            <!-- Display the searched people objects -->
+            <PivotItem x:Name="PeoplePivot" Header="Users">
+                <Grid>
+                    <!-- Used to display any errors that may occur when loading the content -->
+                    <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="PeopleError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <!-- Displays searched people -->
+                    <GridView x:Name="PeopleView"
+                              ItemsSource="{x:Bind Path=ViewModel.SearchUsers}"
+                              ItemTemplate="{StaticResource UserItem}"
+                              SelectionMode="None"
+                              IsSwipeEnabled="False"
+                              IsItemClickEnabled="True"
+                              ItemClick="{x:Bind ViewModel.NavigateItem}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ShowsScrollingPlaceholders="False"
+                              IsMultiSelectCheckBoxEnabled="False"
+                              animations:ReorderGridAnimation.Duration="150"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch" />
+                </Grid>
+            </PivotItem>
+
+            <PivotItem x:Name="FanburstPivot" Header="Fanburst">
+                <Grid>
+                    <!-- Used to display any errors that may occur when loading the content -->
+                    <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="FanburstError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <!-- Displays searched tracks -->
+                    <GridView x:Name="FanburstView"
+                              ItemsSource="{x:Bind Path=ViewModel.FanburstTracks}"
+                              ItemTemplate="{StaticResource TrackItem}"
+                              SelectionMode="None"
+                              IsSwipeEnabled="False"
+                              IsItemClickEnabled="True"
+                              ItemClick="{x:Bind ViewModel.NavigateItem}"
+                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                              ShowsScrollingPlaceholders="False"
+                              IsMultiSelectCheckBoxEnabled="False"
+                              animations:ReorderGridAnimation.Duration="150"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch" />
+                </Grid>
+            </PivotItem>
+            
+            <!-- Display the searched people objects -->
+          <!--  <PivotItem x:Name="YouTubePivot" Header="YouTube [EXPERIMENTAL]">
+                <GridView x:Name="YoutubeView"
+                          ItemsSource="{x:Bind Path=ViewModel.YouTubeTracks}"
+                          ItemTemplate="{StaticResource TrackItem}"
+                          SelectionMode="None"
+                          IsSwipeEnabled="False"
+                          IsItemClickEnabled="True"
+                          ItemClick="{x:Bind ViewModel.NavigateYouTubeItem}"
+                          ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                          ShowsScrollingPlaceholders="False"
+                          IsMultiSelectCheckBoxEnabled="False"
+                          animations:ReorderGridAnimation.Duration="150"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch" />
+            </PivotItem> -->
+        </Pivot>
+    </Grid>
+</Page>

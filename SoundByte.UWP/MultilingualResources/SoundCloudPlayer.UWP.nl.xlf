@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="nl" original="SOUNDCLOUDPLAYER.UWP/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="SOUNDBYTE.UWP/STRINGS/EN-US/RESOURCES.RESW">
+        <trans-unit id="AboutPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>About</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Info</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Login.Label" translate="yes" xml:space="preserve">
+          <source>Manage Accounts</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Accounts beheren</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Notifications.Label" translate="yes" xml:space="preserve">
+          <source>Notifications</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Meldingen</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Offline.Label" translate="yes" xml:space="preserve">
+          <source>Offline</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Offline</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Playing.Label" translate="yes" xml:space="preserve">
+          <source>Playing</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Afspelen</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Refresh.Label" translate="yes" xml:space="preserve">
+          <source>Refresh</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Vernieuwen</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Search.Label" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Zoeken</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Settings.Label" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instellingen / ongeveer</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Upload.Label" translate="yes" xml:space="preserve">
+          <source>Upload Sound</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Upload geluid</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Login" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aanmelden</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Logout" translate="yes" xml:space="preserve">
+          <source>Logout</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Afmelden</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestBuy" translate="yes" xml:space="preserve">
+          <source>Buy Now ({0})</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Koop nu ({0})</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestCancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestExist" translate="yes" xml:space="preserve">
+          <source>You already bought SoundByte and have all the extra features unlocked.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U kocht reeds SoundByte en hebt alle extra opties geopend.</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestExistTitle" translate="yes" xml:space="preserve">
+          <source>Already Purchased</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Al gekocht</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestFail" translate="yes" xml:space="preserve">
+          <source>An error occured while trying to purchase the app. Make sure that you are connected to the internet and try again.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er is een fout opgetreden tijdens een poging om te kopen van de app. ervoor te zorgen dat u met internet verbonden bent en probeer het opnieuw.</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestFailTitle" translate="yes" xml:space="preserve">
+          <source>Something Went Wrong</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er ging iets mis</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestOtherCancel" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestSuccess" translate="yes" xml:space="preserve">
+          <source>Thank you for purchasing SoundByte! You can now experience great features such as uploading sounds, messaging users and extended customization.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dank u voor de aankoop van SoundByte! U kunt nu genieten van geweldige functies zoals uploaden geluiden, messaging gebruikers en uitgebreide aanpassing.</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestSuccessTitle" translate="yes" xml:space="preserve">
+          <source>Success</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Geslaagd</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestText" translate="yes" xml:space="preserve">
+          <source>By upgrading to SoundByte Pro you will enable the following features: Uploading Sounds, Advanced Tile Customization (Look, Colors, Name), Extended App Theme Options (3 RGB Sliders for you to choose any color), Advanced Notification Settings (Change what type of notifications you recieve, and how they should be displayed) and much more.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Door te upgraden naar SoundByte Pro zal u de volgende functies inschakelen: uploaden geluiden, Geavanceerd tegel aanpassen (blik, kleuren, naam), uitgebreid App Theme Options (3 RGB schuiven voor u om een kleur te kiezen), geavanceerde instellingen voor meldingen (het veranderen van wat voor soort berichten die u ontvangt en hoe zij moeten worden weergegeven) en nog veel meer.</target>
+        </trans-unit>
+        <trans-unit id="AppMonitizeHelper_PurchaseRequestTitle" translate="yes" xml:space="preserve">
+          <source>Purchase Full App for {0} ?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aankoop volledige App voor {0}?</target>
+        </trans-unit>
+        <trans-unit id="BackgroundTask_CleanUp_NotificationDescription" translate="yes" xml:space="preserve">
+          <source>{0} MB of space has been cleared from your device. To disable these notifications, go to the settings page in the SoundByte app.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} MB van de ruimte is gewist uit uw apparaat. Schakel deze meldingen, ga naar de pagina-instellingen in de SoundByte app.</target>
+        </trans-unit>
+        <trans-unit id="BackgroundTask_CleanUp_NotificationTitle" translate="yes" xml:space="preserve">
+          <source>Cleared {0} Cached Images</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gewiste {0} Cached Images</target>
+        </trans-unit>
+        <trans-unit id="ChangelogPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>What's New</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nieuw</target>
+        </trans-unit>
+        <trans-unit id="CloseButton.Content" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="ErrorControl_LoginFalse_Content" translate="yes" xml:space="preserve">
+          <source>You need to be logged in to view this content.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U moet ingelogd zijn om deze inhoud te bekijken.</target>
+        </trans-unit>
+        <trans-unit id="ErrorControl_LoginFalse_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_AllMusicGenres.Content" translate="yes" xml:space="preserve">
+          <source>All Music Genres</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle muziekgenres</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_AllAudioGenres.Content" translate="yes" xml:space="preserve">
+          <source>All Audio Genres</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle Audio Genres</target>
+        </trans-unit>
+        <trans-unit id="ExplorePivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Charts</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Grafieken</target>
+        </trans-unit>
+        <trans-unit id="ExploreTracks_Content" translate="yes" xml:space="preserve">
+          <source>That's strange?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dat is vreemd?</target>
+        </trans-unit>
+        <trans-unit id="ExploreTracks_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="ExtraBackgroundSettingsButton.Content" translate="yes" xml:space="preserve">
+          <source>Customize</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aanpassen</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Audio.Content" translate="yes" xml:space="preserve">
+          <source>Background Audio</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Achtergrondgeluid</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Background.Content" translate="yes" xml:space="preserve">
+          <source>BACKGROUND</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ACHTERGROND</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Cleanup.Content" translate="yes" xml:space="preserve">
+          <source>Background Cleanup</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Achtergrond Cleanup</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Default.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Choose...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kies...</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Design.Content" translate="yes" xml:space="preserve">
+          <source>App Design</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App ontwerp</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Features.Content" translate="yes" xml:space="preserve">
+          <source>App Features</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App kenmerken</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Feedback.Content" translate="yes" xml:space="preserve">
+          <source>Feedback Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feedbackpagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_General.Content" translate="yes" xml:space="preserve">
+          <source>GENERAL</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ALGEMEEN</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Home.Content" translate="yes" xml:space="preserve">
+          <source>Home Page</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Startpagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Notifications.Content" translate="yes" xml:space="preserve">
+          <source>Background Notifications</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Achtergrond meldingen</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Pages.Content" translate="yes" xml:space="preserve">
+          <source>PAGES</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">PAGINA 'S</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Performance.Content" translate="yes" xml:space="preserve">
+          <source>App Performance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App prestaties</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Playlist.Content" translate="yes" xml:space="preserve">
+          <source>Set Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instellen pagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Search.Content" translate="yes" xml:space="preserve">
+          <source>Search Page</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Zoekpagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Settings.Content" translate="yes" xml:space="preserve">
+          <source>Settings Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pagina-instellingen</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Track.Content" translate="yes" xml:space="preserve">
+          <source>Now Playing Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nu spelen pagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Translation.Content" translate="yes" xml:space="preserve">
+          <source>App Translation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">App vertaling</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Upload.Content" translate="yes" xml:space="preserve">
+          <source>Upload Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uploaden van de pagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_User.Content" translate="yes" xml:space="preserve">
+          <source>User Page</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gebruikerspagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Combo_Welcome.Content" translate="yes" xml:space="preserve">
+          <source>Welcome Page</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Welkomstpagina</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cat_Title.Text" translate="yes" xml:space="preserve">
+          <source>Which category/area?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Welke categorie/gebied?</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Extra_Input.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Enter your thoughts...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef je gedachten...</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Extra_Title.Text" translate="yes" xml:space="preserve">
+          <source>Any extra information? (Type your contact details if you would like a reponse.)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alle extra informatie? (Typ uw contactgegevens wenst u een antwoord.)</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Feel_1.Content" translate="yes" xml:space="preserve">
+          <source>Good</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Goed</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Feel_2.Content" translate="yes" xml:space="preserve">
+          <source>Average</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gemiddelde</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Feel_3.Content" translate="yes" xml:space="preserve">
+          <source>Poor</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Matig</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Privacy.Text" translate="yes" xml:space="preserve">
+          <source>Please Note: Anonymous data will be sent along with your feedback. To see what data is submitted, check the SoundByte Privacy Policy in the 'About' page.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Let op: Anonieme gegevens toegestuurd samen met uw feedback. Welke gegevens worden ingediend, Raadpleeg het privacybeleid van de SoundByte in de 'About' pagina.</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Send.Content" translate="yes" xml:space="preserve">
+          <source>Send</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verzenden</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Subtitle.Text" translate="yes" xml:space="preserve">
+          <source>How do you feel about your experience with SoundByte?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hoe voelt u over uw ervaring met SoundByte?</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Title.Text" translate="yes" xml:space="preserve">
+          <source>SoundByte Feedback</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SoundByte Feedback</target>
+        </trans-unit>
+        <trans-unit id="GeneralText_Today" translate="yes" xml:space="preserve">
+          <source>Today</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Vandaag</target>
+        </trans-unit>
+        <trans-unit id="GeneralText_Yesterday" translate="yes" xml:space="preserve">
+          <source>Yesterday</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gisteren</target>
+        </trans-unit>
+        <trans-unit id="InfoPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Basic Info</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Basisgegevens</target>
+        </trans-unit>
+        <trans-unit id="LikesPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Likes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Leuk</target>
+        </trans-unit>
+        <trans-unit id="LikeTracks_Content" translate="yes" xml:space="preserve">
+          <source>Start liking sounds to get started.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Start wens geluiden aan de slag.</target>
+        </trans-unit>
+        <trans-unit id="LikeTracks_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="MetaPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Metadata</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Metagegevens</target>
+        </trans-unit>
+        <trans-unit id="NotificationsPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Notifications</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Meldingen</target>
+        </trans-unit>
+        <trans-unit id="PermissionsPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Permissions</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Machtigingen</target>
+        </trans-unit>
+        <trans-unit id="PlaylistDialog_CreateSet.Content" translate="yes" xml:space="preserve">
+          <source>Create Set</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Set maken</target>
+        </trans-unit>
+        <trans-unit id="PlaylistDialog_SaveAndClose.Content" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="PlaylistNavigateError_Button" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="PlaylistNavigateError_Content" translate="yes" xml:space="preserve">
+          <source>An error occured while trying to navigate to the set, try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er is een fout opgetreden terwijl het proberen om te navigeren naar de set, probeer het later opnieuw.</target>
+        </trans-unit>
+        <trans-unit id="PlaylistNavigateError_Title" translate="yes" xml:space="preserve">
+          <source>Navigation Failed</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Kan niet navigeren</target>
+        </trans-unit>
+        <trans-unit id="PlaylistPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Sets</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sets</target>
+        </trans-unit>
+        <trans-unit id="PurchasePivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Upgrade</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bijwerken</target>
+        </trans-unit>
+        <trans-unit id="SearchBoxText.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Search...</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zoek...</target>
+        </trans-unit>
+        <trans-unit id="SettingsBackgroundExtraOption.Text" translate="yes" xml:space="preserve">
+          <source>Change Advanced Notification Settings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geavanceerde instellingen voor meldingen wijzigen</target>
+        </trans-unit>
+        <trans-unit id="SettingsPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Instellingen</target>
+        </trans-unit>
+        <trans-unit id="Settings_AccentColorCustomLabel.Content" translate="yes" xml:space="preserve">
+          <source>Custom</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aangepast</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in the accent color combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_AccentColorDefaultLabel.Content" translate="yes" xml:space="preserve">
+          <source>Default</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Standaard</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in the accent color combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_AccentColorLabel.Text" translate="yes" xml:space="preserve">
+          <source>Accent Color</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Accentkleur</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in the accent color combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_AccentColorSoundcloudLabel.Content" translate="yes" xml:space="preserve">
+          <source>SoundCloud Orange</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SoundCloud oranje</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in the accent color combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_AccentColorSystemLabel.Content" translate="yes" xml:space="preserve">
+          <source>System Accent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Systeem Accent</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in the accent color combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_BackgroundDescription.Text" translate="yes" xml:space="preserve">
+          <source>The options below let you control what notifications you recieve, and if you purchase SoundByte Pro, you can disable certain kinds of notifications or enable grouped notifications. By enabling clean up notifications, you will receive a notification everytime the app performs a clean up. This notification will display how much space was cleaned off of your device.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">De opties hieronder laat u bepalen welke berichten u ontvangt, en als u SoundByte Pro koopt, kunt u bepaalde soorten meldingen of inschakelen gegroepeerd meldingen uitschakelen. Doordat opruimen meldingen, ontvangt u een kennisgeving everytime die app een schone omhoog voert. Deze melding wordt weergegeven hoeveel ruimte was schoongemaakt off van uw apparaat.</target>
+        </trans-unit>
+        <trans-unit id="Settings_BackgroundLabel.Text" translate="yes" xml:space="preserve">
+          <source>BACKGROUND</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ACHTERGROND</target>
+        </trans-unit>
+        <trans-unit id="Settings_BackgroundNotificationsToggle.Header" translate="yes" xml:space="preserve">
+          <source>Enable Background Notifications</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Achtergrond meldingen inschakelen</target>
+        </trans-unit>
+        <trans-unit id="Settings_BackgroundNotificationsToggle.OffContent" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nee</target>
+        </trans-unit>
+        <trans-unit id="Settings_BackgroundNotificationsToggle.OnContent" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The on position of the track number toggle label</note>
+        </trans-unit>
+        <trans-unit id="Settings_CleanupNotificationToggle.Header" translate="yes" xml:space="preserve">
+          <source>Enable Cleanup Notifications</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cleanup meldingen inschakelen</target>
+        </trans-unit>
+        <trans-unit id="Settings_CleanupNotificationToggle.OffContent" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nee</target>
+        </trans-unit>
+        <trans-unit id="Settings_CleanupNotificationToggle.OnContent" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+        </trans-unit>
+        <trans-unit id="Settings_HighQualityImagesToggle.Header" translate="yes" xml:space="preserve">
+          <source>Enable High Quality Images</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Inschakelen van afbeeldingen van hoge kwaliteit</target>
+        </trans-unit>
+        <trans-unit id="Settings_HighQualityImagesToggle.OffContent" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nee</target>
+        </trans-unit>
+        <trans-unit id="Settings_HighQualityImagesToggle.OnContent" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+        </trans-unit>
+        <trans-unit id="Settings_LanguageLabel.Text" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Taal</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The label for the language combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_SilentNotificationToggle.Header" translate="yes" xml:space="preserve">
+          <source>Enable Notification Sounds</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geluidssignalen voor meldingen inschakelen</target>
+        </trans-unit>
+        <trans-unit id="Settings_SilentNotificationToggle.OffContent" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nee</target>
+        </trans-unit>
+        <trans-unit id="Settings_SilentNotificationToggle.OnContent" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+        </trans-unit>
+        <trans-unit id="Settings_ThemeDarkLabel.Content" translate="yes" xml:space="preserve">
+          <source>Dark</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Donker</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in theme combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_ThemeDefaultLabel.Content" translate="yes" xml:space="preserve">
+          <source>Default</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Standaard</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in theme combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_ThemeLabel.Text" translate="yes" xml:space="preserve">
+          <source>Theme</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Thema</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Label for theme combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_ThemeLightLabel.Content" translate="yes" xml:space="preserve">
+          <source>Light</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Licht</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Used in theme combo box</note>
+        </trans-unit>
+        <trans-unit id="Settings_TrackNumberToggle.Header" translate="yes" xml:space="preserve">
+          <source>Enable Track Counter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schakel Track item</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The title text for the tile number toggle </note>
+        </trans-unit>
+        <trans-unit id="Settings_TrackNumberToggle.OffContent" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nee</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The off position of the track number toggle label</note>
+        </trans-unit>
+        <trans-unit id="Settings_TrackNumberToggle.OnContent" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">The on position of the track number toggle label</note>
+        </trans-unit>
+        <trans-unit id="Settings_UserInterfaceDescription.Text" translate="yes" xml:space="preserve">
+          <source>The options below change different aspects of the SoundByte user interface. For more accent colors (any of your choice) upgrade to SoundByte Pro.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">De onderstaande opties wijzigen verschillende aspecten van de gebruikersinterface van de SoundByte. Voor meer accentkleuren (om het even welk van uw keuze) upgraden naar SoundByte Pro.</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Description for the user interface settings</note>
+        </trans-unit>
+        <trans-unit id="Settings_UserInterfaceLabel.Text" translate="yes" xml:space="preserve">
+          <source>USER INTERFACE</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">USER INTERFACE</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Label header for the user interface settings</note>
+        </trans-unit>
+        <trans-unit id="ShareDialog_CloseCaption.Text" translate="yes" xml:space="preserve">
+          <source>Close the share menu.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sluit het menu delen.</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_CloseTitle.Text" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_LinkCaption.Text" translate="yes" xml:space="preserve">
+          <source>Copy a link to the clipboard.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Een koppeling naar het Klembord kopiëren.</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_LinkTitle.Text" translate="yes" xml:space="preserve">
+          <source>Copy Link</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Koppeling kopiëren</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_SoundByteLinkCaption.Text" translate="yes" xml:space="preserve">
+          <source>Copy a link for other SoundByte users.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kopieer een link voor andere gebruikers van de SoundByte.</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_SoundByteLinkTitle.Text" translate="yes" xml:space="preserve">
+          <source>Copy SoundByte Link</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kopieer de Link SoundByte</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_WindowCharmDescription" translate="yes" xml:space="preserve">
+          <source>Share this item with your friends below:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deel dit artikel met je vrienden hieronder:</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_WindowsCaption.Text" translate="yes" xml:space="preserve">
+          <source>Use the Windows share dialog.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gebruik het dialoogvenster Windows aandeel.</target>
+        </trans-unit>
+        <trans-unit id="ShareDialog_WindowsTitle.Text" translate="yes" xml:space="preserve">
+          <source>Share with Windows</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Delen met Windows</target>
+        </trans-unit>
+        <trans-unit id="StreamPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Stream</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Stream</target>
+        </trans-unit>
+        <trans-unit id="StreamTracks_Content" translate="yes" xml:space="preserve">
+          <source>Start following users to get updates on what they post.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Volg gebruikers om updates over wat ze post te krijgen.</target>
+        </trans-unit>
+        <trans-unit id="StreamTracks_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="TileManagerPreviewText" translate="yes" xml:space="preserve">
+          <source>Preview:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voorbeeld:</target>
+        </trans-unit>
+        <trans-unit id="TileManagerPrimeButton" translate="yes" xml:space="preserve">
+          <source>Pin Tile</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">PIN tegel</target>
+        </trans-unit>
+        <trans-unit id="TileManagerSecondButton" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
+        </trans-unit>
+        <trans-unit id="TileManagerTitle" translate="yes" xml:space="preserve">
+          <source>Customize Tile:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tegel aanpassen:</target>
+        </trans-unit>
+        <trans-unit id="TileManagerTitleText" translate="yes" xml:space="preserve">
+          <source>Tile Text:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tegel tekst:</target>
+        </trans-unit>
+        <trans-unit id="TileManager_ForegoundHeader" translate="yes" xml:space="preserve">
+          <source>Tile Text Color:</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tegel tekstkleur:</target>
+        </trans-unit>
+        <trans-unit id="TileManager_ForegoundOffContent" translate="yes" xml:space="preserve">
+          <source>Light</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Licht</target>
+        </trans-unit>
+        <trans-unit id="TileManager_ForegoundOnContent" translate="yes" xml:space="preserve">
+          <source>Dark</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Donker</target>
+        </trans-unit>
+        <trans-unit id="UIUpdateError_Button" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="UIUpdateError_Content" translate="yes" xml:space="preserve">
+          <source>The item has been removed, but an error occured while updating the UI.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Het item is verwijderd, maar er is een fout opgetreden tijdens het bijwerken van de UI.</target>
+        </trans-unit>
+        <trans-unit id="UIUpdateError_Title" translate="yes" xml:space="preserve">
+          <source>UI Update Error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">UI Update fout</target>
+        </trans-unit>
+        <trans-unit id="UpgradeInfo.Text" translate="yes" xml:space="preserve">
+          <source>UPGRADE INFO</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">INFO VAN DE VERBETERING</target>
+        </trans-unit>
+        <trans-unit id="UpgradeInfoMore.Text" translate="yes" xml:space="preserve">
+          <source>In order to keep this app running, some features are paid. Only a few extra features are paid. These features are not needed to use the app, but they are nice addons.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Om deze app draait, worden sommige functies betaald. Alleen een paar extra functies worden betaald. Deze functies niet nodig zijn om de app gebruiken, maar ze zijn mooi addons.</target>
+        </trans-unit>
+        <trans-unit id="UserPlaylists_Content" translate="yes" xml:space="preserve">
+          <source>You have not posted any sets yet.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U hebt geen sets nog niet geboekt.</target>
+        </trans-unit>
+        <trans-unit id="UserPlaylists_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="WelcomePageBrowse.Content" translate="yes" xml:space="preserve">
+          <source>Browse</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Browsen</target>
+        </trans-unit>
+        <trans-unit id="WelcomePageDescription.Text" translate="yes" xml:space="preserve">
+          <source>Find the music you love. Discover new tracks. Connect directly with your favorite artists.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vind de muziek die je liefde. Ontdek nieuwe tracks. Rechtstreeks verbinding maken met uw favoriete artiesten.</target>
+        </trans-unit>
+        <trans-unit id="WelcomePageError.ErrorText" translate="yes" xml:space="preserve">
+          <source>SoundByte encountered an error while trying to login. Please try again.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SoundByte is een fout opgetreden tijdens een poging om in te loggen. Probeer het opnieuw.</target>
+        </trans-unit>
+        <trans-unit id="WelcomePageLogin.Content" translate="yes" xml:space="preserve">
+          <source>Get Started</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Aan de slag</target>
+        </trans-unit>
+        <trans-unit id="WelcomePageError.ErrorHeader" translate="yes" xml:space="preserve">
+          <source>Login Error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Fout bij aanmelding</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_alternativerock.Content" translate="yes" xml:space="preserve">
+          <source>Alternative Rock</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alternatieve Rock</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_ambient.Content" translate="yes" xml:space="preserve">
+          <source>Ambient</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ambient</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_audio.Content" translate="yes" xml:space="preserve">
+          <source>AUDIO</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">AUDIO</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_audiobooks.Content" translate="yes" xml:space="preserve">
+          <source>Audiobooks</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Audioboeken</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_business.Content" translate="yes" xml:space="preserve">
+          <source>Business</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Zakelijk</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_classical.Content" translate="yes" xml:space="preserve">
+          <source>Classical</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Klassiek</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_comedy.Content" translate="yes" xml:space="preserve">
+          <source>Comedy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Comedy</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_country.Content" translate="yes" xml:space="preserve">
+          <source>Country</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Land</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_danceedm.Content" translate="yes" xml:space="preserve">
+          <source>Dance &amp; EDM</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dansen van &amp;EDM</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_dancehall.Content" translate="yes" xml:space="preserve">
+          <source>Dancehall</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dancehall</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_deephouse.Content" translate="yes" xml:space="preserve">
+          <source>Deep House</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deep House</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_disco.Content" translate="yes" xml:space="preserve">
+          <source>Disco</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Disco</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_drumbass.Content" translate="yes" xml:space="preserve">
+          <source>Drum &amp; Bass</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">&amp;Bass Drum</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_dubstep.Content" translate="yes" xml:space="preserve">
+          <source>Dubstep</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dubstep</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_electronic.Content" translate="yes" xml:space="preserve">
+          <source>Electronic</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Elektronisch</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_entertainment.Content" translate="yes" xml:space="preserve">
+          <source>Entertainment</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Entertainment</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_folksingersongwriter.Content" translate="yes" xml:space="preserve">
+          <source>Folk &amp; Singer-Songwriter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Folk &amp;Singer-Songwriter</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_hiphoprap.Content" translate="yes" xml:space="preserve">
+          <source>Hip Hop &amp; Rap</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hip Hop &amp;Rap</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_house.Content" translate="yes" xml:space="preserve">
+          <source>House</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Huis</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_indie.Content" translate="yes" xml:space="preserve">
+          <source>Indie</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Indie</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_jazzblues.Content" translate="yes" xml:space="preserve">
+          <source>Jazz &amp; Blues</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jazz &amp;Blues</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_latin.Content" translate="yes" xml:space="preserve">
+          <source>Latin</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Latijns</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_learning.Content" translate="yes" xml:space="preserve">
+          <source>Learning</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Learning</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_metal.Content" translate="yes" xml:space="preserve">
+          <source>Metal</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Metaal</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_music.Content" translate="yes" xml:space="preserve">
+          <source>MUSIC</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">MUZIEK</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_newspolitics.Content" translate="yes" xml:space="preserve">
+          <source>News &amp; Politics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nieuws &amp;politiek</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_piano.Content" translate="yes" xml:space="preserve">
+          <source>Piano</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Piano</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_pop.Content" translate="yes" xml:space="preserve">
+          <source>Pop</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pop</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_rbsoul.Content" translate="yes" xml:space="preserve">
+          <source>R&amp;B &amp; Soul</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">R&amp;B &amp;ziel</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_reggae.Content" translate="yes" xml:space="preserve">
+          <source>Reggae</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Reggae</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_reggaeton.Content" translate="yes" xml:space="preserve">
+          <source>Reggaeton</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reggaeton</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_religionspirituality.Content" translate="yes" xml:space="preserve">
+          <source>Religion &amp; Spirtuality</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Godsdienst &amp;Spirtuality</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_rock.Content" translate="yes" xml:space="preserve">
+          <source>Rock</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Rock</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_science.Content" translate="yes" xml:space="preserve">
+          <source>Science</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Wetenschap</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_soundtrack.Content" translate="yes" xml:space="preserve">
+          <source>Soundtrack</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Soundtrack</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_sports.Content" translate="yes" xml:space="preserve">
+          <source>Sports</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sport</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_storytelling.Content" translate="yes" xml:space="preserve">
+          <source>Storytelling</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Storytelling</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_techno.Content" translate="yes" xml:space="preserve">
+          <source>Techno</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Techno</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_technology.Content" translate="yes" xml:space="preserve">
+          <source>Technology</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Technologie</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_trance.Content" translate="yes" xml:space="preserve">
+          <source>Trance</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Trance</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_trap.Content" translate="yes" xml:space="preserve">
+          <source>Trap</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Trap</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_triphop.Content" translate="yes" xml:space="preserve">
+          <source>Triphop</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Triphop</target>
+        </trans-unit>
+        <trans-unit id="ExploreGenreCombo_world.Content" translate="yes" xml:space="preserve">
+          <source>World</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Wereld</target>
+        </trans-unit>
+        <trans-unit id="ExploreTypeCombo_top.Content" translate="yes" xml:space="preserve">
+          <source>Top 50</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Top 50</target>
+        </trans-unit>
+        <trans-unit id="ExploreTypeCombo_trending.Content" translate="yes" xml:space="preserve">
+          <source>New &amp; Hot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nieuwe &amp;heet</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Home.Label" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Thuis</target>
+        </trans-unit>
+        <trans-unit id="Close_Button" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_ErrorNoCat" translate="yes" xml:space="preserve">
+          <source>You must enter a cateory to category.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Categorie moet u een cateory invoeren.</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_ErrorNoFeel" translate="yes" xml:space="preserve">
+          <source>You must choose an option on how you feel about the app to continue.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U moet een optie op hoe je je over de app voelt voort te zetten.</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_ErrorTitle" translate="yes" xml:space="preserve">
+          <source>Feedback Error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feedback fout</target>
+        </trans-unit>
+        <trans-unit id="Notifications_Content" translate="yes" xml:space="preserve">
+          <source>Start following and interacting with sounds and people to get started.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Start volgen en interactie met geluiden en mensen aan de slag.</target>
+        </trans-unit>
+        <trans-unit id="Notifications_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to hear here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets te horen hier</target>
+        </trans-unit>
+        <trans-unit id="Notification_CommentOnSound.Text" translate="yes" xml:space="preserve">
+          <source> commented on a sound.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> commentaar op een geluid.</target>
+        </trans-unit>
+        <trans-unit id="Notification_Follow.Text" translate="yes" xml:space="preserve">
+          <source> is following you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> u volgt.</target>
+        </trans-unit>
+        <trans-unit id="Notification_Followers.Text" translate="yes" xml:space="preserve">
+          <source>Followers</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Volgers</target>
+        </trans-unit>
+        <trans-unit id="Notification_Followings.Text" translate="yes" xml:space="preserve">
+          <source>Followings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Achterban</target>
+        </trans-unit>
+        <trans-unit id="Notification_HasLikedSound.Text" translate="yes" xml:space="preserve">
+          <source> liked your sound.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> graag uw geluid.</target>
+        </trans-unit>
+        <trans-unit id="Notification_Sounds.Text" translate="yes" xml:space="preserve">
+          <source>Sounds</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Geluiden</target>
+        </trans-unit>
+        <trans-unit id="NowPlayingNavigate_Button" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="NowPlayingNavigate_Header" translate="yes" xml:space="preserve">
+          <source>SoundByte Information</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SoundByte informatie</target>
+        </trans-unit>
+        <trans-unit id="NowPlayingNavigate_InternetAvaliableText" translate="yes" xml:space="preserve">
+          <source>You need to be connected to the internet to perform this task.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U moet worden aangesloten op het internet voor het uitvoeren van deze taak.</target>
+        </trans-unit>
+        <trans-unit id="NowPlayingNavigate_NotAvaliableText" translate="yes" xml:space="preserve">
+          <source>There are currently no sounds playing or in queue.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er zijn momenteel geen geluiden afspelen of in de wachtrij.</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Filter.Label" translate="yes" xml:space="preserve">
+          <source>Filter</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Filteren</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Pin.Label" translate="yes" xml:space="preserve">
+          <source>Pin</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pincode</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Pin_Raw" translate="yes" xml:space="preserve">
+          <source>Pin</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pincode</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Shuffle.Label" translate="yes" xml:space="preserve">
+          <source>Shuffle</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Willekeurige volgorde</target>
+        </trans-unit>
+        <trans-unit id="AppBarUI_Unpin_Raw" translate="yes" xml:space="preserve">
+          <source>Unpin</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Losmaken</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_FailContent" translate="yes" xml:space="preserve">
+          <source>An error occured while trying to delete this item. Try again later.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er is een fout opgetreden tijdens een poging om dit item te verwijderen. Probeer het later opnieuw.</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_FailTitle" translate="yes" xml:space="preserve">
+          <source>Delete Error</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verwijderen van de fout</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_OfflineTitle" translate="yes" xml:space="preserve">
+          <source>Remove Offline Sound?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verwijder off line geluid?</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_PlaylistContent" translate="yes" xml:space="preserve">
+          <source>Are you sure that you want to delete this set?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weet u zeker dat u wilt verwijderen van deze set?</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_PlaylistTitle" translate="yes" xml:space="preserve">
+          <source>Delete Set?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Set verwijderen?</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_TrackButtonPrimary" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_TrackButtonSecondary" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_TrackContent" translate="yes" xml:space="preserve">
+          <source>Are you sure that you want to delete this sound?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weet u zeker dat u wilt verwijderen van dit geluid?</target>
+        </trans-unit>
+        <trans-unit id="DeleteConfirm_TrackTitle" translate="yes" xml:space="preserve">
+          <source>Delete Sound?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geluid verwijderen?</target>
+        </trans-unit>
+        <trans-unit id="DeletePlaylist_OfflineContent" translate="yes" xml:space="preserve">
+          <source>Are you sure that you want to remove this offline sound?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Weet u zeker dat u wilt verwijderen van dit off line geluid?</target>
+        </trans-unit>
+        <trans-unit id="GeneralError_Content" translate="yes" xml:space="preserve">
+          <source>Error message: {0}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Foutbericht: {0}.</target>
+        </trans-unit>
+        <trans-unit id="GeneralError_Header" translate="yes" xml:space="preserve">
+          <source>General Error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Algemene fout</target>
+        </trans-unit>
+        <trans-unit id="HttpError_Header" translate="yes" xml:space="preserve">
+          <source>Connection Error</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Verbindingsfout</target>
+        </trans-unit>
+        <trans-unit id="HttpError_JsonError" translate="yes" xml:space="preserve">
+          <source>An error occured while trying to read the data. Contact the developer.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er is een fout opgetreden tijdens een poging om de gegevens te lezen. Contact opnemen met de ontwikkelaar.</target>
+        </trans-unit>
+        <trans-unit id="HttpError_NoInternet" translate="yes" xml:space="preserve">
+          <source>Make sure that you are connected to the internet and try again.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zorg ervoor dat u met internet verbonden bent en probeer het opnieuw.</target>
+        </trans-unit>
+        <trans-unit id="HttpError_TaskCancel" translate="yes" xml:space="preserve">
+          <source>The task was canceled before it finished.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">De taak werd geannuleerd voordat het klaar.</target>
+        </trans-unit>
+        <trans-unit id="LanguageRestart_Button" translate="yes" xml:space="preserve">
+          <source>Close App</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">App sluiten</target>
+        </trans-unit>
+        <trans-unit id="LanguageRestart_Content" translate="yes" xml:space="preserve">
+          <source>The app must restart in order for the language to be changed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">De app moet opnieuw opstarten om de taal te worden gewijzigd.</target>
+        </trans-unit>
+        <trans-unit id="LanguageRestart_Title" translate="yes" xml:space="preserve">
+          <source>Restart Required</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Opnieuw opstarten is vereist</target>
+        </trans-unit>
+        <trans-unit id="OfflinePivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Offline</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Offline</target>
+        </trans-unit>
+        <trans-unit id="Offline_Content" translate="yes" xml:space="preserve">
+          <source>You have not saved any sounds offline yet.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U hebt nog niet alle geluiden off line opgeslagen.</target>
+        </trans-unit>
+        <trans-unit id="Offline_Header" translate="yes" xml:space="preserve">
+          <source>No offline sounds</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen off line geluiden</target>
+        </trans-unit>
+        <trans-unit id="PlaylistNavigate_FailButton" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="PlaylistTracks_Content" translate="yes" xml:space="preserve">
+          <source>There are no sounds in this set.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er zijn geen geluiden in deze set.</target>
+        </trans-unit>
+        <trans-unit id="PlaylistTracks_Header" translate="yes" xml:space="preserve">
+          <source>No Sounds</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen geluiden</target>
+        </trans-unit>
+        <trans-unit id="Raw_Follow" translate="yes" xml:space="preserve">
+          <source>Follow</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Volgen</target>
+        </trans-unit>
+        <trans-unit id="Raw_Unfollow" translate="yes" xml:space="preserve">
+          <source>Unfollow</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Niet meer volgen</target>
+        </trans-unit>
+        <trans-unit id="SearchFilter_Apply.Content" translate="yes" xml:space="preserve">
+          <source>Apply</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Toepassen</target>
+        </trans-unit>
+        <trans-unit id="SearchFilter_BPM.PlaceholderText" translate="yes" xml:space="preserve">
+          <source>Number (e.g 160)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nummer (bv. 160)</target>
+        </trans-unit>
+        <trans-unit id="SearchFilter_BPMText.Text" translate="yes" xml:space="preserve">
+          <source>BPM (+/-10)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">BPM (+/-10)</target>
+        </trans-unit>
+        <trans-unit id="SearchPlaylist_Content" translate="yes" xml:space="preserve">
+          <source>No sets found matching '{0}'.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen sets gevonden overeenkomende '{0}'.</target>
+        </trans-unit>
+        <trans-unit id="SearchPlaylist_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to see here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets hier te zien</target>
+        </trans-unit>
+        <trans-unit id="SearchTrack_Content" translate="yes" xml:space="preserve">
+          <source>No sounds found matching '{0}'.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen geluiden gevonden overeenkomende '{0}'.</target>
+        </trans-unit>
+        <trans-unit id="SearchTrack_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to see here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets hier te zien</target>
+        </trans-unit>
+        <trans-unit id="SearchUser_Content" translate="yes" xml:space="preserve">
+          <source>No users found matching '{0}'.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen gebruikers gevonden overeenkomende '{0}'.</target>
+        </trans-unit>
+        <trans-unit id="SearchUser_Header" translate="yes" xml:space="preserve">
+          <source>Nothing to see here</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niets hier te zien</target>
+        </trans-unit>
+        <trans-unit id="SetsPivot.Label" translate="yes" xml:space="preserve">
+          <source>Sets</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sets</target>
+        </trans-unit>
+        <trans-unit id="SoundsPivot.Label" translate="yes" xml:space="preserve">
+          <source>Sounds</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Geluiden</target>
+        </trans-unit>
+        <trans-unit id="SoundsPivotHeader.Label" translate="yes" xml:space="preserve">
+          <source>Sounds</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Geluiden</target>
+        </trans-unit>
+        <trans-unit id="UsersPivot.Label" translate="yes" xml:space="preserve">
+          <source>Users</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Gebruikers</target>
+        </trans-unit>
+        <trans-unit id="PlaylistPage_NoSetsClose" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sluiten</target>
+        </trans-unit>
+        <trans-unit id="PlaylistPage_NoSetsContent" translate="yes" xml:space="preserve">
+          <source>There are no sounds in the current set.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Er zijn geen geluiden in de huidige set.</target>
+        </trans-unit>
+        <trans-unit id="PlaylistPage_NoSetsTitle" translate="yes" xml:space="preserve">
+          <source>No Sounds</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geen geluiden</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Cancel.Content" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Annuleren</target>
+        </trans-unit>
+        <trans-unit id="FeedbackPage_Description.Text" translate="yes" xml:space="preserve">
+          <source>Leave feedback about the app below.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geef feedback over de app hieronder.</target>
+        </trans-unit>
+        <trans-unit id="SoundByte_Control_Like" translate="yes" xml:space="preserve">
+          <source>Like</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Zoals</target>
+        </trans-unit>
+        <trans-unit id="SoundByte_Control_Unlike" translate="yes" xml:space="preserve">
+          <source>Unlike</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Niet leuk</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

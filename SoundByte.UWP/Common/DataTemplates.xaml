@@ -1,0 +1,147 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:endpoints="using:SoundByte.Core.API.Endpoints"
+    xmlns:stateTriggers="using:SoundByte.UWP.StateTriggers"
+    x:Class="SoundByte.UWP.Common.DataTemplates">
+
+    <!-- Playlist Item -->
+    <DataTemplate x:Key="PlaylistItem" x:DataType="endpoints:Playlist">
+        <StackPanel Height="270" 
+                    Width="200"
+                    Margin="5"
+                    Orientation="Vertical">
+
+
+            <controls:DropShadowPanel VerticalAlignment="Top"
+                                      BlurRadius="25"
+                                      ShadowOpacity="0.6"
+                                      OffsetX="0"
+                                      OffsetY="5"
+                                      IsTabStop="False"
+                                      IsHitTestVisible="False"
+                                      Margin="5,5,5,8"
+                                      Color="Black">
+                <Grid>
+                    <controls:ImageEx Source="{x:Bind Converter={StaticResource ArtworkConverter}, Mode=OneWay}"
+                                      IsCacheEnabled="True"
+                                      PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                      PlaceholderStretch="UniformToFill"
+                                      Width="190" 
+                                      Height="190"
+                                      VerticalAlignment="Stretch"                 
+                                      HorizontalAlignment="Stretch"
+                                      Stretch="UniformToFill"
+                                      IsHitTestVisible="False" />
+                    <TextBlock Text="&#xE8FD;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="White" />
+
+                    <Grid RequestedTheme="Dark" Background="#66000000" Padding="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <TextBlock RequestedTheme="Dark" Text="{x:Bind Duration, Mode=OneWay, Converter={StaticResource TimeStampConverter}}" FontSize="12" FontWeight="SemiLight" />
+                    </Grid>
+                </Grid>
+            </controls:DropShadowPanel>
+            <TextBlock Text="{x:Bind Title, Mode=OneWay}" Margin="0,0,0,4" TextAlignment="Center" FontSize="16" TextWrapping="Wrap" MaxHeight="50" TextTrimming="CharacterEllipsis" />
+            <TextBlock Text="{x:Bind User.Username, Mode=OneWay}" FontSize="12" Opacity="0.6" TextAlignment="Center" FontWeight="SemiBold" />
+        </StackPanel>
+    </DataTemplate>
+
+    <!-- Track Item -->
+    <DataTemplate x:Key="TrackItem" x:DataType="endpoints:Track">
+        <StackPanel x:Name="StackPanel"
+                    Height="270"
+                    Width="200"
+                    Margin="5"
+                    Orientation="Vertical">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState>
+                        <VisualState.StateTriggers>
+                            <stateTriggers:DeviceStateTrigger DeviceFamily="Windows.Mobile"/>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="StackPanel.Orientation" Value="Horizontal" />
+                            <Setter Target="StackPanel.Margin" Value="0" />
+                            <Setter Target="TitlePanel.VerticalAlignment" Value="Center" />
+                            <Setter Target="TitlePanel.Margin" Value="10,0,0,0" />
+                            <Setter Target="StackPanel.Width" Value="Auto" />
+                            <Setter Target="StackPanel.Height" Value="Auto" />
+                            <Setter Target="ShadowPanel.Width" Value="80" />
+                            <Setter Target="ShadowPanel.Height" Value="80" />
+                            <Setter Target="TitleText.TextAlignment" Value="Left" />
+                            <Setter Target="TitleDescription.TextAlignment" Value="Left" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            
+            <controls:DropShadowPanel x:Name="ShadowPanel"   
+                                      VerticalAlignment="Top"
+                                      BlurRadius="25"
+                                      ShadowOpacity="0.6"
+                                      OffsetX="0"
+                                      IsTabStop="False"
+                                      IsHitTestVisible="False"
+                                      Margin="5,5,5,8"
+                                      OffsetY="5"
+                                      Color="Black">
+                <Grid>
+                    <controls:ImageEx Source="{x:Bind Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
+                                      IsCacheEnabled="True"
+                                      PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                      PlaceholderStretch="UniformToFill"
+                                      VerticalAlignment="Stretch"
+                                      HorizontalAlignment="Stretch"
+                                      IsHitTestVisible="False"
+                                      Width="190" 
+                                      Height="190" 
+                                      Stretch="Uniform" />
+                    <TextBlock Text="&#xE768;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="White" />
+
+                    <Grid RequestedTheme="Dark" Background="#66000000" Padding="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <TextBlock RequestedTheme="Dark" Text="{x:Bind Duration, Mode=OneWay, Converter={StaticResource TimeStampConverter}}" FontSize="12" FontWeight="SemiLight" />
+                    </Grid>
+                </Grid>
+            </controls:DropShadowPanel>
+
+            <StackPanel Orientation="Vertical" x:Name="TitlePanel" Margin="0" VerticalAlignment="Top">
+                <TextBlock x:Name="TitleText" Text="{x:Bind Title, Mode=OneWay}" Margin="0,0,0,4" TextAlignment="Center" FontSize="16" TextWrapping="Wrap" MaxHeight="50" TextTrimming="CharacterEllipsis" />
+                <TextBlock x:Name="TitleDescription" Text="{x:Bind User.Username, Mode=OneWay}" FontSize="12" Opacity="0.6" TextAlignment="Center" FontWeight="SemiBold" />
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <!-- User Item -->
+    <DataTemplate x:Key="UserItem" x:DataType="endpoints:User">
+        <StackPanel Height="270"
+                    Width="200"
+                    Margin="5"
+                    Orientation="Vertical">
+            <controls:DropShadowPanel Width="190" 
+                                      Height="190" 
+                                      VerticalAlignment="Top"
+                                      BlurRadius="25"
+                                      ShadowOpacity="0.6"
+                                      OffsetX="0"
+                                      OffsetY="5"
+                                      IsTabStop="False"
+                                      IsHitTestVisible="False"
+                                      Margin="5,5,5,8"
+                                      Color="Black">
+                <controls:RoundImageEx Source="{x:Bind Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
+                                       IsCacheEnabled="True"
+                                       PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                       PlaceholderStretch="UniformToFill"
+                                       VerticalAlignment="Stretch"
+                                       HorizontalAlignment="Stretch"
+                                       CornerRadius="95"
+                                       IsHitTestVisible="False"
+                                       Width="190" 
+                                       Height="190" 
+                                       Stretch="Uniform" />
+            </controls:DropShadowPanel>
+            <TextBlock Text="{x:Bind Username, Mode=OneWay}" Margin="0,0,0,4" TextAlignment="Center" FontSize="16" TextWrapping="Wrap" MaxHeight="50" TextTrimming="CharacterEllipsis" />
+            <TextBlock Text="{x:Bind Country, Mode=OneWay}" FontSize="12" Opacity="0.6" TextAlignment="Center" FontWeight="SemiBold" />
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

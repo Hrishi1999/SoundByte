@@ -1,0 +1,57 @@
+﻿<ContentDialog
+    x:Class="SoundByte.UWP.Dialogs.PendingUpdateDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ShellBackground}">
+
+    <ScrollViewer HorizontalAlignment="Stretch"
+                  VerticalScrollBarVisibility="Hidden">
+        <StackPanel>
+            <TextBlock Text="&#xE896;" 
+                       FontFamily="Segoe MDL2 Assets" 
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="65" 
+                       Padding="5"
+                       Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"
+                       Margin="20" />
+
+            <TextBlock Text="New Version Available" 
+                       TextAlignment="Center" 
+                       FontWeight="SemiBold"
+                       FontSize="22"
+                       Margin="5"
+                       VerticalAlignment="Center" />
+            <TextBlock TextWrapping="Wrap" 
+                       Opacity="0.8"
+                       FontWeight="SemiLight"
+                       TextAlignment="Center"
+                       Margin="2"
+                       Text="There is a new version of SoundByte waiting and it is highly recommended that you upgrade as soon as possible. This may cause SoundByte to exit." />
+
+
+            <ProgressBar x:Name="UpdateBar" Margin="20,30,20,0" Visibility="Collapsed" />
+
+            <Button Content="Update Now" 
+                    Width="250"
+                    Click="UpdateNow" 
+                    Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                    BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}"
+                    Foreground="White"
+                    Padding="10,12"
+                    FontSize="16"
+                    x:Name="UpdateButton"
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center" />
+
+            <HyperlinkButton Content="Close (Not Recommended)" 
+                             x:Name="CloseButton"
+                             Margin="0,15,0,15"
+                             Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                             ContentTemplate="{StaticResource HyperlinkClean}"
+                             Click="{x:Bind DeferUpdate}" 
+                             HorizontalAlignment="Center" />
+
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>

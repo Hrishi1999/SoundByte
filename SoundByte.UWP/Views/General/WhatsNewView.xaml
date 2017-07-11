@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="SoundByte.UWP.Views.General.WhatsNewView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:stateTriggers="using:SoundByte.UWP.StateTriggers"
+    Transitions="{StaticResource MainTransition}">
+
+    <Grid Background="{ThemeResource ShellBackground}" x:Name="RootGrid">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="DeviceStates">
+                <VisualState x:Name="Xbox">
+                    <VisualState.StateTriggers>
+                        <stateTriggers:DeviceStateTrigger DeviceFamily="Windows.Xbox"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootGrid.Background" Value="Transparent"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="WindowSize">
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="768" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="StackPanel.Margin" Value="50,0" />
+                        <Setter Target="TextHeader.FontSize" Value="55" />
+                        <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
+                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid x:Name="MobileGrid" Visibility="Visible" Background="{ThemeResource ShellNavigationBackground}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="48" Canvas.ZIndex="100">
+            <TextBlock Text="What's New" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
+        </Grid>
+
+        <ScrollViewer HorizontalAlignment="Stretch"
+                      VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="StackPanel" Margin="10,0">
+                <TextBlock x:Name="TextHeader" Opacity="0"  Text="What's New" FontWeight="SemiBold" FontSize="25" Margin="0,0,0,0" />
+                <controls:MarkdownTextBlock x:Name="ChangelogView"
+                                            IsTextSelectionEnabled="False"
+                                             CodeBackground="{ThemeResource ShellNavigationBackground}"
+                                            HorizontalAlignment="Stretch" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="SoundByte.UWP.Views.Me.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:stateTriggers="using:SoundByte.UWP.StateTriggers"
+    Transitions="{StaticResource MainTransition}">
+
+    <!-- Main Page -->
+    <Grid Background="{ThemeResource ShellBackground}" x:Name="RootGrid">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="DeviceStates">
+                <VisualState x:Name="Xbox">
+                    <VisualState.StateTriggers>
+                        <stateTriggers:DeviceStateTrigger DeviceFamily="Windows.Xbox"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootGrid.Background" Value="Transparent"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <WebView x:Name="LoginWebView"
+                 HorizontalAlignment="Stretch"
+                 DefaultBackgroundColor="Transparent"
+                 VerticalAlignment="Stretch" />
+
+        <Grid x:Name="LoadingSection" Canvas.ZIndex="10" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Collapsed" Background="{ThemeResource ShellNavigationBackground}">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ProgressRing IsActive="True" Width="80" Height="80" />
+                <TextBlock TextAlignment="Center" Text="Loading..." FontSize="28" FontWeight="SemiBold" Margin="0,10,0,0" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

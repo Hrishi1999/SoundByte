@@ -1,0 +1,51 @@
+﻿<ContentDialog
+    x:Class="SoundByte.UWP.Dialogs.AppUpdateDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ShellBackground}">
+
+    <ScrollViewer HorizontalAlignment="Stretch"
+                  VerticalScrollBarVisibility="Hidden">
+        <StackPanel>
+            <TextBlock Text="&#xE76E;" 
+                       FontFamily="Segoe MDL2 Assets" 
+                       TextAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       FontSize="65" 
+                       Padding="5"
+                       Foreground="{ThemeResource SystemControlBackgroundAccentBrush}"
+                       Margin="20" />
+
+            <TextBlock Text="SoundByte was updated!" 
+                       TextAlignment="Center" 
+                       FontWeight="SemiBold"
+                       FontSize="22"
+                       Margin="5"
+                       VerticalAlignment="Center" />
+            <TextBlock TextWrapping="Wrap" 
+                       Opacity="0.8"
+                       FontWeight="SemiLight"
+                       TextAlignment="Center"
+                       Margin="2"
+                       Text="SoundByte was just updated! There are many new and exciting features waiting for you. Why not take a peek?" />
+
+            <Button Content="See What's New" 
+                    Width="250"
+                    Click="NavigateWhatNew" 
+                    Background="{ThemeResource SystemControlBackgroundAccentBrush}"
+                    BorderBrush="{ThemeResource SystemControlBackgroundAccentBrush}"
+                    Foreground="White"
+                    Padding="10,12"
+                    FontSize="16"
+                    Margin="0,35,0,0"
+                    HorizontalAlignment="Center" />
+
+            <HyperlinkButton Content="Close" 
+                             Margin="0,15,0,15"
+                             Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}"
+                             ContentTemplate="{StaticResource HyperlinkClean}"
+                             Click="{x:Bind Hide}" 
+                             HorizontalAlignment="Center" />
+        </StackPanel>
+    </ScrollViewer>
+</ContentDialog>
