@@ -643,7 +643,6 @@
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"
-               Background="{ThemeResource ShellBackground}"
                Margin="0,350,0,64"
                Padding="0" />
 
