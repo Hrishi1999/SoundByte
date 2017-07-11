@@ -8,6 +8,7 @@
 //*********************************************************
 
 using System.Collections.Generic;
+using System.Linq;
 using Windows.Storage;
 using SoundByte.UWP.Services;
 
@@ -143,13 +144,13 @@ namespace SoundByte.UWP.Common
             get
             {
                 // Check if the key has been stored locally
-                var key = ApplicationData.Current.LocalSettings.Values.ContainsKey("SoundByte.Keys.SCPI") ? ApplicationData.Current.LocalSettings.Values["SoundByte.Keys.SCPI"] as List<string> : null;
+                var key = ApplicationData.Current.LocalSettings.Values.ContainsKey("SoundByte.Keys.SCPI") ? ApplicationData.Current.LocalSettings.Values["SoundByte.Keys.SCPI"] as string : null;
 
                 if (key != null)
-                    return key;
+                    return key.Split(',').ToList();
 
                 var liveKey = SoundByteService.Current.GetSoundBytePlaybackKeys();
-                ApplicationData.Current.LocalSettings.Values.Add("SoundByte.Keys.SCPI", liveKey);
+                ApplicationData.Current.LocalSettings.Values.Add("SoundByte.Keys.SCPI", string.Join(",", liveKey));
 
                 return liveKey;
             }

@@ -40,10 +40,10 @@
 
             <brush:AcrylicHostBrush
                 x:Key="AppHostBackgroundBrush"
-                BackdropFactor="0.1"
+                BackdropFactor="0.15"
                 BlurAmount="10"
                 TintColor="{ThemeResource ShellNavigationBackgroundColor}"
-                TintColorFactor="0.9" />
+                TintColorFactor="0.85" />
 
             <!-- Shell Brushes -->
             <SolidColorBrush x:Key="ShellNavigationBackground" Color="{ThemeResource ShellNavigationBackgroundColor}" />

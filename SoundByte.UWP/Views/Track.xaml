@@ -181,10 +181,10 @@
                                       HorizontalAlignment="Left"
                                       IsTabStop="False"
                                       IsHitTestVisible="False"
-                                      BlurRadius="50"
-                                      ShadowOpacity="0.65"
+                                      BlurRadius="80"
+                                      ShadowOpacity="0.7"
                                       OffsetX="0"
-                                      OffsetY="0"
+                                      OffsetY="5"
                                       Color="Black">
                 <controls:ImageEx IsCacheEnabled="True"
                                   x:Name="ArtworkImage"
