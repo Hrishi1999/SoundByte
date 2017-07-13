@@ -32,10 +32,10 @@
                         <AdaptiveTrigger MinWindowWidth="768" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="StreamView.Margin" Value="50,0" />
+                        <Setter Target="StreamView.Padding" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="10,30,0,0"  />
-                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="DesktopCommandBar.Visibility" Value="Visible" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
                         <Setter Target="MobileCommandBar.Visibility" Value="Collapsed" />
@@ -77,17 +77,14 @@
                           SelectionMode="None"
                           IsSwipeEnabled="False"
                           IsItemClickEnabled="True"
-                          Margin="10,0,10,0"
+                          Padding="10,0,10,0"
                           ItemClick="{x:Bind ViewModel.NavigateStream}"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden"
                           HorizontalAlignment="Stretch"
                           VerticalAlignment="Stretch">
-            <interactivity:Interaction.Behaviors>
-                <behaviors:FadeHeaderBehavior />
-            </interactivity:Interaction.Behaviors>
+            
             <ListView.Header>
                 <StackPanel Canvas.ZIndex="20">
-                    <TextBlock Opacity="0" x:Name="TextHeader"  Text="Stream" FontWeight="SemiBold" FontSize="25" Margin="0,18,0,0" />
+                    <TextBlock Opacity="0" x:Name="TextHeader" Text="Stream" FontWeight="Bold" FontSize="25" Margin="0,18,0,0" />
 
                     <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="10,30,0,20">
                         <elements:CircleButton Glyph="&#xE768;" Label="Play All Tracks" Click="{x:Bind ViewModel.PlayAllTracks}" Margin="0,0,5,0" />
@@ -96,6 +93,9 @@
                     </StackPanel>
                 </StackPanel>
             </ListView.Header>
+            <interactivity:Interaction.Behaviors>
+                <behaviors:FadeHeaderBehavior />
+            </interactivity:Interaction.Behaviors>
         </ListView>
     </Grid>
 </Page>

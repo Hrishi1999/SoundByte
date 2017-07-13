@@ -23,10 +23,10 @@
                         <AdaptiveTrigger MinWindowWidth="768" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="StackPanel.Margin" Value="50,0" />
+                        <Setter Target="StackPanel.Padding" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
-                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
@@ -37,10 +37,9 @@
             <TextBlock Text="Upload" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
         </Grid>
 
-        <ScrollViewer HorizontalAlignment="Stretch"
-                      VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:Name="StackPanel" Margin="10,0">
-                <TextBlock x:Name="TextHeader" Opacity="0" Text="Upload" FontWeight="SemiBold" FontSize="25" Margin="0,0,0,0" />
+        <ScrollViewer HorizontalAlignment="Stretch">
+            <StackPanel x:Name="StackPanel" Padding="10,0">
+                <TextBlock x:Name="TextHeader" Opacity="0" Text="Upload" FontWeight="Bold" FontSize="25" Margin="0,0,0,0" />
                 <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,25,0,30" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Upload your track to SoundCloud below. Items marked with a * are required in order to upload your track." />
 
                 <Button BorderThickness="1" Padding="15,8"  BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" FontSize="16" x:Name="UploadRecording" Click="UploadRecording_Tapped" Content="Pick File" Width="390" Margin="0,10,0,0" />

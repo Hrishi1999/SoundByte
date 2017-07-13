@@ -24,10 +24,10 @@
                         <AdaptiveTrigger MinWindowWidth="768" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="StackPanel.Margin" Value="50,0" />
+                        <Setter Target="StackPanel.Padding" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
-                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
@@ -38,10 +38,9 @@
             <TextBlock Text="SoundByte v2" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
         </Grid>
 
-        <ScrollViewer HorizontalAlignment="Stretch"
-                      VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:Name="StackPanel" Margin="10,0">
-                <TextBlock x:Name="TextHeader" Opacity="0" Text="SoundByte v2" FontWeight="SemiBold" FontSize="25" Margin="0,0,0,0" />
+        <ScrollViewer HorizontalAlignment="Stretch">
+            <StackPanel x:Name="StackPanel" Padding="10,0">
+                <TextBlock x:Name="TextHeader" Opacity="0" Text="SoundByte v2" FontWeight="Bold" FontSize="25" Margin="0,0,0,0" />
                 <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,25,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SoundByte is a beautiful SoundCloud &amp; Fanburst client built for Windows 10 devices. Every feature has been hand designed and created for the best possible user experience. Features include listening to sounds, creating sets, receiving notifications, uploading sounds, and much more! " />
 
                 <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Licensed under the MIT License." />

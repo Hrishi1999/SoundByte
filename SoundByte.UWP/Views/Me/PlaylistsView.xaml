@@ -28,10 +28,10 @@
                         <AdaptiveTrigger MinWindowWidth="768" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="StackPanel.Margin" Value="50,0" />
+                        <Setter Target="StackPanel.Padding" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="10,30,0,0"  />
-                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="DesktopCommandBar.Visibility" Value="Visible" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
                         <Setter Target="MobileCommandBar.Visibility" Value="Collapsed" />
@@ -56,21 +56,20 @@
 
         <GridView ItemClick="{x:Bind NavigatePlaylist}"
                   ItemsSource="{x:Bind PlaylistModel}"
-                  Margin="10,0"
+                  Padding="10,0"
                   VerticalAlignment="Stretch"
                   SelectionMode="None"
                   x:Name="StackPanel"
                   IsSwipeEnabled="False"
                   IsItemClickEnabled="True"
                   HorizontalAlignment="Stretch"
-                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   ShowsScrollingPlaceholders="False"
                   IsMultiSelectCheckBoxEnabled="False"
                   animations:ReorderGridAnimation.Duration="150"
                   ItemTemplate="{StaticResource PlaylistItem}">
             <GridView.Header>
                 <StackPanel Canvas.ZIndex="20">
-                    <TextBlock Opacity="0" x:Name="TextHeader" Text="Playlists" FontWeight="SemiBold" FontSize="25" Margin="0,18,0,0" />
+                    <TextBlock Opacity="0" x:Name="TextHeader" Text="Playlists" FontWeight="Bold" FontSize="25" Margin="0,18,0,0" />
 
                     <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="10,30,0,20">
                         <userControls:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind PlaylistModel.RefreshItems}" Margin="0,0,5,0" />

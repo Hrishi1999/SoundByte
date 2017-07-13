@@ -91,34 +91,35 @@
         </VisualStateManager.VisualStateGroups>
         <ScrollViewer x:Name="MainScrollViewer"
                       ViewChanged="MainScrollViewerViewChanged"
-                      HorizontalAlignment="Stretch"
-                      VerticalScrollBarVisibility="Hidden">
+                      HorizontalAlignment="Stretch">
             <Grid>
                 <StackPanel Margin="50,0" x:Name="HeaderPanel" VerticalAlignment="Top">
-                    <!-- Background Image -->
-                        
-                    
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                         <!-- User Image -->
-                        <controls:DropShadowPanel HorizontalAlignment="Left" Height="240" Width="240" Margin="0,50,0,0"
-                                                  BlurRadius="8"
-                                                  ShadowOpacity="0.85"
+                        <controls:DropShadowPanel HorizontalAlignment="Left"  Margin="0,50,0,0"
+                                                  BlurRadius="25"
+                                                  ShadowOpacity="0.7"
                                                   OffsetX="0"
-                                                  OffsetY="0"
+                                                  OffsetY="5"
                                                   IsTabStop="False"
                                                   IsHitTestVisible="False"
                                                   Color="Black">
-                            <Ellipse HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                                <Ellipse.Fill>
-                                    <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind Path=ViewModel.User, Converter={StaticResource ArtworkImageSourceConverter}, Mode=OneWay}" />
-                                </Ellipse.Fill>
-                            </Ellipse>
+                            <controls:RoundImageEx Source="{x:Bind Path=ViewModel.User, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
+                                                   IsCacheEnabled="True"
+                                                   PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                                   PlaceholderStretch="UniformToFill"
+                                                   VerticalAlignment="Stretch"
+                                                   HorizontalAlignment="Stretch"
+                                                   CornerRadius="120"
+                                                   IsHitTestVisible="False"
+                                                   Height="240" Width="240"
+                                                   Stretch="Uniform" />
                         </controls:DropShadowPanel>
 
                         <!-- Detail Section -->
                         <StackPanel VerticalAlignment="Center" Margin="40,0,0,0">
                             <!-- Username -->
-                            <TextBlock Text="{x:Bind Path=ViewModel.User.Username, Mode=OneWay}" FontSize="50" FontWeight="SemiBold" TextAlignment="Center" />
+                            <TextBlock Text="{x:Bind Path=ViewModel.User.Username, Mode=OneWay}" Opacity="0.8" FontSize="50" FontWeight="Bold" TextAlignment="Center" />
                             <!-- Followers -->
                             <StackPanel Orientation="Horizontal"  Margin="0,15,0,0">
                                 <TextBlock Text="&#xE716;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="14" Opacity="0.8" />

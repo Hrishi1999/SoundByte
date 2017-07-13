@@ -30,7 +30,7 @@
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
                         <Setter Target="MainPivot.Margin" Value="50,170,50,0"  />
-                        <Setter Target="TextHeader.Opacity" Value="1" />
+                        <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="DesktopCommandBar.Visibility" Value="Visible" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
                         <Setter Target="MainSearchBox.Visibility" Value="Collapsed" />
@@ -62,7 +62,7 @@
         
         <!-- Title -->
         <StackPanel Margin="10,0" x:Name="Header">
-            <TextBlock Opacity="0" x:Name="TextHeader" Text="Search" FontWeight="SemiBold" FontSize="25" Margin="0,18,0,0"/>
+            <TextBlock Opacity="0" x:Name="TextHeader" Text="Search" FontWeight="Bold" FontSize="25" Margin="0,18,0,0"/>
 
             <!-- Main Search Bar -->
             <uiElements:SearchBox SearchSubmitted="{x:Bind ViewModel.Search}" 
@@ -93,7 +93,6 @@
                               IsSwipeEnabled="False"
                               IsItemClickEnabled="True"
                               ItemClick="{x:Bind ViewModel.NavigateItem}"
-                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
                               ShowsScrollingPlaceholders="False"
                               IsMultiSelectCheckBoxEnabled="False"
                               animations:ReorderGridAnimation.Duration="150"
@@ -114,7 +113,6 @@
                               IsSwipeEnabled="False"
                               IsItemClickEnabled="True"
                               ItemClick="{x:Bind ViewModel.NavigateItem}"
-                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
                               ShowsScrollingPlaceholders="False"
                               IsMultiSelectCheckBoxEnabled="False"
                               animations:ReorderGridAnimation.Duration="150"
@@ -135,7 +133,6 @@
                               IsSwipeEnabled="False"
                               IsItemClickEnabled="True"
                               ItemClick="{x:Bind ViewModel.NavigateItem}"
-                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
                               ShowsScrollingPlaceholders="False"
                               IsMultiSelectCheckBoxEnabled="False"
                               animations:ReorderGridAnimation.Duration="150"
@@ -156,7 +153,6 @@
                               IsSwipeEnabled="False"
                               IsItemClickEnabled="True"
                               ItemClick="{x:Bind ViewModel.NavigateItem}"
-                              ScrollViewer.VerticalScrollBarVisibility="Hidden"
                               ShowsScrollingPlaceholders="False"
                               IsMultiSelectCheckBoxEnabled="False"
                               animations:ReorderGridAnimation.Duration="150"
@@ -164,23 +160,6 @@
                               VerticalAlignment="Stretch" />
                 </Grid>
             </PivotItem>
-            
-            <!-- Display the searched people objects -->
-          <!--  <PivotItem x:Name="YouTubePivot" Header="YouTube [EXPERIMENTAL]">
-                <GridView x:Name="YoutubeView"
-                          ItemsSource="{x:Bind Path=ViewModel.YouTubeTracks}"
-                          ItemTemplate="{StaticResource TrackItem}"
-                          SelectionMode="None"
-                          IsSwipeEnabled="False"
-                          IsItemClickEnabled="True"
-                          ItemClick="{x:Bind ViewModel.NavigateYouTubeItem}"
-                          ScrollViewer.VerticalScrollBarVisibility="Hidden"
-                          ShowsScrollingPlaceholders="False"
-                          IsMultiSelectCheckBoxEnabled="False"
-                          animations:ReorderGridAnimation.Duration="150"
-                          HorizontalAlignment="Stretch"
-                          VerticalAlignment="Stretch" />
-            </PivotItem> -->
         </Pivot>
     </Grid>
 </Page>

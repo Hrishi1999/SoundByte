@@ -29,13 +29,12 @@
         <GridView x:Name="TracksView"
                   ItemsSource="{x:Bind ViewModel.Tracks}"
                   ItemTemplate="{StaticResource TrackItem}"
-                  Margin="50,0"
+                  Padding="50,0"
                   VerticalAlignment="Stretch"
                   SelectionMode="None"
                   IsSwipeEnabled="False"
                   IsItemClickEnabled="True"
                   HorizontalAlignment="Stretch"
-                  ScrollViewer.VerticalScrollBarVisibility="Hidden"
                   ShowsScrollingPlaceholders="False"
                   IsMultiSelectCheckBoxEnabled="False"
                   animations:ReorderGridAnimation.Duration="150"
@@ -65,7 +64,7 @@
 
                         <!-- Detail Section -->
                         <StackPanel VerticalAlignment="Center" Margin="40,0,0,0">
-                            <TextBlock Text="{x:Bind ViewModel.Playlist.Title, Mode=OneWay}" FontWeight="SemiBold" FontSize="50" TextTrimming="CharacterEllipsis" />
+                            <TextBlock Text="{x:Bind ViewModel.Playlist.Title, Mode=OneWay}" FontWeight="Bold" FontSize="50" TextTrimming="CharacterEllipsis" Opacity="0.8" />
                             <TextBlock Text="{x:Bind ViewModel.Playlist.User.Username, Mode=OneWay}" Opacity="0.7" FontSize="20" Margin="0,5,0,10" HorizontalAlignment="Left" TextWrapping="Wrap" />
 
                             <!-- Tracks -->
