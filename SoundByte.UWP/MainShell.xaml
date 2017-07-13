@@ -640,7 +640,7 @@
         <Canvas x:Name="ShellFrameShadow"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
-                Margin="0,350,0,64"
+                Margin="0,350,32,64"
                 Canvas.ZIndex="5" />
         
         <!-- Main Page Content will be rendered here -->
@@ -649,7 +649,7 @@
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"
-               Margin="0,350,0,64"
+               Margin="0,350,32,64"
                Padding="0" />
 
         <!-- Is displayed when performing tasks that take a long time -->

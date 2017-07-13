@@ -18,7 +18,6 @@ using Windows.Globalization;
 using Windows.Networking.PushNotifications;
 using Windows.Services.Store;
 using Windows.UI;
-using Windows.UI.Composition;
 using Windows.UI.Core;
 using Windows.UI.Notifications;
 using Windows.UI.Popups;
@@ -27,9 +26,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
-using Microsoft.Graphics.Canvas.Effects;
 using Microsoft.Toolkit.Uwp;
 using Microsoft.Toolkit.Uwp.Helpers;
 using Microsoft.WindowsAzure.Messaging;
@@ -41,7 +38,6 @@ using SoundByte.UWP.Views.Application;
 using SoundByte.UWP.Views.CoreApp;
 using SoundByte.UWP.Views.Me;
 using SoundByte.UWP.Views.Mobile;
-using UICompositionAnimations.Lights;
 
 namespace SoundByte.UWP
 {
@@ -542,16 +538,16 @@ namespace SoundByte.UWP
                     SplitViewPane.Visibility = Visibility.Visible;
                     if (Service.CurrentTrack == null)
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
 
                         HideNowPlayingBar();
                     }
                     else
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
                         ShowNowPlayingBar();
                     }
@@ -562,14 +558,14 @@ namespace SoundByte.UWP
             {
                 if (((Frame)sender).SourcePageType.Name == "Track")
                 {
-                    ShellFrame.Margin = new Thickness { Left = 0 };
-                    ShellFrameShadow.Margin = new Thickness { Left = 0 };
+                    ShellFrame.Margin = new Thickness { Left = 0, Top = 0 };
+                    ShellFrameShadow.Margin = new Thickness { Left = 0, Top = 0 };
                     SplitViewPane.Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    ShellFrame.Margin = new Thickness { Left = 50 };
-                    ShellFrameShadow.Margin = new Thickness { Left = 50 };
+                    ShellFrame.Margin = new Thickness { Left = 50, Top = 0};
+                    ShellFrameShadow.Margin = new Thickness { Left = 50, Top = 0 };
                     SplitViewPane.Visibility = Visibility.Visible;
                 }
             }
@@ -682,9 +678,9 @@ namespace SoundByte.UWP
 
             // Apply the shadow effects
             var shadowMobile = compositor.CreateDropShadow();
-            shadowMobile.Offset = new Vector3(-2, 0, 0);
-            shadowMobile.BlurRadius = 65;
-            shadowMobile.Color = new Color { A = 100, R = 30, G = 30, B = 30 };
+            shadowMobile.Offset = new Vector3(0, 0, 0);
+            shadowMobile.BlurRadius = 28;
+            shadowMobile.Color = new Color { A = 140, R = 30, G = 30, B = 30 };
 
             // Set the element visual
             shellFrameShadowVisual.Shadow = shadowMobile;

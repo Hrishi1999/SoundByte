@@ -48,16 +48,16 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                         <!-- Track Image -->
-                        <controls:DropShadowPanel BlurRadius="8"
-                                                  Width="240"
-                                                  Height="240"
+                        <controls:DropShadowPanel BlurRadius="25"
                                                   Margin="10,50,0,0"
-                                                  ShadowOpacity="0.85"
+                                                  ShadowOpacity="0.7"
                                                   OffsetX="0"
-                                                  OffsetY="0"
+                                                  OffsetY="5"
                                                   Color="Black">
                                         <controls:ImageEx IsCacheEnabled="True" 
                                                           Canvas.ZIndex="1" 
+                                                          Width="240"
+                                                          Height="240"
                                                           Source="{x:Bind ViewModel.Playlist, Converter={StaticResource ArtworkConverter}, Mode=OneWay}" 
                                                           VerticalAlignment="Stretch" 
                                                           HorizontalAlignment="Stretch" />

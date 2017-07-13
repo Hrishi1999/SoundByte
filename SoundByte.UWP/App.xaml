@@ -24,8 +24,8 @@
                 <!-- Light -->
                 <ResourceDictionary x:Key="Light">
                     <!-- Shell Colors --> 
-                    <Color x:Key="ShellNavigationBackgroundColor">#FFDCDCDC</Color>
-                    <Color x:Key="ShellBackgroundColor">#FFE8E8E8</Color>
+                    <Color x:Key="ShellNavigationBackgroundColor">#FFE8E8E8</Color>
+                    <Color x:Key="ShellBackgroundColor">#FFF8F8F8</Color>
                     <!-- Grey Background Color -->
                     <SolidColorBrush x:Key="SecondaryBackgroundColor" Color="#15000000" />
                 </ResourceDictionary>
@@ -50,10 +50,10 @@
             <brushes:CustomAcrylicBrush
                 x:Key="AppHostBackgroundBrush"
                 Mode="HostBackdrop"
-                BlurAmount="8"
+                BlurAmount="12"
                 Tint="{StaticResource ShellNavigationBackgroundColor}"  
-                TintMix="0.6"
-                NoiseTextureUri="/Assets/Misc/noise.png"/>
+                TintMix="0.7"
+                NoiseTextureUri="/Assets/Misc/lightnoise.png"/>
             
             <!-- Shell Brushes -->
             <SolidColorBrush x:Key="ShellNavigationBackground" Color="{ThemeResource ShellNavigationBackgroundColor}" />

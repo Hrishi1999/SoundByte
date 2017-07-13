@@ -110,6 +110,7 @@
     <Content Include="Assets\BadgeLogo.scale-150.png" />
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\Misc\lightnoise.png" />
     <Content Include="Assets\Misc\noise.png" />
     <Content Include="Assets\PlaceholderBackground.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
