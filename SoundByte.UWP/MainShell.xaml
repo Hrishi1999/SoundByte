@@ -6,12 +6,18 @@
     xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:converters="using:SoundByte.UWP.Converters"
-    xmlns:interactivity="using:Microsoft.Xaml.Interactivity">
+    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:lights="using:UICompositionAnimations.Lights"
+    xmlns:brushes="using:UICompositionAnimations.Brushes">
 
     <Page.Resources>
         <converters:SliderValueConverter x:Key="SliderValueConverter" />
         <converters:NowPlayingVisibilityConverter x:Key="NullVisibilityConverter" />
- 
+
+        <brushes:LightingBrush
+            x:Key="ButtonLightingBrush"
+            lights:PointerPositionSpotLight.IsTarget="True"/>
+
         <Style x:Key="MainSliderStyle" TargetType="Slider">
             <Setter Property="Background" Value="{ThemeResource SystemControlForegroundBaseMediumLowBrush}"/>
             <Setter Property="BorderThickness" Value="{ThemeResource SliderBorderThemeThickness}"/>
@@ -285,16 +291,13 @@
                               IsTabStop="False"
                               IsHitTestVisible="False"
                               Canvas.ZIndex="20">
-                <interactivity:Interaction.Behaviors>
-                    <behaviors:Blur Value="25" AutomaticallyStart="True"/>
-                </interactivity:Interaction.Behaviors>
             </controls:ImageEx>
 
             <!-- Fade the background so white text is easy to read -->
             <Grid Canvas.ZIndex="30" 
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch" 
-                  Background="#99000000"
+                  Background="{StaticResource TrackBlurBrush}"
                   IsHitTestVisible="False"
                   Margin="0" />
 
@@ -452,6 +455,9 @@
                                  FocusVisualMargin="0"
                                  HorizontalAlignment="Stretch" 
                                  GroupName="NavPaneButtons" 
+                                 BorderThickness="1"
+                                 BorderBrush="{StaticResource ButtonLightingBrush}"
+                                 Background="{StaticResource ButtonLightingBrush}"
                                  Style="{StaticResource NavigationButtonStyle}" 
                                  Tag="&#xEA37;" 
                                  Content="Stream" 
@@ -591,17 +597,17 @@
             <Button x:Name="UserButton" 
                     Canvas.ZIndex="15"
                     Grid.Row="1"
-                    Background="Transparent"
+                    Background="{StaticResource ButtonLightingBrush}"
                     FocusVisualPrimaryThickness="0"
                     FocusVisualSecondaryThickness="0"
                     FocusVisualMargin="0"
-                    BorderBrush="{x:Null}"
+                    BorderBrush="{StaticResource ButtonLightingBrush}"
                     HorizontalContentAlignment="Stretch"
                     VerticalContentAlignment="Stretch"
                     Padding="0"
                     Click="NavigateUserProfile"
                     Margin="0"
-                    BorderThickness="0"
+                    BorderThickness="1"
                     Height="48" 
                     HorizontalAlignment="Stretch">
                 <Grid HorizontalAlignment="Stretch"

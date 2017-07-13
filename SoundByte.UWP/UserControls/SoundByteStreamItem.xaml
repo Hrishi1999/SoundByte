@@ -49,7 +49,7 @@
             <Grid>
 
                 <!-- Transparent element that covers background canvas, makes image darker so white text and icons are easy to see -->
-                <Grid Canvas.ZIndex="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#99000000" />
+                <Grid Canvas.ZIndex="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource TrackBlurBrush}" />
                 <!-- Background Image -->
                 <control:ImageEx Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
                                  PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
@@ -134,7 +134,7 @@
                                  x:DeferLoadStrategy="Lazy">
             <Grid>
                 <!-- Transparent element that covers background canvas, makes image darker so white text and icons are easy to see -->
-                <Grid Canvas.ZIndex="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#99000000" />
+                <Grid Canvas.ZIndex="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource TrackBlurBrush}" />
                 <!-- Background Image -->
                 <control:ImageEx Source="{x:Bind Path=Playlist, Converter={StaticResource ArtworkConverter}, Mode=OneWay}" 
                                  IsCacheEnabled="True"

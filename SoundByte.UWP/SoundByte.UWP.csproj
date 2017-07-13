@@ -110,6 +110,7 @@
     <Content Include="Assets\BadgeLogo.scale-150.png" />
     <Content Include="Assets\BadgeLogo.scale-200.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
+    <Content Include="Assets\Misc\noise.png" />
     <Content Include="Assets\PlaceholderBackground.png" />
     <Content Include="Assets\SplashScreen.scale-400.png" />
     <Content Include="Assets\Square150x150Logo.scale-100.png" />
@@ -145,9 +146,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Brushes\AcrylicBrush.cs" />
-    <Compile Include="Brushes\AcrylicBrushBase.cs" />
-    <Compile Include="Brushes\AcrylicHostBrush.cs" />
     <Compile Include="Common\CompositionBrushBuilder.cs" />
     <Compile Include="Common\DataTemplates.cs" />
     <Compile Include="Common\ServiceKeys.cs" />
@@ -475,6 +473,9 @@
     <SDKReference Include="WindowsMobile, Version=10.0.15063.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ResourceDictionaries\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -15,6 +15,7 @@ using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Push;
 using Microsoft.HockeyApp;
+using SoundByte.UWP.Helpers;
 
 namespace SoundByte.UWP.Services
 {
@@ -55,7 +56,7 @@ namespace SoundByte.UWP.Services
 #if DEBUG
                 // Disable this on debug
                 AnalyticsManager.Current.AppOptOut = true;
-                MobileCenter.Enabled = false;
+                AsyncHelper.RunSync(async () => await MobileCenter.SetEnabledAsync(false));
 #endif
             }
             catch

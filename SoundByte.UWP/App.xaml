@@ -3,8 +3,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:c="using:SoundByte.UWP.Converters"
     xmlns:common="using:SoundByte.UWP.Common"
-    xmlns:brush="using:SoundByte.UWP.Brushes"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:brushes="using:UICompositionAnimations.Brushes">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -38,13 +38,23 @@
             <c:ModernDateTimeConverter x:Key="ModernDateTimeConverter" />
             <c:TimeStampConverter x:Key="TimeStampConverter" />
 
-            <brush:AcrylicHostBrush
-                x:Key="AppHostBackgroundBrush"
-                BackdropFactor="0.15"
-                BlurAmount="10"
-                TintColor="{ThemeResource ShellNavigationBackgroundColor}"
-                TintColorFactor="0.85" />
 
+            <brushes:CustomAcrylicBrush
+                x:Key="TrackBlurBrush"
+                Mode="InAppBlur"
+                BlurAmount="18"
+                Tint="#FF000000"
+                TintMix="0.6"
+                NoiseTextureUri="/Assets/Misc/noise.png"/>
+
+            <brushes:CustomAcrylicBrush
+                x:Key="AppHostBackgroundBrush"
+                Mode="HostBackdrop"
+                BlurAmount="8"
+                Tint="{StaticResource ShellNavigationBackgroundColor}"  
+                TintMix="0.6"
+                NoiseTextureUri="/Assets/Misc/noise.png"/>
+            
             <!-- Shell Brushes -->
             <SolidColorBrush x:Key="ShellNavigationBackground" Color="{ThemeResource ShellNavigationBackgroundColor}" />
             <SolidColorBrush x:Key="ShellBackground" Color="{ThemeResource ShellBackgroundColor}" />

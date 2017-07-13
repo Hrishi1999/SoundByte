@@ -27,6 +27,7 @@ using SoundByte.UWP.Helpers;
 using SoundByte.UWP.Services;
 using SoundByte.UWP.Views;
 using SoundByte.UWP.Views.CoreApp;
+using UICompositionAnimations.Lights;
 
 namespace SoundByte.UWP
 {
@@ -510,6 +511,11 @@ namespace SoundByte.UWP
 
             // Set the root shell as the window content
             Window.Current.Content = rootShell;
+
+            Window.Current.Content.Lights.Add(new PointerPositionSpotLight
+            {
+               Active = true
+            });
 
             // If on xbox display the screen to the full width and height
             if (IsXbox)

@@ -41,6 +41,7 @@ using SoundByte.UWP.Views.Application;
 using SoundByte.UWP.Views.CoreApp;
 using SoundByte.UWP.Views.Me;
 using SoundByte.UWP.Views.Mobile;
+using UICompositionAnimations.Lights;
 
 namespace SoundByte.UWP
 {
@@ -90,6 +91,8 @@ namespace SoundByte.UWP
                 else
                     ShowNowPlayingBar();
             };
+
+       //     Window.Current.Content.Lights.Add(new PointerPositionSpotLight());
 
             // Create the blur for desktop
             if (App.IsDesktop)
