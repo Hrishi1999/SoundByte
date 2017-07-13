@@ -151,7 +151,7 @@
 
         <!-- Transparent element that covers background canvas, makes image darker so white text and icons are easy to see -->
         <Grid x:Name="Overlay"
-          Canvas.ZIndex="2"
+          Canvas.ZIndex="3"
           HorizontalAlignment="Stretch"
           VerticalAlignment="Stretch"
           IsHitTestVisible="False">
@@ -165,11 +165,11 @@
 
         <!-- Reversed blur for overlay -->
         <Grid x:Name="BlurOverlay"
-          Visibility="Collapsed"
+          Opacity="0"
           Canvas.ZIndex="2"
           HorizontalAlignment="Stretch"
           VerticalAlignment="Stretch"
-          Background="#85000000"
+          Background="{StaticResource BackgroundTrackBlurBrush}"
           IsHitTestVisible="False" />
 
         <Grid x:Name="TrackInfoHolder" VerticalAlignment="Bottom" Canvas.ZIndex="10">

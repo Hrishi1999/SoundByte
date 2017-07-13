@@ -14,7 +14,10 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Toolkit.Uwp.UI.Animations;
+using Microsoft.Toolkit.Uwp.UI.Controls;
 using SoundByte.UWP.Services;
+using UICompositionAnimations.Behaviours;
+using UICompositionAnimations.Behaviours.Effects;
 
 namespace SoundByte.UWP.Views
 {
@@ -52,7 +55,7 @@ namespace SoundByte.UWP.Views
         /// <summary>
         /// Setup the view model, passing in the navigation events.
         /// </summary>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             // Setup view model
             ViewModel.SetupModel();
@@ -124,8 +127,6 @@ namespace SoundByte.UWP.Views
             App.OverrideBackEvent = false;
             SystemNavigationManager.GetForCurrentView().BackRequested -= Track_BackRequested;
 
-            BackgroundImage.Blur(0, 450).Start();
-
             ButtonHolder.Visibility = Visibility.Visible;
             ButtonHolder.Offset(0, 0, 450).Fade(1, 250).Start();
 
@@ -152,8 +153,6 @@ namespace SoundByte.UWP.Views
 
             App.OverrideBackEvent = true;
             SystemNavigationManager.GetForCurrentView().BackRequested += Track_BackRequested;
-
-            BackgroundImage.Blur(50, 450).Start();
 
             var buttonHolderShowAnimation = ButtonHolder.Offset(0, 120, 450).Fade(0, 250);
             buttonHolderShowAnimation.Completed += (o, args) => { ButtonHolder.Visibility = Visibility.Collapsed; };

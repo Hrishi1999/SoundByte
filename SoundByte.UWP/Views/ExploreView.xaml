@@ -9,7 +9,7 @@
     xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
     xmlns:stateTriggers="using:SoundByte.UWP.StateTriggers"
     Transitions="{StaticResource MainTransition}">
-
+    
     <Grid Background="{ThemeResource ShellBackground}" x:Name="RootGrid">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="DeviceStates">
@@ -97,7 +97,15 @@
                             <ComboBoxItem Tag="trending" x:Uid="ExploreTypeCombo_trending" />
                         </ComboBox>
                         <!-- Lets the user switch between each category -->
-                        <ComboBox BorderThickness="1" BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" x:Name="ExploreGenreCombo" Grid.Column="1" SelectionChanged="{x:Bind OnComboBoxChanged}" Margin="5" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <ComboBox BorderThickness="1" 
+                                  BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" 
+                                  x:Name="ExploreGenreCombo"
+                                  Grid.Column="1" 
+                                  SelectionChanged="{x:Bind OnComboBoxChanged}" 
+                                  Margin="5"
+                                  HorizontalContentAlignment="Stretch" 
+                                  HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="GENERAL" IsEnabled="False" />
                             <ComboBoxItem Tag="all-music" x:Uid="ExploreGenreCombo_AllMusicGenres" IsSelected="True"/>
                             <ComboBoxItem Tag="all-audio" x:Uid="ExploreGenreCombo_AllAudioGenres" />
                             <ComboBoxItem x:Uid="ExploreGenreCombo_music" IsEnabled="False" />
@@ -155,7 +163,7 @@
             </GridView.Header>
             <interactivity:Interaction.Behaviors>
                 <behaviors:FadeHeaderBehavior />
-            </interactivity:Interaction.Behaviors>
+            </interactivity:Interaction.Behaviors>  
         </GridView>
     </Grid>
 </Page>
