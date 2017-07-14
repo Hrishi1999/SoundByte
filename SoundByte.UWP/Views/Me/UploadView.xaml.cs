@@ -255,7 +255,7 @@ namespace SoundByte.UWP.Views.Me
             }
             else
             {
-                App.NavigateTo(typeof(Home));
+                App.NavigateTo(typeof(StreamView));
             }
         }
 

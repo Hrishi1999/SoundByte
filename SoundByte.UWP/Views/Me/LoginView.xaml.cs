@@ -206,7 +206,7 @@ namespace SoundByte.UWP.Views.Me
                                                 {
                                                     { "service", accountType }
                                                 });
-                                                App.NavigateTo(typeof(Home));
+                                                App.NavigateTo(typeof(StreamView));
                                             }
                                         }
                                     }

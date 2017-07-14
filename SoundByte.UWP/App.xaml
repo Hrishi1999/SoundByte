@@ -58,7 +58,7 @@
             <brushes:CustomAcrylicBrush
                 x:Key="BackgroundTrackBlurBrush"
                 Mode="InAppBlur"
-                BlurAmount="48"
+                BlurAmount="28"
                 Tint="#FF000000"
                 TintMix="0.6"
                 NoiseTextureUri="/Assets/Misc/lightnoise.png"/>

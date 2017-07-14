@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="SoundByte.UWP.Views.Home"
+    x:Class="SoundByte.UWP.Views.StreamView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:elements="using:SoundByte.UWP.UserControls"
@@ -32,7 +32,7 @@
                         <AdaptiveTrigger MinWindowWidth="768" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="StreamView.Padding" Value="50,0" />
+                        <Setter Target="StreamListView.Padding" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
                         <Setter Target="TextHeader.Margin" Value="10,30,0,0"  />
                         <Setter Target="TextHeader.Opacity" Value="0.8" />
@@ -71,7 +71,7 @@
         </CommandBar>
 
         <!-- Displays the users stream -->
-        <ListView x:Name="StreamView"
+        <ListView x:Name="StreamListView"
                           ItemsSource="{x:Bind Path=ViewModel.StreamItems}"
                           ItemTemplate="{StaticResource StreamItem}"
                           SelectionMode="None"
@@ -86,7 +86,7 @@
                 <StackPanel Canvas.ZIndex="20">
                     <TextBlock Opacity="0" x:Name="TextHeader" Text="Stream" FontWeight="Bold" FontSize="25" Margin="0,18,0,0" />
 
-                    <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="10,30,0,20">
+                    <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="0,20,0,20">
                         <elements:CircleButton Glyph="&#xE768;" Label="Play All Tracks" Click="{x:Bind ViewModel.PlayAllTracks}" Margin="0,0,5,0" />
                         <elements:CircleButton Glyph="&#xE8B1;" Label="Shuffle Play Tracks" Click="{x:Bind ViewModel.PlayShuffleTracks}" Margin="0,0,5,0" />
                         <elements:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshItems}" Margin="0,0,5,0" />

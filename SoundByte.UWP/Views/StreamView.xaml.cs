@@ -19,15 +19,15 @@ namespace SoundByte.UWP.Views
     /// This page displays the users stream, the latest/trending tracks,
     /// and the users playlists/likes.
     /// </summary>
-    public sealed partial class Home
+    public sealed partial class StreamView
     {
         // The view model
-        public HomeViewModel ViewModel = new HomeViewModel();
+        public StreamViewModel ViewModel = new StreamViewModel();
 
         /// <summary>
         /// Setup page and init the xaml
         /// </summary>
-        public Home()
+        public StreamView()
         {
             InitializeComponent();
             // This page must be cached
@@ -44,7 +44,7 @@ namespace SoundByte.UWP.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // Set the last visited frame (crash handling)
-            SettingsService.Current.LastFrame = typeof(Home).FullName;
+            SettingsService.Current.LastFrame = typeof(StreamView).FullName;
             // Always clear the backstack when navigating to the main page
             Frame.BackStack.Clear();
             // Store the latest time (for notification task)

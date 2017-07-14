@@ -166,9 +166,9 @@ namespace SoundByte.UWP
                 }
                 else
                 {
-                    if (RootFrame.SourcePageType == typeof(Home)) return;
+                    if (RootFrame.SourcePageType == typeof(StreamView)) return;
 
-                    RootFrame.Navigate(typeof(Home));
+                    RootFrame.Navigate(typeof(StreamView));
                     e.Handled = true;
                 }
             }
@@ -334,7 +334,7 @@ namespace SoundByte.UWP
             }
 
             if (SoundByteService.Current.IsSoundCloudAccountConnected)
-                RootFrame.Navigate(typeof(Home));
+                RootFrame.Navigate(typeof(StreamView));
             else
                 RootFrame.Navigate(typeof(ExploreView));
         }
@@ -345,7 +345,7 @@ namespace SoundByte.UWP
         {
             if (BlockNavigation) return;
 
-            RootFrame.Navigate(typeof(Home));
+            RootFrame.Navigate(typeof(StreamView));
         }
 
         private void NavigateSettings(object sender, RoutedEventArgs e)
@@ -453,7 +453,7 @@ namespace SoundByte.UWP
             // Update the side bar
             switch (((Frame)sender).SourcePageType.Name)
             {
-                case "Home":
+                case "StreamView":
                     StreamTab.IsChecked = true;
                     MobileHomeTab.IsChecked = true;
                     break;
@@ -509,7 +509,7 @@ namespace SoundByte.UWP
 
             RootFrame.Focus(FocusState.Keyboard);
 
-            if (((Frame)sender).SourcePageType == typeof(Home) || ((Frame)sender).SourcePageType == typeof(MainShell))
+            if (((Frame)sender).SourcePageType == typeof(StreamView) || ((Frame)sender).SourcePageType == typeof(MainShell))
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                     AppViewBackButtonVisibility.Collapsed;
             else
@@ -650,12 +650,12 @@ namespace SoundByte.UWP
 
             var nowPlayingSpriteVisual = compositor.CreateSpriteVisual();
 
-            var shadowMobile = compositor.CreateDropShadow();
-            shadowMobile.Offset = new Vector3(0, -3, 0);
-            shadowMobile.BlurRadius = 35;
-            shadowMobile.Color = new Color { A = 160, R = 20, G = 20, B = 20 };
+            var nowPlayingDropShadow = compositor.CreateDropShadow();
+            nowPlayingDropShadow.Offset = new Vector3(0, -3, 0);
+            nowPlayingDropShadow.BlurRadius = 35;
+            nowPlayingDropShadow.Color = new Color { A = 180, R = 0, G = 0, B = 0 };
 
-            nowPlayingSpriteVisual.Shadow = shadowMobile;
+            nowPlayingSpriteVisual.Shadow = nowPlayingDropShadow;
 
             // Set the element visual
             ElementCompositionPreview.SetElementChildVisual(NowplayingShadow, nowPlayingSpriteVisual);
@@ -677,13 +677,13 @@ namespace SoundByte.UWP
             var shellFrameShadowVisual = compositor.CreateSpriteVisual();
 
             // Apply the shadow effects
-            var shadowMobile = compositor.CreateDropShadow();
-            shadowMobile.Offset = new Vector3(0, 0, 0);
-            shadowMobile.BlurRadius = 26;
-            shadowMobile.Color = new Color { A = 120, R = 0, G = 0, B = 0 };
+            var shellDropShadow = compositor.CreateDropShadow();
+            shellDropShadow.Offset = new Vector3(0, 0, 0);
+            shellDropShadow.BlurRadius = 16;
+            shellDropShadow.Color = new Color { A = 110, R = 0, G = 0, B = 0 };
 
             // Set the element visual
-            shellFrameShadowVisual.Shadow = shadowMobile;
+            shellFrameShadowVisual.Shadow = shellDropShadow;
             ElementCompositionPreview.SetElementChildVisual(ShellFrameShadow, shellFrameShadowVisual);
 
             // Get the shell frame for animation purposes
