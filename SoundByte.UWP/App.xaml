@@ -46,7 +46,32 @@
 
             <brushes:LightingBrush x:Key="ComboBoxLightingBrush"
                                    lights:PointerPositionSpotLight.IsTarget="True" />
-            
+
+            <brushes:LightingBrush
+                x:Key="ButtonLightingBrush"
+                SpecularShine=".01"
+                SpecularAmount=".01"
+                DiffuseAmount="0.1"
+                Opacity=".4"
+                lights:PointerPositionSpotLight.IsTarget="True"/>
+
+            <brushes:LightingBrush
+                x:Key="ButtonPressedLightingBrush"
+                SpecularShine=".01"
+                SpecularAmount=".01"
+                DiffuseAmount="1.5"
+                Opacity=".4"
+                lights:PointerPositionSpotLight.IsTarget="True"/>
+
+            <brushes:LightingBrush
+                x:Key="ButtonBorderLightingBrush"
+                SpecularShine=".1"
+                SpecularAmount=".1"
+                DiffuseAmount=".8"
+                Opacity="0.8"
+                lights:PointerPositionSpotLight.IsTarget="True"/>
+
+
             <brushes:CustomAcrylicBrush
                 x:Key="TrackBlurBrush"
                 Mode="InAppBlur"

@@ -14,10 +14,7 @@
         <converters:SliderValueConverter x:Key="SliderValueConverter" />
         <converters:NowPlayingVisibilityConverter x:Key="NullVisibilityConverter" />
 
-        <brushes:LightingBrush
-            x:Key="ButtonLightingBrush"
-            lights:PointerPositionSpotLight.IsTarget="True"/>
-
+       
         <Style x:Key="MainSliderStyle" TargetType="Slider">
             <Setter Property="Background" Value="{ThemeResource SystemControlForegroundBaseMediumLowBrush}"/>
             <Setter Property="BorderThickness" Value="{ThemeResource SliderBorderThemeThickness}"/>
@@ -93,14 +90,14 @@
         </Style>
 
         <Style TargetType="RadioButton" x:Key="NavigationButtonStyle">
-            <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundAccentBrush}" />
+            <Setter Property="Background" Value="Transparent" />
             <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}"/>
             <Setter Property="MinWidth" Value="{ThemeResource SplitViewCompactPaneThemeLength}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
 
-                        <Grid x:Name="RootGrid" Background="Transparent">
+                        <Grid x:Name="RootGrid" Background="Transparent" BorderThickness="0,1,0,1" BorderBrush="{StaticResource ButtonBorderLightingBrush}">
 
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="Common">
@@ -110,7 +107,7 @@
                                             <ObjectAnimationUsingKeyFrames
                                                 Storyboard.TargetName="RootGrid"
                                                 Storyboard.TargetProperty="Background">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightListLowBrush}" />
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonLightingBrush}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
@@ -120,7 +117,7 @@
                                             <ObjectAnimationUsingKeyFrames
                                                 Storyboard.TargetName="RootGrid"
                                                 Storyboard.TargetProperty="Background">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightListMediumBrush}" />
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonPressedLightingBrush}" />
                                             </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
