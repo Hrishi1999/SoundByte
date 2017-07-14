@@ -35,37 +35,283 @@
         </VisualStateManager.VisualStateGroups>
 
         <Grid x:Name="MobileGrid" Visibility="Visible" Background="{ThemeResource ShellNavigationBackground}" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="48" Canvas.ZIndex="100">
-            <TextBlock Text="SoundByte v2" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
+            <TextBlock Text="SoundByte v2.1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
         </Grid>
 
         <ScrollViewer HorizontalAlignment="Stretch">
             <StackPanel x:Name="StackPanel" Padding="10,0">
-                <TextBlock x:Name="TextHeader" Opacity="0" Text="SoundByte v2" FontWeight="Bold" FontSize="25" Margin="0,0,0,0" />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,25,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SoundByte is a beautiful SoundCloud &amp; Fanburst client built for Windows 10 devices. Every feature has been hand designed and created for the best possible user experience. Features include listening to sounds, creating sets, receiving notifications, uploading sounds, and much more! " />
+                <TextBlock x:Name="TextHeader" Opacity="0" Text="SoundByte v2.1" FontWeight="Bold" FontSize="25" Margin="0,0,0,0" />
+                <TextBlock Opacity="0.7" FontSize="14" Margin="0,25,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="SoundByte is a beautiful SoundCloud &amp; Fanburst client built for Windows 10 devices. Every feature has been hand designed and created for the best possible user experience. Features include listening to sounds, creating sets, receiving notifications, uploading sounds, and much more! " />
 
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Licensed under the MIT License." />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Orginally created by Dominic Maas. Maintained by the wonderful GitHub community." />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="AppVersion" />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="AppBuildBranch" />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="AppBuildVersion" />
-                <TextBlock MaxWidth="390" Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" x:Name="AppBuildTime" />
+                <TextBlock Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Licensed under the MIT License." />
+                <TextBlock Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Created by Dominic Maas (@dominicjmaas)." />
+                <TextBlock Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Designed by DennisBednarz (@DennisBednarz)." />
+                <TextBlock Opacity="0.7" FontSize="14" Margin="0,2,0,2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Maintained by the wonderful GitHub community." />
 
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="What's New" Click="{x:Bind NavigateNew}" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Rate and Review" Click="{x:Bind RateAndReview}" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Report Bugs / Issues" NavigateUri="https://github.com/DominicMaas/SoundByte/issues" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Reddit" NavigateUri="http://gridentertainment.net/fwlink/68vfoKLYJS" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Facebook" NavigateUri="http://gridentertainment.net/fwlink/rOye5hzCXt" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="GitHub" NavigateUri="https://github.com/DominicMaas/SoundByte" ContentTemplate="{StaticResource HyperlinkClean}" />
+                <GridView IsItemClickEnabled="False"
+                          Margin="0,15,0,0"
+                          SelectionMode="None"
+                          IsTapEnabled="False">
+                    <GridView.Items>
 
-                <TextBlock Text="Privacy" FontWeight="SemiBold" FontSize="22" Margin="0,30,0,0" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="SoundByte Privacy Policy" NavigateUri="http://gridentertainment.net/fwlink/Y5jGLtoFXs" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="SoundCloud Privacy Policy" NavigateUri="https://soundcloud.com/pages/privacy" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Fanburst Privacy Policy" NavigateUri="https://fanburst.com/privacy" ContentTemplate="{StaticResource HyperlinkClean}" />
+                        <Grid BorderThickness="1"
+                              Width="128"
+                              Height="128"
+                              Background="{ThemeResource ShellNavigationBackground}"
+                              BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xECC5;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Version"
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                                <TextBlock x:Name="AppVersion"
+                                           Margin="0,2,0,0"
+                                           Opacity="0.6"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Grid>
 
-                <TextBlock Text="Legal" FontWeight="SemiBold" FontSize="22" Margin="0,40,0,0" />
-                <TextBlock HorizontalAlignment="Left" MaxWidth="390" FontSize="14" TextWrapping="Wrap" Opacity="0.8"  Text="This application (SoundByte) makes use of the SoundCloud® Application Programming Interface (API), and is not endorsed or certified in anyway by SoundCloud Ltd." Margin="0,10,0,10" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="SoundCloud Terms of Use" NavigateUri="https://soundcloud.com/terms-of-use" ContentTemplate="{StaticResource HyperlinkClean}" />
-                <HyperlinkButton Foreground="{ThemeResource AppBarButtonForeground}" FontSize="16" Content="Fanburst Terms of Service" NavigateUri="https://fanburst.com/terms" ContentTemplate="{StaticResource HyperlinkClean}" />
+                        <Grid BorderThickness="1"
+                              Width="128"
+                              Height="128"
+                              Background="{ThemeResource ShellNavigationBackground}"
+                              BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xEC7A;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Branch"
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                                <TextBlock x:Name="AppBuildBranch"
+                                           Margin="0,2,0,0"
+                                           Opacity="0.6"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid BorderThickness="1"
+                              Width="128"
+                              Height="128"
+                              Background="{ThemeResource ShellNavigationBackground}"
+                              BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xEC92;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Build Time"
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                                <TextBlock x:Name="AppBuildTime"
+                                           Margin="0,2,0,0"
+                                           Opacity="0.6"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Grid>
+
+                        <Button Click="{x:Bind NavigateNew}"  
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE8F3;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="What's New" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind RateAndReview}"  
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE1CE;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Rate &amp; Review" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigateBugs}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xEA37;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Report Bug" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigateFeedback}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xED15;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Feedback" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigateReddit}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE12B;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Reddit" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigateFacebook}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE12B;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Facebook" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigateGitHub}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE12B;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="GitHub" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+
+                        <Button Click="{x:Bind NavigatePrivacy}" 
+                                BorderThickness="1"
+                                Width="128"
+                                Height="128"
+                                Background="{ThemeResource ShellNavigationBackground}"
+                                BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                                <TextBlock Text="&#xE727;" 
+                                           FontFamily="Segoe MDL2 Assets"
+                                           TextAlignment="Center"
+                                           Foreground="{ThemeResource SystemControlForegroundAccentBrush}"
+                                           HorizontalAlignment="Center" 
+                                           FontSize="36" />
+                                <TextBlock Text="Privacy Policy" 
+                                           Margin="0,10,0,0"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Center" 
+                                           TextAlignment="Center"
+                                           FontSize="16" />
+                            </StackPanel>
+                        </Button>
+                    </GridView.Items>
+                </GridView>
             </StackPanel>
         </ScrollViewer>
     </Grid>

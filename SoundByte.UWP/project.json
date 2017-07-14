@@ -15,7 +15,7 @@
     "NotificationsExtensions.Win10": "14332.0.2",
     "Robmikh.CompositionSurfaceFactory": "0.7.1",
     "System.ValueTuple": "4.3.1",
-    "UICompositionAnimations": "2.8.2",
+    "UICompositionAnimations": "2.8.3",
     "UWP.SDKforGoogleAnalytics.Managed": "1.5.2",
     "Win2D.uwp": "1.21.0",
     "WindowsAzure.Messaging.Managed": "0.1.7.9",
