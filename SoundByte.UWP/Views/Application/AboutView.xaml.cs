@@ -34,7 +34,7 @@ namespace SoundByte.UWP.Views.Application
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             // Set the app version
-            AppVersion.Text = $"Version: {Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
+            AppVersion.Text = $"{Package.Current.Id.Version.Major}.{Package.Current.Id.Version.Minor}.{Package.Current.Id.Version.Build}.{Package.Current.Id.Version.Revision}";
             AppBuildBranch.Text = "...";
             AppBuildTime.Text = "...";
 

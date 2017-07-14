@@ -3,7 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="using:Coding4Fun.Toolkit.Controls"
-    Background="{ThemeResource ShellBackground}">
+    Background="{StaticResource ContentDialogBackgroundBrush}">
 
     <ScrollViewer HorizontalAlignment="Stretch"
                   VerticalScrollBarVisibility="Hidden">

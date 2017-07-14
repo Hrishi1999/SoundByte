@@ -679,8 +679,8 @@ namespace SoundByte.UWP
             // Apply the shadow effects
             var shadowMobile = compositor.CreateDropShadow();
             shadowMobile.Offset = new Vector3(0, 0, 0);
-            shadowMobile.BlurRadius = 28;
-            shadowMobile.Color = new Color { A = 140, R = 30, G = 30, B = 30 };
+            shadowMobile.BlurRadius = 26;
+            shadowMobile.Color = new Color { A = 120, R = 0, G = 0, B = 0 };
 
             // Set the element visual
             shellFrameShadowVisual.Shadow = shadowMobile;

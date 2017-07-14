@@ -2,7 +2,7 @@
     x:Class="SoundByte.UWP.Dialogs.PlaylistDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Background="{ThemeResource ShellBackground}">
+    Background="{StaticResource ContentDialogBackgroundBrush}">
 
     <ContentDialog.Resources>
         
