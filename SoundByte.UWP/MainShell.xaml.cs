@@ -9,7 +9,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Numerics;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
@@ -24,7 +23,6 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Toolkit.Uwp;
@@ -88,8 +86,6 @@ namespace SoundByte.UWP
                     ShowNowPlayingBar();
             };
 
-       //     Window.Current.Content.Lights.Add(new PointerPositionSpotLight());
-
             // Create the blur for desktop
             if (App.IsDesktop)
             {
@@ -106,12 +102,8 @@ namespace SoundByte.UWP
                 RootFrame.Margin = new Thickness { Left = 50 };
                 SplitViewPane.Width = 80;
                 SplitViewPane.Background = new SolidColorBrush(Colors.Transparent);
- //              DesktopShadow.Visibility = Visibility.Collapsed;
 
                 // Hide the labels
-                SoundByteTitle.Visibility = Visibility.Collapsed;
-                MeTitle.Visibility = Visibility.Collapsed;
-                AppTitle.Visibility = Visibility.Collapsed;
                 SearchXboxTab.Visibility = Visibility.Visible;
 
                 // Center icons
@@ -138,17 +130,6 @@ namespace SoundByte.UWP
             }
 
             RootFrame.Focus(FocusState.Programmatic);
-
-#if DEBUG
-            GotFocus += (sender, e) =>
-            {
-                var focus = FocusManager.GetFocusedElement() as FrameworkElement;
-                if (focus != null)
-                {
-                    Debug.WriteLine("Got Focus: " + focus.Name + " (" + focus.GetType() + ")");
-                }
-            };
-#endif
         }
     
         private void OnBackRequested(object sender, BackRequestedEventArgs e)
@@ -166,9 +147,9 @@ namespace SoundByte.UWP
                 }
                 else
                 {
-                    if (RootFrame.SourcePageType == typeof(StreamView)) return;
+                    if (RootFrame.SourcePageType == typeof(HomeView)) return;
 
-                    RootFrame.Navigate(typeof(StreamView));
+                    RootFrame.Navigate(typeof(HomeView));
                     e.Handled = true;
                 }
             }
@@ -334,18 +315,18 @@ namespace SoundByte.UWP
             }
 
             if (SoundByteService.Current.IsSoundCloudAccountConnected)
-                RootFrame.Navigate(typeof(StreamView));
+                RootFrame.Navigate(typeof(HomeView));
             else
                 RootFrame.Navigate(typeof(ExploreView));
         }
 
         #endregion
 
-        private void NavigateStream(object sender, RoutedEventArgs e)
+        private void NavigateHome(object sender, RoutedEventArgs e)
         {
             if (BlockNavigation) return;
 
-            RootFrame.Navigate(typeof(StreamView));
+            RootFrame.Navigate(typeof(HomeView));
         }
 
         private void NavigateSettings(object sender, RoutedEventArgs e)
@@ -381,13 +362,6 @@ namespace SoundByte.UWP
             if (BlockNavigation) return;
 
             RootFrame.Navigate(typeof(LikesView));
-        }
-
-        private void NavigateAbout(object sender, RoutedEventArgs e)
-        {
-            if (BlockNavigation) return;
-
-            RootFrame.Navigate(typeof(AboutView));
         }
 
         private void NavigateTrack()
@@ -453,8 +427,8 @@ namespace SoundByte.UWP
             // Update the side bar
             switch (((Frame)sender).SourcePageType.Name)
             {
-                case "StreamView":
-                    StreamTab.IsChecked = true;
+                case "HomeView":
+                    HomeTab.IsChecked = true;
                     MobileHomeTab.IsChecked = true;
                     break;
                 case "Track":
@@ -494,7 +468,7 @@ namespace SoundByte.UWP
                     MobileSearchTab.IsChecked = true;
                     break;
                 case "AboutView":
-                    AboutTab.IsChecked = true;
+                    SettingsTab.IsChecked = true;
                     MobileUnkownTab.IsChecked = true;
                     break;
                 case "MobileNavView":
@@ -509,7 +483,7 @@ namespace SoundByte.UWP
 
             RootFrame.Focus(FocusState.Keyboard);
 
-            if (((Frame)sender).SourcePageType == typeof(StreamView) || ((Frame)sender).SourcePageType == typeof(MainShell))
+            if (((Frame)sender).SourcePageType == typeof(HomeView) || ((Frame)sender).SourcePageType == typeof(MainShell))
                 SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                     AppViewBackButtonVisibility.Collapsed;
             else
@@ -598,10 +572,9 @@ namespace SoundByte.UWP
         // are visiable to the user.
         private void ShowLoginContent()
         {
-            StreamTab.Visibility = Visibility.Visible;
+            HomeTab.Visibility = Visibility.Visible;
             LikesTab.Visibility = Visibility.Visible;
             SetsTab.Visibility = Visibility.Visible;
-            MeTitle.Visibility = Visibility.Visible;
             NotificationsTab.Visibility = Visibility.Visible;
             HistoryTab.Visibility = Visibility.Visible;
             LoginTab.Visibility = Visibility.Collapsed;
@@ -619,10 +592,9 @@ namespace SoundByte.UWP
 
         private void ShowLogoutContent()
         {
-            StreamTab.Visibility = Visibility.Collapsed;
+            HomeTab.Visibility = Visibility.Collapsed;
             LikesTab.Visibility = Visibility.Collapsed;
             SetsTab.Visibility = Visibility.Collapsed;
-            MeTitle.Visibility = Visibility.Collapsed;
             NotificationsTab.Visibility = Visibility.Collapsed;
             HistoryTab.Visibility = Visibility.Collapsed;
             LoginTab.Visibility = Visibility.Visible;

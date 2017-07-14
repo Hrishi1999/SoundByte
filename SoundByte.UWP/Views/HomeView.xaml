@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="SoundByte.UWP.Views.StreamView"
+    x:Class="SoundByte.UWP.Views.HomeView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:elements="using:SoundByte.UWP.UserControls"

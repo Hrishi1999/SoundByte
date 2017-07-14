@@ -100,7 +100,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
 
-                        <Grid x:Name="RootGrid" Background="Transparent" Padding="25,0,0,0">
+                        <Grid x:Name="RootGrid" Background="Transparent" Margin="0,5,0,5">
 
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="Common">
@@ -117,7 +117,6 @@
                                     </VisualState>
                                     <VisualState x:Name="PointerOver">
                                         <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetName="Icon" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
                                             <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
                                         </Storyboard>
                                     </VisualState>
@@ -148,20 +147,20 @@
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4" />
-                                <ColumnDefinition Width="46" />
+                                <ColumnDefinition Width="3" />
+                                <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <Rectangle x:Name="SelectedIcon" 
                                        Opacity="0.0" 
                                        Grid.Column="0" 
-                                       Margin="0,15,0,15" 
-                                       Width="4" 
+                                       Margin="0,5,0,5" 
+                                       Width="3" 
                                        Fill="{StaticResource SystemControlHighlightAccentBrush}" />
 
-                            <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
-                            <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="12,8,8,8" Text="{TemplateBinding Content}" />
+                            <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
+                            <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="35,8,8,8" Text="{TemplateBinding Content}" />
                         </Grid>
 
                     </ControlTemplate>
@@ -263,7 +262,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <RadioButton Grid.Column="0" Content="Stream"   x:Name="MobileHomeTab"   Tag="&#xEA37;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateStream" />
+            <RadioButton Grid.Column="0" Content="Home"   x:Name="MobileHomeTab"   Tag="&#xE80F;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateHome" />
             <RadioButton Grid.Column="1" Content="Explore"  x:Name="MobileBrowseTab" Tag="&#xE128;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateCharts" />
             <RadioButton Grid.Column="2" Content="Playing"  x:Name="NowPlayingTab"   Tag="&#xE102;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateCurrentPlaying" />
             <RadioButton Grid.Column="3" Content="Search"   x:Name="MobileSearchTab" Tag="&#xE094;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateSearch" />
@@ -436,20 +435,13 @@
             <!-- The left hand side menu items -->
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           Grid.Row="0"
+                          Margin="0,60,0,0"
                           x:Name="NavbarScrollViewer"
                           Canvas.ZIndex="10">
                 <!-- Stack all the objects on top of each other -->
                 <StackPanel>
-                    <!-- App Title -->
-                    <TextBlock x:Name="SoundByteTitle"
-                               Text="SoundByte" 
-                               Margin="40,40,0,15"
-                               FontWeight="SemiBold" 
-                               Opacity="0.8"
-                               FontSize="16" />
-
                     <!-- Stream Button -->
-                    <RadioButton x:Name="StreamTab" 
+                    <RadioButton x:Name="HomeTab" 
                                  FocusVisualPrimaryThickness="0"
                                  FocusVisualSecondaryThickness="0"
                                  FocusVisualMargin="0"
@@ -459,9 +451,9 @@
                                  BorderBrush="{StaticResource ButtonLightingBrush}"
                                  Background="{StaticResource ButtonLightingBrush}"
                                  Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xEA37;" 
-                                 Content="Stream" 
-                                 Checked="NavigateStream" />
+                                 Tag="&#xE80F;" 
+                                 Content="Home" 
+                                 Checked="NavigateHome" />
 
                     <!-- Charts button -->
                     <RadioButton x:Name="ChartsTab" 
@@ -490,15 +482,7 @@
                                  Tag="&#xE71E;" 
                                  Content="Search" 
                                  Checked="NavigateSearch" />
-
-                    <!-- User content -->
-                    <TextBlock x:Name="MeTitle"
-                               Text="Me" 
-                               Opacity="0.8"
-                               FontWeight="SemiBold" 
-                               Margin="40,15,0,15"
-                               FontSize="16" />
-
+                    
                     <!-- User likes -->
                     <RadioButton x:Name="LikesTab" 
                                  FocusVisualPrimaryThickness="0"
@@ -519,7 +503,7 @@
                                  HorizontalAlignment="Stretch" 
                                  GroupName="NavPaneButtons" 
                                  Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE8FD;" 
+                                 Tag="&#xE142;" 
                                  Content="Playlists" 
                                  Checked="NavigateSets" />
 
@@ -544,14 +528,6 @@
                                  Content="History" 
                                  Checked="NavigateHistory" />
 
-                    <!-- Key app locations -->
-                    <TextBlock x:Name="AppTitle"
-                                Text="App" 
-                               FontWeight="SemiBold" 
-                               Margin="40,15,0,15"
-                               Opacity="0.8"
-                               FontSize="16"/>
-
                     <!-- Navigate to the settings page -->
                     <RadioButton x:Name="SettingsTab" 
                                  FocusVisualPrimaryThickness="0"
@@ -563,19 +539,6 @@
                                  Tag="&#xE713;" 
                                  Content="Settings" 
                                  Checked="NavigateSettings"  />
-
-                    <!-- About the app -->
-                    <RadioButton x:Name="AboutTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE946;" 
-                                 Content="About" 
-                                 Checked="NavigateAbout" />
-
                 </StackPanel>
             </ScrollViewer>
 
@@ -645,7 +608,7 @@
         
         <!-- Main Page Content will be rendered here -->
         <Frame x:Name="ShellFrame" 
-               TabIndex="-1"
+               TabIndex="1"
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"

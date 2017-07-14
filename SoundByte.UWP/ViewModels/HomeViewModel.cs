@@ -18,9 +18,9 @@ using SoundByte.UWP.Services;
 namespace SoundByte.UWP.ViewModels
 {
     /// <summary>
-    /// The view model for the StreamView page
+    /// The view model for the HomeView page
     /// </summary>
-    public class StreamViewModel : BaseViewModel
+    public class HomeViewModel : BaseViewModel
     {
         // Model for stream items
         public StreamModel StreamItems { get; } = new StreamModel();
