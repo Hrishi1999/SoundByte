@@ -31,7 +31,7 @@ namespace SoundByte.UWP.ViewModels
             // Disconnect from the service
             SoundByteService.Current.DisconnectService();
             // Navigate to the explore page
-            App.NavigateTo(typeof(Views.ExploreView));
+            App.NavigateTo(typeof(Views.HomeView));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace SoundByte.UWP.ViewModels
             // Disconnect from the service
             SoundByteService.Current.DisconnectService();
             // Navigate to the explore page
-            App.NavigateTo(typeof(Views.ExploreView));
+            App.NavigateTo(typeof(Views.HomeView));
         }
 
         /// <summary>

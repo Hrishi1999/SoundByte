@@ -203,7 +203,7 @@ namespace SoundByte.UWP.Services
                 catch
                 {
                     DisconnectService();
-                    App.NavigateTo(typeof(Views.ExploreView));
+                    App.NavigateTo(typeof(Views.HomeView));
                     return null;
                 }
 

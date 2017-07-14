@@ -17,8 +17,8 @@
                 <!-- Dark -->
                 <ResourceDictionary x:Key="Dark">
                     <!-- Shell Colors -->
-                    <Color x:Key="ShellNavigationBackgroundColor">#FF171717</Color>
-                    <Color x:Key="ShellBackgroundColor">#FF232323</Color>
+                    <Color x:Key="ShellNavigationBackgroundColor">#FF2B2B2B</Color>
+                    <Color x:Key="ShellBackgroundColor">#FF1F1F1F</Color>
                     <!-- Grey Background Color -->
                     <SolidColorBrush x:Key="SecondaryBackgroundColor" Color="#0DFFFFFF" />
 
@@ -53,7 +53,7 @@
                 BlurAmount="22"
                 Tint="#FF000000"
                 TintMix="0.6"
-                NoiseTextureUri="/Assets/Misc/noise.png"/>
+                NoiseTextureUri="/Assets/Misc/lightnoise.png"/>
 
             <brushes:CustomAcrylicBrush
                 x:Key="BackgroundTrackBlurBrush"
@@ -69,7 +69,7 @@
                 BlurAmount="18"
                 Tint="{StaticResource ShellNavigationBackgroundColor}"
                 TintMix="0.5"
-                NoiseTextureUri="/Assets/Misc/noise.png"/>
+                NoiseTextureUri="/Assets/Misc/lightnoise.png"/>
 
             <brushes:CustomAcrylicBrush
                 x:Key="ContentDialogBackgroundBrush"
@@ -77,7 +77,7 @@
                 BlurAmount="18"
                 Tint="{StaticResource ShellNavigationBackgroundColor}"
                 TintMix="0.6"
-                NoiseTextureUri="/Assets/Misc/noise.png"/>
+                NoiseTextureUri="/Assets/Misc/lightnoise.png"/>
 
             <brushes:CustomAcrylicBrush
                 x:Key="AppHostBackgroundBrush"

@@ -111,6 +111,7 @@ namespace SoundByte.UWP
 
                 // Show backgroudn iamge
                 XboxBlurImage.Visibility = Visibility.Visible;
+                ShellFrame.Background = new SolidColorBrush(Colors.Transparent);
                 XboxBlurOverlay.Visibility = Visibility.Visible;
             }
 
@@ -314,10 +315,7 @@ namespace SoundByte.UWP
                 App.IsLoading = false;
             }
 
-            if (SoundByteService.Current.IsSoundCloudAccountConnected)
-                RootFrame.Navigate(typeof(HomeView));
-            else
-                RootFrame.Navigate(typeof(ExploreView));
+            RootFrame.Navigate(typeof(HomeView));
         }
 
         #endregion
@@ -348,13 +346,6 @@ namespace SoundByte.UWP
             if (BlockNavigation) return;
 
             RootFrame.Navigate(typeof(HistoryView));
-        }
-
-        private void NavigateCharts(object sender, RoutedEventArgs e)
-        {
-            if (BlockNavigation) return;
-
-            RootFrame.Navigate(typeof(ExploreView));
         }
 
         private void NavigateLikes(object sender, RoutedEventArgs e)
@@ -434,10 +425,6 @@ namespace SoundByte.UWP
                 case "Track":
                     UnknownTab.IsChecked = true;
                     NowPlayingTab.IsChecked = true;
-                    break;
-                case "ExploreView":
-                    ChartsTab.IsChecked = true;
-                    MobileBrowseTab.IsChecked = true;
                     break;
                 case "LikesView":
                     LikesTab.IsChecked = true;

@@ -100,31 +100,28 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
 
-                        <Grid x:Name="RootGrid" Background="Transparent" Margin="0,5,0,5">
+                        <Grid x:Name="RootGrid" Background="Transparent">
 
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="Common">
-                                    <VisualState x:Name="Normal">
-                                        <Storyboard>
-                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Focused">
-                                        <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetName="Icon" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
-                                            <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
-                                        </Storyboard>
-                                    </VisualState>
+                                    <VisualState x:Name="Normal" />
                                     <VisualState x:Name="PointerOver">
                                         <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
+                                            <ObjectAnimationUsingKeyFrames
+                                                Storyboard.TargetName="RootGrid"
+                                                Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightListLowBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
                                     <VisualState x:Name="Pressed">
                                         <Storyboard>
                                             <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
-                                            <DoubleAnimation Storyboard.TargetName="Icon" Storyboard.TargetProperty="Opacity" From="1.0" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
-                                            <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" From="1.0" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
+                                            <ObjectAnimationUsingKeyFrames
+                                                Storyboard.TargetName="RootGrid"
+                                                Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlHighlightListMediumBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
                                         </Storyboard>
                                     </VisualState>
                                     <VisualState x:Name="Disabled" />
@@ -132,9 +129,7 @@
                                 <VisualStateGroup x:Name="CheckedStates">
                                     <VisualState x:Name="Checked">
                                         <Storyboard>
-                                            <DoubleAnimation Storyboard.TargetName="SelectedIcon" Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
-                                            <DoubleAnimation Storyboard.TargetName="Icon" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
-                                            <DoubleAnimation Storyboard.TargetName="Text" Storyboard.TargetProperty="Opacity" From="0.5" To="1.0" Duration="0:0:0.3" FillBehavior="HoldEnd" />
+                                            <ColorAnimation Storyboard.TargetName="Brush" Storyboard.TargetProperty="Color" From="{Binding Path=Background}" To="{StaticResource SystemAccentColor}" Duration="0:0:0" FillBehavior="HoldEnd" />
                                         </Storyboard>
                                     </VisualState>
                                     <VisualState x:Name="Unchecked" />
@@ -147,20 +142,22 @@
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3" />
+                                <ColumnDefinition Width="4" />
                                 <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <Rectangle x:Name="SelectedIcon" 
-                                       Opacity="0.0" 
                                        Grid.Column="0" 
-                                       Margin="0,5,0,5" 
-                                       Width="3" 
-                                       Fill="{StaticResource SystemControlHighlightAccentBrush}" />
+                                       Margin="0,8,0,8" 
+                                       Width="4" >
+                                <Rectangle.Fill>
+                                    <SolidColorBrush x:Name="Brush" Color="{Binding Path=Background}" />
+                                </Rectangle.Fill>
+                             </Rectangle>
 
-                            <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
-                            <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" Opacity="0.5" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="35,8,8,8" Text="{TemplateBinding Content}" />
+                            <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
+                            <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="35,8,8,8" Text="{TemplateBinding Content}" />
                         </Grid>
 
                     </ControlTemplate>
@@ -263,7 +260,6 @@
             </Grid.ColumnDefinitions>
 
             <RadioButton Grid.Column="0" Content="Home"   x:Name="MobileHomeTab"   Tag="&#xE80F;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateHome" />
-            <RadioButton Grid.Column="1" Content="Explore"  x:Name="MobileBrowseTab" Tag="&#xE128;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateCharts" />
             <RadioButton Grid.Column="2" Content="Playing"  x:Name="NowPlayingTab"   Tag="&#xE102;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateCurrentPlaying" />
             <RadioButton Grid.Column="3" Content="Search"   x:Name="MobileSearchTab" Tag="&#xE094;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateSearch" />
             <RadioButton Grid.Column="4" Content="Menu"     x:Name="MenuMobileTab"   Tag="&#xE700;" GroupName="MobileNavPaneButtons" Style="{StaticResource NavigationButtonStyleMobile}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="NavigateMobileNavView"  />
@@ -440,34 +436,7 @@
                           Canvas.ZIndex="10">
                 <!-- Stack all the objects on top of each other -->
                 <StackPanel>
-                    <!-- Stream Button -->
-                    <RadioButton x:Name="HomeTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 BorderThickness="1"
-                                 BorderBrush="{StaticResource ButtonLightingBrush}"
-                                 Background="{StaticResource ButtonLightingBrush}"
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE80F;" 
-                                 Content="Home" 
-                                 Checked="NavigateHome" />
-
-                    <!-- Charts button -->
-                    <RadioButton x:Name="ChartsTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE128;" 
-                                 Content="Explore" 
-                                 Checked="NavigateCharts" />
-
-                    <!-- The search box todo: fix this up and replace it -->
+                    <!-- The search box  -->
                     <sui:SearchBox x:Name="SearchTab" SearchSubmitted="SearchBox_SearchSubmitted" />
 
                     <!-- Xbox Search Bar -->
@@ -482,6 +451,23 @@
                                  Tag="&#xE71E;" 
                                  Content="Search" 
                                  Checked="NavigateSearch" />
+
+
+
+                    <!-- Stream Button -->
+                    <RadioButton x:Name="HomeTab" 
+                                 FocusVisualPrimaryThickness="0"
+                                 FocusVisualSecondaryThickness="0"
+                                 FocusVisualMargin="0"
+                                 HorizontalAlignment="Stretch" 
+                                 GroupName="NavPaneButtons" 
+                                 BorderThickness="1"
+                                 BorderBrush="{StaticResource ButtonLightingBrush}"
+                                 Background="{StaticResource ButtonLightingBrush}"
+                                 Style="{StaticResource NavigationButtonStyle}" 
+                                 Tag="&#xE80F;" 
+                                 Content="Home" 
+                                 Checked="NavigateHome" />
                     
                     <!-- User likes -->
                     <RadioButton x:Name="LikesTab" 
@@ -507,15 +493,6 @@
                                  Content="Playlists" 
                                  Checked="NavigateSets" />
 
-                    <!-- User notifications -->
-                    <RadioButton x:Name="NotificationsTab" 
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xEA8F;" 
-                                 Content="Notifications" 
-                                 Checked="NavigateNotifications"  />
-
                     <!-- User history -->
                     <RadioButton x:Name="HistoryTab" 
                                  FocusVisualPrimaryThickness="0"
@@ -527,6 +504,15 @@
                                  Tag="&#xE81C;" 
                                  Content="History" 
                                  Checked="NavigateHistory" />
+
+                    <!-- User notifications -->
+                    <RadioButton x:Name="NotificationsTab" 
+                                 HorizontalAlignment="Stretch" 
+                                 GroupName="NavPaneButtons" 
+                                 Style="{StaticResource NavigationButtonStyle}" 
+                                 Tag="&#xEA8F;" 
+                                 Content="Notifications" 
+                                 Checked="NavigateNotifications"  />
 
                     <!-- Navigate to the settings page -->
                     <RadioButton x:Name="SettingsTab" 
@@ -609,6 +595,7 @@
         <!-- Main Page Content will be rendered here -->
         <Frame x:Name="ShellFrame" 
                TabIndex="1"
+               Background="{ThemeResource ShellBackground}"
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"
