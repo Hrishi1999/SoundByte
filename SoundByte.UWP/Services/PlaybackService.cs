@@ -454,20 +454,23 @@ namespace SoundByte.UWP.Services
 
         private static async Task<string> GetCorrectApiKey()
         {
-            // Check if we have hit the soundcloud api limit
-            if (await SoundByteService.Current.ApiCheck("https://api.soundcloud.com/tracks/320126814/stream?client_id=" + Common.ServiceKeys.SoundCloudClientId))
-                return Common.ServiceKeys.SoundCloudClientId;
-
-            // Loop through all the backup keys
-            foreach (var key in Common.ServiceKeys.SoundCloudPlaybackClientIds)
+            return await Task.Run(async () =>
             {
-                if (await SoundByteService.Current.ApiCheck("https://api.soundcloud.com/tracks/320126814/stream?client_id=" + key))
-                {
-                    return key;
-                }
-            }
+                // Check if we have hit the soundcloud api limit
+                if (await SoundByteService.Current.ApiCheck("https://api.soundcloud.com/tracks/320126814/stream?client_id=" + Common.ServiceKeys.SoundCloudClientId))
+                    return Common.ServiceKeys.SoundCloudClientId;
 
-            return Common.ServiceKeys.SoundCloudClientId;
+                // Loop through all the backup keys
+                foreach (var key in Common.ServiceKeys.SoundCloudPlaybackClientIds)
+                {
+                    if (await SoundByteService.Current.ApiCheck("https://api.soundcloud.com/tracks/320126814/stream?client_id=" + key))
+                    {
+                        return key;
+                    }
+                }
+
+                return Common.ServiceKeys.SoundCloudClientId;
+            });
         }
 
         /// <summary>

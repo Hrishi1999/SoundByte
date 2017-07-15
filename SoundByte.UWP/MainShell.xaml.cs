@@ -98,16 +98,16 @@ namespace SoundByte.UWP
 
             if (App.IsXbox)
             {
-                RootFrame.Margin = new Thickness { Left = 50 };
+                // Pane is hidden by default
                 MainSplitView.IsPaneOpen = false;
 
-                // Hide the labels
+                // Show the search bar
                 SearchXboxTab.Visibility = Visibility.Visible;
 
-                // Center icons
+                // Center all navigation icons
                 NavbarScrollViewer.VerticalAlignment = VerticalAlignment.Center;
 
-                // Show backgroudn iamge
+                // Show background blur image
                 XboxOnlyGrid.Visibility = Visibility.Visible;
                 ShellFrame.Background = new SolidColorBrush(Colors.Transparent);
             }
@@ -535,7 +535,7 @@ namespace SoundByte.UWP
                 }
                 else
                 {
-                    MainSplitView.IsPaneOpen = true;
+                    MainSplitView.IsPaneOpen = false;
                     MainSplitView.CompactPaneLength = 84;
 
                 }
@@ -657,8 +657,7 @@ namespace SoundByte.UWP
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-
-            MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
+            MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;          
         }
     }
 }
