@@ -112,7 +112,7 @@
                                             <GroupStyle>
                                                 <GroupStyle.HeaderTemplate>
                                                     <DataTemplate>
-                                                        <TextBlock Text="{Binding Key}" Opacity="0.8" Typography.Capitals="AllPetiteCaps" FontWeight="SemiLight" />
+                                                        <TextBlock Text="{Binding Key}" Opacity="1" Typography.Capitals="AllPetiteCaps" FontWeight="Normal" />
                                                     </DataTemplate>
                                                 </GroupStyle.HeaderTemplate>
                                             </GroupStyle>
@@ -127,23 +127,23 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Height="48" HorizontalAlignment="Stretch" Padding="25,0,0,0" Background="Transparent">
+    <Grid Height="48" HorizontalAlignment="Stretch" Padding="35,0,0,0" Background="Transparent">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="48" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="4" />
-            <ColumnDefinition Width="46" />
+            <ColumnDefinition Width="0" />
+            <ColumnDefinition Width="42" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <FontIcon Grid.Column="0" 
                   Grid.ColumnSpan="2" 
-                  Opacity="0.5" 
+                  Opacity="1" 
                   VerticalAlignment="Center" 
-                  HorizontalAlignment="Center" 
+                  HorizontalAlignment="Left" 
                   FontFamily="{ThemeResource SymbolThemeFontFamily}" 
                   Glyph="&#xE71E;" 
                   FontSize="21" />
@@ -157,7 +157,7 @@
                         KeyUp="TextAdded" 
                         FontSize="16"
                         Margin="0"
-                        Opacity="0.75"
+                        Opacity="1"
                         HorizontalAlignment="Stretch"  
                         Style="{StaticResource AppSearchBox}" 
                         Background="Transparent" />

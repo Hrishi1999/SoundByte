@@ -434,11 +434,27 @@
             <!-- The left hand side menu items -->
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           Grid.Row="0"
-                          Margin="0,70,0,0"
+                          Margin="0,48,0,0"
                           x:Name="NavbarScrollViewer"
                           Canvas.ZIndex="10">
                 <!-- Stack all the objects on top of each other -->
                 <StackPanel>
+
+                    <!-- Stream Button -->
+                    <RadioButton x:Name="HomeTab" 
+                                 FocusVisualPrimaryThickness="0"
+                                 FocusVisualSecondaryThickness="0"
+                                 FocusVisualMargin="0"
+                                 HorizontalAlignment="Stretch" 
+                                 GroupName="NavPaneButtons" 
+                                 BorderThickness="1"
+                                 BorderBrush="{StaticResource ButtonLightingBrush}"
+                                 Background="{StaticResource ButtonLightingBrush}"
+                                 Style="{StaticResource NavigationButtonStyle}" 
+                                 Tag="&#xE80F;" 
+                                 Content="Home" 
+                                 Checked="NavigateHome" />
+
                     <!-- The search box  -->
                     <sui:SearchBox x:Name="SearchTab" SearchSubmitted="SearchBox_SearchSubmitted" />
 
@@ -457,21 +473,6 @@
 
 
 
-                    <!-- Stream Button -->
-                    <RadioButton x:Name="HomeTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 BorderThickness="1"
-                                 BorderBrush="{StaticResource ButtonLightingBrush}"
-                                 Background="{StaticResource ButtonLightingBrush}"
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE80F;" 
-                                 Content="Home" 
-                                 Checked="NavigateHome" />
-                    
                     <!-- User likes -->
                     <RadioButton x:Name="LikesTab" 
                                  FocusVisualPrimaryThickness="0"

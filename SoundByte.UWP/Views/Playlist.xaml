@@ -85,9 +85,9 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="10,40,0,20">
-                        <ui:SoundByteButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind ViewModel.NavigatePlay}" Margin="0,0,20,0" />
-                        <ui:SoundByteButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind ViewModel.ShuffleItemsAsync}" Margin="0,0,20,0" />
-                        <ui:SoundByteButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinPlaylist}" Margin="0,0,20,0" />
+                        <ui:SoundByteButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind ViewModel.NavigatePlay}" Margin="0,0,25,0" />
+                        <ui:SoundByteButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind ViewModel.ShuffleItemsAsync}" Margin="0,0,25,0" />
+                        <ui:SoundByteButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinPlaylist}" Margin="0,0,25,0" />
                     </StackPanel>
                 </StackPanel>
             </GridView.Header>

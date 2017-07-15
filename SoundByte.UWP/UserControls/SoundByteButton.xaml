@@ -11,7 +11,7 @@
             <StackPanel Orientation="Horizontal">
                 <TextBlock OpticalMarginAlignment="TrimSideBearings" 
                            Text="{x:Bind Glyph, Mode=OneWay}"  
-                           FontWeight="SemiLight" 
+                           FontWeight="Normal" 
                            FontSize="16" 
                            FontFamily="Segoe MDL2 Assets"
                            VerticalAlignment="Center"
@@ -19,8 +19,9 @@
 
                 <TextBlock OpticalMarginAlignment="TrimSideBearings" 
                            Text="{x:Bind Label, Mode=OneWay}"  
-                           FontWeight="SemiLight" 
-                           Margin="5,-2,0,0"
+                           FontWeight="Normal" 
+                           Opacity="0.8"
+                           Margin="8,-3,0,0"
                            FontSize="16" 
                            VerticalAlignment="Center"
                            TextAlignment="Center"  />

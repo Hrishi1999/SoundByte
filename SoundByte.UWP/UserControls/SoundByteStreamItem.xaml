@@ -35,32 +35,32 @@
 
         <!-- Track View -->
         <Grid x:Name="TrackView"
-              Height="180"
+              Height="170"
               HorizontalAlignment="Stretch"
-              Margin="0,10,0,10"
+              Margin="0,5,0,5"
               x:DeferLoadStrategy="Lazy">
 
             <!-- Item Image -->
             <control:DropShadowPanel Canvas.ZIndex="5"
                                          HorizontalAlignment="Left"
                                          BlurRadius="15"
-                                         ShadowOpacity="0.6"
+                                         ShadowOpacity="0.8"
                                          OffsetX="0"
                                          IsTabStop="False"
                                          IsHitTestVisible="False"
                                          Margin="10"
                                          OffsetY="5"
                                          Color="Black">
-                <control:ImageEx Width="160" 
-                                     Height="160" 
-                                     IsCacheEnabled="True"
-                                     Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
-                                     PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
-                                     PlaceholderStretch="UniformToFill"
-                                     VerticalAlignment="Stretch"
-                                     HorizontalAlignment="Stretch"
-                                     IsHitTestVisible="False"
-                                     Stretch="Uniform" />
+                <control:ImageEx Width="148" 
+                                 Height="148" 
+                                 IsCacheEnabled="True"
+                                 Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
+                                 PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                 PlaceholderStretch="UniformToFill"
+                                 VerticalAlignment="Stretch"
+                                 HorizontalAlignment="Stretch"
+                                 IsHitTestVisible="False"
+                                 Stretch="Uniform" />
             </control:DropShadowPanel>
 
             <!-- Basic Item Detail -->
@@ -68,7 +68,7 @@
                         VerticalAlignment="Top"
                         HorizontalAlignment="Left"
                         Canvas.ZIndex="5"
-                        Margin="190,20,0,20">
+                        Margin="180,20,0,20">
 
                 <!-- Holds the 'reported by' / 'posted by text' -->
                 <StackPanel Orientation="Horizontal">
@@ -86,15 +86,16 @@
 
                 <!-- User who uploaded this track -->
                 <TextBlock Text="{x:Bind Track.User.Username, Mode=OneWay}" 
-                            Margin="0,18,0,0"
+                            Margin="0,14,0,0"
                             FontSize="16" 
-                            Opacity="0.8" 
+                            Opacity="0.6" 
                             FontWeight="Normal" />
 
                 <!-- track title -->
                 <TextBlock Text="{x:Bind Track.Title, Mode=OneWay}" 
-                           FontSize="26" 
+                           FontSize="24" 
                            Margin="0,0,0,2" 
+                           Opacity="0.8"
                            TextWrapping="NoWrap" 
                            FontWeight="SemiBold" 
                            TextTrimming="CharacterEllipsis" />
@@ -105,7 +106,7 @@
                         HorizontalAlignment="Left"
                         Canvas.ZIndex="5"
                         VerticalAlignment="Bottom"
-                        Margin="190,20,0,20">
+                        Margin="180,20,0,20">
                 
                 <!-- Plays -->
                 <TextBlock Text="&#xE768;" 
@@ -151,10 +152,10 @@
                 
                 
                 <TextBlock Text="{x:Bind Track.Duration, Mode=OneWay, Converter={StaticResource TimeStampConverter}}" 
-                           Margin="0,18,0,0"
+                           Margin="0,14,0,0"
                            TextAlignment="Right"
                            FontSize="16" 
-                           Opacity="0.8" 
+                           Opacity="0.6" 
                            FontWeight="Normal" />
 
             </StackPanel>
@@ -165,7 +166,7 @@
                         Canvas.ZIndex="5"
                         VerticalAlignment="Bottom"
                         Margin="20,20,20,10">
-                <userControls:SoundByteButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,20,0" Click="{x:Bind ShareTrack}" />
+                <userControls:SoundByteButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,25,0" Click="{x:Bind ShareTrack}" />
                 <userControls:SoundByteButton Glyph="&#xE142;" Label="Add to Playlist"  Margin="0,0,0,0" Click="{x:Bind AddTrackToPlaylist}" />
 
             </StackPanel>

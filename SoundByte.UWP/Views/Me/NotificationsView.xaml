@@ -75,7 +75,7 @@
                     <TextBlock x:Name="TextHeader" Opacity="0" Text="Notifications" FontWeight="Bold" FontSize="25" Margin="0,18,0,0" />
 
                     <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="10,30,0,20">
-                        <uiElements:SoundByteButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshPage}" Margin="0,0,20,0" />
+                        <uiElements:SoundByteButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshPage}" Margin="0,0,25,0" />
                     </StackPanel>
                 </StackPanel>
             </ListView.Header>

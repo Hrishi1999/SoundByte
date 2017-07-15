@@ -39,7 +39,7 @@
             <TextBlock Text="Settings" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="18" />
         </Grid>
 
-        <TextBlock Opacity="0.8" x:Name="TextHeader" Text="SoundByte v2.1" FontWeight="Bold" FontSize="55" Margin="0,18,0,0" Padding="50,0" />
+        <TextBlock Opacity="0.8" x:Name="TextHeader" Text="SoundByte v2.1" FontWeight="Bold" FontSize="55" Margin="0,8,0,0" Padding="50,0" />
 
 
         <Pivot x:Name="InfoPivot" Padding="10,110,10,0">
@@ -375,6 +375,12 @@
                         </GridView>
                     </StackPanel>
                 </ScrollViewer>
+            </PivotItem>
+
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Text="Developer Messages" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                </PivotItem.Header>
             </PivotItem>
         </Pivot>
     </Grid>
