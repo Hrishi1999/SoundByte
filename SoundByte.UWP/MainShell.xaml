@@ -14,80 +14,8 @@
         <converters:SliderValueConverter x:Key="SliderValueConverter" />
         <converters:NowPlayingVisibilityConverter x:Key="NullVisibilityConverter" />
 
-       
-        <Style x:Key="MainSliderStyle" TargetType="Slider">
-            <Setter Property="Background" Value="{ThemeResource SystemControlForegroundBaseMediumLowBrush}"/>
-            <Setter Property="BorderThickness" Value="{ThemeResource SliderBorderThemeThickness}"/>
-            <Setter Property="Foreground" Value="{ThemeResource SystemControlHighlightAccentBrush}"/>
-            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
-            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
-            <Setter Property="ManipulationMode" Value="None"/>
-            <Setter Property="UseSystemFocusVisuals" Value="True"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Slider">
-                        <Grid Margin="{TemplateBinding Padding}">
-                            <Grid.Resources>
-                                <Style x:Key="SliderThumbStyle" TargetType="Thumb">
-                                    <Setter Property="BorderThickness" Value="0"/>
-                                    <Setter Property="Background" Value="{ThemeResource SystemControlHighlightAccentBrush}"/>
-                                    <Setter Property="Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="Thumb">
-                                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="0"/>
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                </Style>
-                            </Grid.Resources>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <ContentPresenter x:Name="HeaderContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Foreground="{ThemeResource SystemControlForegroundBaseHighBrush}" FontWeight="{ThemeResource SliderHeaderThemeFontWeight}" Margin="{ThemeResource SliderHeaderThemeMargin}" TextWrapping="Wrap" Visibility="Collapsed" x:DeferLoadStrategy="Lazy"/>
-                            <Grid x:Name="SliderContainer" Background="Transparent" Control.IsTemplateFocusTarget="True" Grid.Row="1">
-                                <Grid x:Name="HorizontalTemplate" MinHeight="44">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="18"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="18"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle x:Name="HorizontalTrackRect" Grid.ColumnSpan="3" Fill="#66FFFFFF" Height="3px" Grid.Row="1"/>
-                                    <Rectangle x:Name="HorizontalDecreaseRect" Fill="#FFFFFFFF" Grid.Row="1"/>
-                                    <TickBar x:Name="TopTickBar" Grid.ColumnSpan="3" Fill="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" Height="{ThemeResource SliderOutsideTickBarThemeHeight}" Margin="0,0,0,3" Visibility="Collapsed" VerticalAlignment="Bottom"/>
-                                    <TickBar x:Name="HorizontalInlineTickBar" Grid.ColumnSpan="3" Fill="{ThemeResource SystemControlBackgroundAltHighBrush}" Height="3px" Grid.Row="1" Visibility="Collapsed"/>
-                                    <TickBar x:Name="BottomTickBar" Grid.ColumnSpan="3" Fill="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" Height="{ThemeResource SliderOutsideTickBarThemeHeight}" Margin="0,4,0,0" Grid.Row="2" Visibility="Collapsed" VerticalAlignment="Top"/>
-                                    <Thumb BorderBrush="{ThemeResource SystemControlDisabledListMediumBrush}" x:Name="HorizontalThumb" AutomationProperties.AccessibilityView="Raw" Background="#FFFFFFFF" Grid.Column="1" DataContext="{TemplateBinding Value}" Height="3px" Grid.Row="0" Grid.RowSpan="3" Style="{StaticResource SliderThumbStyle}" Width="20"/>
-                                </Grid>
-                                <Grid x:Name="VerticalTemplate" MinWidth="44" Visibility="Collapsed">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="18"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="18"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle x:Name="VerticalTrackRect" Grid.Column="1" Fill="{TemplateBinding Background}" Grid.RowSpan="3" Width="{ThemeResource SliderTrackThemeHeight}"/>
-                                    <Rectangle x:Name="VerticalDecreaseRect" Grid.Column="1" Fill="{TemplateBinding Foreground}" Grid.Row="2"/>
-                                    <TickBar x:Name="LeftTickBar" Fill="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" HorizontalAlignment="Right" Margin="0,0,4,0" Grid.RowSpan="3" Visibility="Collapsed" Width="{ThemeResource SliderOutsideTickBarThemeHeight}"/>
-                                    <TickBar x:Name="VerticalInlineTickBar" Grid.Column="1" Fill="{ThemeResource SystemControlBackgroundAltHighBrush}" Grid.RowSpan="3" Visibility="Collapsed" Width="{ThemeResource SliderTrackThemeHeight}" RequestedTheme="Dark"/>
-                                    <TickBar x:Name="RightTickBar" Grid.Column="2" Fill="{ThemeResource SystemControlForegroundBaseMediumLowBrush}" HorizontalAlignment="Left" Margin="4,0,0,0" Grid.RowSpan="3" Visibility="Collapsed" Width="{ThemeResource SliderOutsideTickBarThemeHeight}"/>
-                                    <Thumb x:Name="VerticalThumb" AutomationProperties.AccessibilityView="Raw" Background="{ThemeResource SystemControlForegroundAccentBrush}" Grid.ColumnSpan="3" Grid.Column="0" DataContext="{TemplateBinding Value}" Height="4" Grid.Row="1" Style="{StaticResource SliderThumbStyle}" Width="15"/>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+
+
 
         <Style TargetType="RadioButton" x:Key="NavigationButtonStyle">
             <Setter Property="Background" Value="Transparent" />
@@ -151,7 +79,7 @@
                                 <Rectangle.Fill>
                                     <SolidColorBrush x:Name="Brush" Color="{Binding Path=Background}" />
                                 </Rectangle.Fill>
-                             </Rectangle>
+                            </Rectangle>
 
                             <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
                             <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="35,8,8,8" Text="{TemplateBinding Content}" />
@@ -161,7 +89,75 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
+
+        <Style TargetType="Button" x:Name="MenuItemButtonStyle" x:Key="MenuItemButtonStyle">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}"/>
+            <Setter Property="MinWidth" Value="{ThemeResource SplitViewCompactPaneThemeLength}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid x:Name="RootGrid" Background="Transparent"  BorderThickness="0,1,0,1" BorderBrush="{StaticResource ButtonBorderLightingBrush}">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="Common">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames
+                                                Storyboard.TargetName="RootGrid"
+                                                Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonLightingBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid"/>
+                                            <ObjectAnimationUsingKeyFrames
+                                                Storyboard.TargetName="RootGrid"
+                                                Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonPressedLightingBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled" />
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="CheckedStates">
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <ColorAnimation Storyboard.TargetName="Brush" Storyboard.TargetProperty="Color" From="{Binding Path=Background}" To="{StaticResource SystemAccentColor}" Duration="0:0:0" FillBehavior="HoldEnd" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unchecked" />
+                                    <VisualState x:Name="Indeterminate" />
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="48" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- use extra left margin to align the icon with NavigationButtonStyle'd controls -->
+                            <FontIcon x:Name="Icon" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right" FontFamily="{ThemeResource SymbolThemeFontFamily}" Glyph="{TemplateBinding Tag}" FontSize="21" />
+
+                            <TextBlock x:Name="Text" FontWeight="Normal" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="35,8,8,8" Text="{TemplateBinding Content}" />
+
+                        </Grid>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
         <!-- Mobile Menu -->
         <Style TargetType="RadioButton" x:Key="NavigationButtonStyleMobile">
             <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundAccentBrush}" />
@@ -215,32 +211,250 @@
     </Page.Resources>
 
     <Grid Background="{StaticResource AppHostBackgroundBrush}" x:Name="RootGrid">
-        <!-- Xbox Blur Background -->
-        <controls:ImageEx IsCacheEnabled="True" 
-                          x:Name="XboxBlurImage"
-                          Visibility="Collapsed"
-                          PlaceholderSource="/Assets/PlaceholderBackground.png"
-                          Source="{x:Bind Service.CurrentTrack, Converter={StaticResource ArtworkConverter}, Mode=OneWay}" 
-                          HorizontalAlignment="Center" 
-                          VerticalAlignment="Center"
-                          Stretch="UniformToFill"
-                          PlaceholderStretch="UniformToFill"
-                          IsTabStop="False"
-                          IsHitTestVisible="False"
-                          Canvas.ZIndex="2">
-            <interactivity:Interaction.Behaviors>
-                <behaviors:Blur Value="30" Duration="0" Delay="0" AutomaticallyStart="True"/>
-            </interactivity:Interaction.Behaviors>
-        </controls:ImageEx>
 
-        <!-- Darken the Screen -->
-        <Grid Canvas.ZIndex="3" 
-              x:Name="XboxBlurOverlay"
-              Visibility="Collapsed"
-              HorizontalAlignment="Stretch"
-              VerticalAlignment="Stretch" 
-              Background="#65000000" 
-              Margin="0" />
+        <!-- Xbox Specific Items -->
+        <Grid x:Name="XboxOnlyGrid" Visibility="Collapsed">
+            <!-- Xbox Blur Background -->
+            <controls:ImageEx IsCacheEnabled="True" 
+                              PlaceholderSource="/Assets/PlaceholderBackground.png"
+                              Source="{x:Bind Service.CurrentTrack, Converter={StaticResource ArtworkConverter}, Mode=OneWay}" 
+                              HorizontalAlignment="Center" 
+                              VerticalAlignment="Center"
+                              Stretch="UniformToFill"
+                              PlaceholderStretch="UniformToFill"
+                              IsTabStop="False"
+                              IsHitTestVisible="False"
+                              Canvas.ZIndex="2">
+                <interactivity:Interaction.Behaviors>
+                    <behaviors:Blur Value="30" Duration="0" Delay="0" AutomaticallyStart="True"/>
+                </interactivity:Interaction.Behaviors>
+            </controls:ImageEx>
+
+            <!-- Darken the Screen for xbox -->
+            <Grid Canvas.ZIndex="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#65000000"  />
+        </Grid>
+
+        <!-- Main Splitview, holds left pane navigation and right content,
+             nowplaying bar is below the splitview -->
+        <SplitView x:Name="MainSplitView" 
+                   IsPaneOpen="True"
+                   Background="Transparent"
+                   OpenPaneLength="350"
+                   PaneBackground="Transparent"
+                   DisplayMode="CompactInline"
+                   Margin="0,32,0,0"
+                   CompactPaneLength="84">
+
+            <!-- Navigation Pane -->
+            <SplitView.Pane>
+                <Grid>
+                    <!-- Everything is max height -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- The left hand side menu items -->
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                              Grid.Row="0"
+                              Margin="0,50,0,0"
+                              x:Name="NavbarScrollViewer"
+                              Canvas.ZIndex="10">
+                        <!-- Stack all the objects on top of each other -->
+                        <StackPanel>
+
+                            <Button x:Name="HamburgerButton" 
+                                FocusVisualPrimaryThickness="0"
+                                FocusVisualSecondaryThickness="0"
+                                FocusVisualMargin="0"
+                                Style="{StaticResource MenuItemButtonStyle}" 
+                                HorizontalAlignment="Stretch" 
+                                Content="SoundByte"
+                                Tag="&#xE700;" 
+                                Click="HamburgerButton_Click" />
+
+                            <!-- Stream Button -->
+                            <RadioButton x:Name="HomeTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE80F;" 
+                                     Content="Home" 
+                                     Checked="NavigateHome" />
+
+                            <!-- The search box  -->
+                            <sui:SearchBox x:Name="SearchTab" SearchSubmitted="SearchBox_SearchSubmitted" />
+
+                            <!-- Xbox Search Bar -->
+                            <RadioButton x:Name="SearchXboxTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     Visibility="Collapsed"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE71E;" 
+                                     Content="Search" 
+                                     Checked="NavigateSearch" />
+
+
+
+                            <!-- User likes -->
+                            <RadioButton x:Name="LikesTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE006;" 
+                                     Content="Likes" 
+                                     Checked="NavigateLikes" />
+
+                            <!-- User sets -->
+                            <RadioButton x:Name="SetsTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE142;" 
+                                     Content="Playlists" 
+                                     Checked="NavigateSets" />
+
+                            <!-- User history -->
+                            <RadioButton x:Name="HistoryTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE81C;" 
+                                     Content="History" 
+                                     Checked="NavigateHistory" />
+
+                            <!-- User notifications -->
+                            <RadioButton x:Name="NotificationsTab" 
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xEA8F;" 
+                                     Content="Notifications" 
+                                     Checked="NavigateNotifications"  />
+
+                            <!-- Navigate to the settings page -->
+                            <RadioButton x:Name="DonateTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons"
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE8EC;" 
+                                     Content="Donate" 
+                                     Checked="NavigateDonate"  />
+
+                            <!-- Navigate to the settings page -->
+                            <RadioButton x:Name="SettingsTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons"
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE713;" 
+                                     Content="Settings" 
+                                     Checked="NavigateSettings"  />
+
+                            <!-- Let the user login to their account -->
+                            <RadioButton x:Name="LoginTab" 
+                                     FocusVisualPrimaryThickness="0"
+                                     FocusVisualSecondaryThickness="0"
+                                     FocusVisualMargin="0"
+                                     Canvas.ZIndex="15"
+                                     Grid.Row="1"
+                                     HorizontalAlignment="Stretch" 
+                                     GroupName="NavPaneButtons" 
+                                     Style="{StaticResource NavigationButtonStyle}" 
+                                     Tag="&#xE77B;"
+                                     Content="Login" 
+                                     Checked="NavigateLogin" />
+
+                            <!-- The users profile -->
+                            <Button x:Name="UserButton" 
+                                Canvas.ZIndex="15"
+                                Grid.Row="1"
+                                Background="{StaticResource ButtonLightingBrush}"
+                                FocusVisualPrimaryThickness="0"
+                                FocusVisualSecondaryThickness="0"
+                                FocusVisualMargin="0"
+                                BorderBrush="{StaticResource ButtonLightingBrush}"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"
+                                Padding="0"
+                                Click="NavigateUserProfile"
+                                Margin="0"
+                                BorderThickness="1"
+                                Height="48" 
+                                HorizontalAlignment="Stretch">
+                                <Grid HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Margin="19,0,0,0">
+                                    <Ellipse HorizontalAlignment="Left" 
+                                         Width="28"
+                                         Margin="8.5,0,0,0"
+                                         Height="28"
+                                         VerticalAlignment="Center" >
+                                        <Ellipse.Fill>
+                                            <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind SoundByteService.CurrentUser, Converter={StaticResource ArtworkImageSourceConverter}, Mode=OneWay}" />
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+
+                                    <TextBlock Text="{x:Bind SoundByteService.CurrentUser.Username, Mode=OneWay}"
+                                           FontWeight="Normal" 
+                                           TextTrimming="CharacterEllipsis"
+                                           VerticalAlignment="Center" 
+                                           Opacity="1"
+                                           Margin="67,0,0,0"/>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <!-- We select this in code when the tab is not known -->
+                    <RadioButton Grid.Row="0" x:Name="UnknownTab" Visibility="Collapsed" GroupName="NavPaneButtons"  />
+                </Grid>
+            </SplitView.Pane>
+
+            <!-- Main Frame Content -->
+            <SplitView.Content>
+                <Grid>
+                    <!-- Shadow for now playing bar -->
+                    <Canvas x:Name="ShellFrameShadow"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Canvas.ZIndex="5" />
+
+                    <!-- Main Page Content will be rendered here -->
+                    <Frame x:Name="ShellFrame" 
+                           TabIndex="1"
+                           Background="{ThemeResource ShellBackground}"
+                           Navigated="ShellFrame_Navigated"
+                           HorizontalAlignment="Stretch"
+                           Canvas.ZIndex="10"
+                           Padding="0" />
+                </Grid>
+            </SplitView.Content>
+
+        </SplitView>
+
+
 
         <!-- Bottom Navigation bar for mobile devices -->
         <Grid x:Name="MobileNavigation" 
@@ -271,7 +485,7 @@
               Height="64" 
               HorizontalAlignment="Stretch">
 
-      <!--      <controls:ImageEx IsCacheEnabled="True" 
+            <!--      <controls:ImageEx IsCacheEnabled="True" 
                               PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
                               PlaceholderStretch="UniformToFill"
                               Source="{x:Bind Service.CurrentTrack, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"
@@ -360,7 +574,7 @@
                                    Text="{x:Bind Service.TimeListened, Mode=OneWay}"  
                                    Opacity="0.9" 
                                    FontSize="14" />
-                        
+
                         <Slider Grid.Column="1" 
                                 ThumbToolTipValueConverter="{StaticResource SliderValueConverter}" 
                                 VerticalAlignment="Center" 
@@ -368,7 +582,7 @@
                                 Margin="30,9,30,0" 
                                 Value="{x:Bind Service.CurrentTimeValue, Mode=TwoWay}" 
                                 Maximum="{x:Bind Service.MaxTimeValue, Mode=OneWay}" />
-                        
+
                         <TextBlock Grid.Column="2" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Right" 
@@ -428,207 +642,7 @@
             </Grid>
         </Grid>
 
-        <!-- Holds all the left hand side bar content -->
-        <Grid x:Name="SplitViewPane" 
-              Canvas.ZIndex="5"
-              Margin="0,0,0,64" 
-              Width="350" 
-              HorizontalAlignment="Left">
 
-            <!-- Everything is max height -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <!-- The left hand side menu items -->
-            <ScrollViewer VerticalScrollBarVisibility="Auto"
-                          Grid.Row="0"
-                          Margin="0,48,0,0"
-                          x:Name="NavbarScrollViewer"
-                          Canvas.ZIndex="10">
-                <!-- Stack all the objects on top of each other -->
-                <StackPanel>
-
-                    <!-- Stream Button -->
-                    <RadioButton x:Name="HomeTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 BorderThickness="1"
-                                 BorderBrush="{StaticResource ButtonLightingBrush}"
-                                 Background="{StaticResource ButtonLightingBrush}"
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE80F;" 
-                                 Content="Home" 
-                                 Checked="NavigateHome" />
-
-                    <!-- The search box  -->
-                    <sui:SearchBox x:Name="SearchTab" SearchSubmitted="SearchBox_SearchSubmitted" />
-
-                    <!-- Xbox Search Bar -->
-                    <RadioButton x:Name="SearchXboxTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 Visibility="Collapsed"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE71E;" 
-                                 Content="Search" 
-                                 Checked="NavigateSearch" />
-
-
-
-                    <!-- User likes -->
-                    <RadioButton x:Name="LikesTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE006;" 
-                                 Content="Likes" 
-                                 Checked="NavigateLikes" />
-
-                    <!-- User sets -->
-                    <RadioButton x:Name="SetsTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE142;" 
-                                 Content="Playlists" 
-                                 Checked="NavigateSets" />
-
-                    <!-- User history -->
-                    <RadioButton x:Name="HistoryTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE81C;" 
-                                 Content="History" 
-                                 Checked="NavigateHistory" />
-
-                    <!-- User notifications -->
-                    <RadioButton x:Name="NotificationsTab" 
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xEA8F;" 
-                                 Content="Notifications" 
-                                 Checked="NavigateNotifications"  />
-
-                    <!-- Navigate to the settings page -->
-                    <RadioButton x:Name="DonateTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons"
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE8EC;" 
-                                 Content="Donate" 
-                                 Checked="NavigateDonate"  />
-
-                    <!-- Navigate to the settings page -->
-                    <RadioButton x:Name="SettingsTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons"
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE713;" 
-                                 Content="Settings" 
-                                 Checked="NavigateSettings"  />
-
-                    <!-- Let the user login to their account -->
-                    <RadioButton x:Name="LoginTab" 
-                                 FocusVisualPrimaryThickness="0"
-                                 FocusVisualSecondaryThickness="0"
-                                 FocusVisualMargin="0"
-                                 Canvas.ZIndex="15"
-                                 Grid.Row="1"
-                                 HorizontalAlignment="Stretch" 
-                                 GroupName="NavPaneButtons" 
-                                 Style="{StaticResource NavigationButtonStyle}" 
-                                 Tag="&#xE77B;"
-                                 Content="Login" 
-                                 Checked="NavigateLogin" />
-
-                    <!-- The users profile -->
-                    <Button x:Name="UserButton" 
-                            Canvas.ZIndex="15"
-                            Grid.Row="1"
-                            Background="{StaticResource ButtonLightingBrush}"
-                            FocusVisualPrimaryThickness="0"
-                            FocusVisualSecondaryThickness="0"
-                            FocusVisualMargin="0"
-                            BorderBrush="{StaticResource ButtonLightingBrush}"
-                            HorizontalContentAlignment="Stretch"
-                            VerticalContentAlignment="Stretch"
-                            Padding="0"
-                            Click="NavigateUserProfile"
-                            Margin="0"
-                            BorderThickness="1"
-                            Height="48" 
-                            HorizontalAlignment="Stretch">
-                        <Grid HorizontalAlignment="Stretch"
-                              VerticalAlignment="Stretch"
-                              Margin="19,0,0,0">
-                            <Ellipse HorizontalAlignment="Left" 
-                                     Width="28"
-                                     Margin="8.5,0,0,0"
-                                     Height="28"
-                                     VerticalAlignment="Center" >
-                                <Ellipse.Fill>
-                                    <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind SoundByteService.CurrentUser, Converter={StaticResource ArtworkImageSourceConverter}, Mode=OneWay}" />
-                                </Ellipse.Fill>
-                            </Ellipse>
-
-                            <TextBlock Text="{x:Bind SoundByteService.CurrentUser.Username, Mode=OneWay}"
-                                       FontWeight="Normal" 
-                                       TextTrimming="CharacterEllipsis"
-                                       VerticalAlignment="Center" 
-                                       Opacity="1"
-                                       Margin="67,0,0,0"/>
-                        </Grid>
-                    </Button>
-                </StackPanel>
-            </ScrollViewer>
-
-          
-
-            <!-- We select this in code when the tab is not known -->
-            <RadioButton Grid.Row="0" x:Name="UnknownTab" Visibility="Collapsed" GroupName="NavPaneButtons"  />
-        </Grid>
-
-        <!-- Shadow for now playing bar -->
-        <Canvas x:Name="ShellFrameShadow"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch"
-                Margin="0,350,0,64"
-                Canvas.ZIndex="5" />
-        
-        <!-- Main Page Content will be rendered here -->
-        <Frame x:Name="ShellFrame" 
-               TabIndex="1"
-               Background="{ThemeResource ShellBackground}"
-               Navigated="ShellFrame_Navigated"
-               HorizontalAlignment="Stretch"
-               Canvas.ZIndex="10"
-               Margin="350,32,0,64"
-               Padding="0" />
 
         <!-- Is displayed when performing tasks that take a long time -->
         <ProgressRing x:Name="LoadingRing" 

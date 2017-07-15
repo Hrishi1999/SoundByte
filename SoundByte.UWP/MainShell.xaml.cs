@@ -99,8 +99,7 @@ namespace SoundByte.UWP
             if (App.IsXbox)
             {
                 RootFrame.Margin = new Thickness { Left = 50 };
-                SplitViewPane.Width = 80;
-                SplitViewPane.Background = new SolidColorBrush(Colors.Transparent);
+                MainSplitView.IsPaneOpen = false;
 
                 // Hide the labels
                 SearchXboxTab.Visibility = Visibility.Visible;
@@ -109,16 +108,16 @@ namespace SoundByte.UWP
                 NavbarScrollViewer.VerticalAlignment = VerticalAlignment.Center;
 
                 // Show backgroudn iamge
-                XboxBlurImage.Visibility = Visibility.Visible;
+                XboxOnlyGrid.Visibility = Visibility.Visible;
                 ShellFrame.Background = new SolidColorBrush(Colors.Transparent);
-                XboxBlurOverlay.Visibility = Visibility.Visible;
             }
 
             // Mobile Specific stuff
             if (App.IsMobile)
             {
                 RootFrame.Margin = new Thickness {Left = 0, Right = 0, Top = 0, Bottom = 64};
-                SplitViewPane.Visibility = Visibility.Collapsed;
+                MainSplitView.IsPaneOpen = false;
+                MainSplitView.CompactPaneLength = 0;
                 MobileNavigation.Visibility = Visibility.Visible;
                 NowPlaying.Visibility = Visibility.Collapsed;
             }
@@ -497,28 +496,30 @@ namespace SoundByte.UWP
             {
                 if (((Frame)sender).SourcePageType.Name == "Track")
                 {
-                    SplitViewPane.Visibility = Visibility.Collapsed;
-                    ShellFrame.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 0 };
-                    ShellFrameShadow.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 0 };
+                    MainSplitView.IsPaneOpen = false;
+                    MainSplitView.CompactPaneLength = 0;
+
                     LoadingRing.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 0 };
 
                     HideNowPlayingBar();
+
+                    MainSplitView.Margin = new Thickness { Bottom = 0, Top = 0 };
+
                 }
                 else
                 {
-                    SplitViewPane.Visibility = Visibility.Visible;
+                    MainSplitView.IsPaneOpen = true;
+                    MainSplitView.CompactPaneLength = 84;
+
                     if (Service.CurrentTrack == null)
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
 
                         HideNowPlayingBar();
+
                     }
                     else
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
                         ShowNowPlayingBar();
                     }
@@ -529,15 +530,14 @@ namespace SoundByte.UWP
             {
                 if (((Frame)sender).SourcePageType.Name == "Track")
                 {
-                    ShellFrame.Margin = new Thickness { Left = 0, Top = 0 };
-                    ShellFrameShadow.Margin = new Thickness { Left = 0, Top = 0 };
-                    SplitViewPane.Visibility = Visibility.Collapsed;
+                    MainSplitView.IsPaneOpen = false;
+                    MainSplitView.CompactPaneLength = 0;
                 }
                 else
                 {
-                    ShellFrame.Margin = new Thickness { Left = 50, Top = 0};
-                    ShellFrameShadow.Margin = new Thickness { Left = 50, Top = 0 };
-                    SplitViewPane.Visibility = Visibility.Visible;
+                    MainSplitView.IsPaneOpen = true;
+                    MainSplitView.CompactPaneLength = 84;
+
                 }
             }
 
@@ -548,15 +548,13 @@ namespace SoundByte.UWP
         {
             UnknownTab.IsChecked = true;
             NowPlaying.Visibility = Visibility.Collapsed;
-            SplitViewPane.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 0 };
+            MainSplitView.Margin = new Thickness { Bottom = 0, Top = 32};
         }
 
         private void ShowNowPlayingBar()
         {
-            ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
-            ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
             NowPlaying.Visibility = Visibility.Visible;
-            SplitViewPane.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 64 };
+            MainSplitView.Margin = new Thickness { Bottom = 64, Top = 32};
         }
 
         private void SearchBox_SearchSubmitted(object sender, RoutedEventArgs e)
@@ -656,5 +654,11 @@ namespace SoundByte.UWP
         }
 
         #endregion
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainSplitView.IsPaneOpen = !MainSplitView.IsPaneOpen;
+        }
     }
 }
