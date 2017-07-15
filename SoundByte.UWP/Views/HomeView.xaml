@@ -74,9 +74,9 @@
 
                     <ListView.Header>
                         <StackPanel x:Name="DesktopCommandBarStream" Visibility="Collapsed" Orientation="Horizontal" Margin="0,10,0,10">
-                            <elements:CircleButton Glyph="&#xE768;" Label="Play All Tracks" Click="{x:Bind ViewModel.PlayAllStreamTracks}" Margin="0,0,5,0" />
-                            <elements:CircleButton Glyph="&#xE8B1;" Label="Shuffle Play Tracks" Click="{x:Bind ViewModel.PlayShuffleStreamTracks}" Margin="0,0,5,0" />
-                            <elements:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshStreamItems}" Margin="0,0,5,0" />
+                            <elements:SoundByteButton Glyph="&#xE768;" Label="Play All Tracks" Click="{x:Bind ViewModel.PlayAllStreamTracks}" Margin="0,0,20,0" />
+                            <elements:SoundByteButton Glyph="&#xE8B1;" Label="Shuffle Play Tracks" Click="{x:Bind ViewModel.PlayShuffleStreamTracks}" Margin="0,0,20,0" />
+                            <elements:SoundByteButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshStreamItems}" Margin="0,0,20,0" />
                         </StackPanel>
                     </ListView.Header>
                     <ListView.ItemContainerStyle>
@@ -179,9 +179,9 @@
                             </Grid>
 
                             <StackPanel x:Name="DesktopCommandBarChart" Visibility="Collapsed" Orientation="Horizontal" Margin="10,0,0,10">
-                                <elements:CircleButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind ViewModel.PlayAllChartItems}" Margin="0,0,5,0" />
-                                <elements:CircleButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind ViewModel.PlayShuffleChartItems}" Margin="0,0,5,0" />
-                                <elements:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.ChartsModel.RefreshItems}" Margin="0,0,5,0" />
+                                <elements:SoundByteButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind ViewModel.PlayAllChartItems}" Margin="0,0,5,0" />
+                                <elements:SoundByteButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind ViewModel.PlayShuffleChartItems}" Margin="0,0,5,0" />
+                                <elements:SoundByteButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.ChartsModel.RefreshItems}" Margin="0,0,5,0" />
                             </StackPanel>
                         </StackPanel>
                     </GridView.Header>

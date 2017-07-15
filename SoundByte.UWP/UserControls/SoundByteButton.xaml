@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="SoundByte.UWP.UserControls.SoundByteButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="38">
+
+    <HyperlinkButton x:Name="MainButton" 
+                     Opacity="0.8"
+                     Foreground="{ThemeResource AppBarButtonForeground}">
+        <HyperlinkButton.Content>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock OpticalMarginAlignment="TrimSideBearings" 
+                           Text="{x:Bind Glyph, Mode=OneWay}"  
+                           FontWeight="SemiLight" 
+                           FontSize="16" 
+                           FontFamily="Segoe MDL2 Assets"
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"  />
+
+                <TextBlock OpticalMarginAlignment="TrimSideBearings" 
+                           Text="{x:Bind Label, Mode=OneWay}"  
+                           FontWeight="SemiLight" 
+                           Margin="8,-2,0,0"
+                           FontSize="16" 
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"  />
+            </StackPanel>
+        </HyperlinkButton.Content>
+    </HyperlinkButton>
+</UserControl>

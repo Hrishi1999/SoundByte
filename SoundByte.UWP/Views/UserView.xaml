@@ -144,9 +144,9 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="10,40,0,40">
-                        <elements:CircleButton Glyph="{x:Bind ViewModel.FollowUserIcon, Mode=OneWay}" Label="{x:Bind ViewModel.FollowUserText, Mode=OneWay}" Click="{x:Bind ViewModel.FollowUser}" IsEnabled="{x:Bind ViewModel.ShowFollowButton, Mode=OneWay}" Margin="0,0,5,0" />
-                        <elements:CircleButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinUser}" Margin="0,0,5,0" />
-                        <elements:CircleButton x:Name="UploadButton" Glyph="&#xE898;" Label="Upload Track" Click="{x:Bind UploadTrack}" Margin="0,0,5,0" />
+                        <elements:SoundByteButton Glyph="{x:Bind ViewModel.FollowUserIcon, Mode=OneWay}" Label="{x:Bind ViewModel.FollowUserText, Mode=OneWay}" Click="{x:Bind ViewModel.FollowUser}" IsEnabled="{x:Bind ViewModel.ShowFollowButton, Mode=OneWay}" Margin="0,0,20,0" />
+                        <elements:SoundByteButton Glyph="{x:Bind ViewModel.PinButtonIcon, Mode=OneWay}" Label="{x:Bind ViewModel.PinButtonText, Mode=OneWay}" Click="{x:Bind ViewModel.PinUser}" Margin="0,0,20,0" />
+                        <elements:SoundByteButton x:Name="UploadButton" Glyph="&#xE898;" Label="Upload Track" Click="{x:Bind UploadTrack}" Margin="0,0,20,0" />
                     </StackPanel>
                 </StackPanel>
 

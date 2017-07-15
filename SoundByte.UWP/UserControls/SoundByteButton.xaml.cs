@@ -11,12 +11,12 @@ using Windows.UI.Xaml;
 
 namespace SoundByte.UWP.UserControls
 {
-    public sealed partial class CircleButton
+    public sealed partial class SoundByteButton
     {
         public delegate void ClickEventHandler(object sender, RoutedEventArgs e);
 
-        public static readonly DependencyProperty LabelProperty = DependencyProperty.Register("Label", typeof(string), typeof(CircleButton), null);
-        public static readonly DependencyProperty GlyphProperty = DependencyProperty.Register("Glyph", typeof(string), typeof(CircleButton), null);
+        public static readonly DependencyProperty LabelProperty = DependencyProperty.Register("Label", typeof(string), typeof(SoundByteButton), null);
+        public static readonly DependencyProperty GlyphProperty = DependencyProperty.Register("Glyph", typeof(string), typeof(SoundByteButton), null);
 
         /// <summary>
         /// The label to show on the button
@@ -45,7 +45,7 @@ namespace SoundByte.UWP.UserControls
             set => this.SetValue(GlyphProperty, value);
         }
 
-        public CircleButton()
+        public SoundByteButton()
         {
             this.InitializeComponent();
 

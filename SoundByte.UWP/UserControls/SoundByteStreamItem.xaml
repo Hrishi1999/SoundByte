@@ -165,8 +165,8 @@
                         Canvas.ZIndex="5"
                         VerticalAlignment="Bottom"
                         Margin="20">
-                <userControls:CircleButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,5,0" Click="{x:Bind ShareTrack}" />
-                <userControls:CircleButton Glyph="&#xE142;" Label="Add to Playlist"  Margin="0,0,0,0" Click="{x:Bind AddTrackToPlaylist}" />
+                <userControls:SoundByteButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,20,0" Click="{x:Bind ShareTrack}" />
+                <userControls:SoundByteButton Glyph="&#xE142;" Label="Add to Playlist"  Margin="0,0,0,0" Click="{x:Bind AddTrackToPlaylist}" />
 
             </StackPanel>
         </Grid>

@@ -213,8 +213,8 @@
     <Compile Include="Services\TelemetryService.cs" />
     <Compile Include="Services\TileService.cs" />
     <Compile Include="StateTriggers\DeviceStateTrigger.cs" />
-    <Compile Include="UserControls\CircleButton.xaml.cs">
-      <DependentUpon>CircleButton.xaml</DependentUpon>
+    <Compile Include="UserControls\SoundByteButton.xaml.cs">
+      <DependentUpon>SoundByteButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\InfoPane.xaml.cs">
       <DependentUpon>InfoPane.xaml</DependentUpon>
@@ -350,7 +350,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\CircleButton.xaml">
+    <Page Include="UserControls\SoundByteButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

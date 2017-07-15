@@ -83,9 +83,9 @@
                     <TextBlock Opacity="0" x:Name="TextHeader" Text="History" FontWeight="Bold" FontSize="25" Margin="0,18,0,0" />
 
                     <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed" Orientation="Horizontal" Margin="10,30,0,20">
-                            <uiElements:CircleButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind PlayAllItems}" Margin="0,0,5,0" />
-                            <uiElements:CircleButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind PlayShuffleItems}" Margin="0,0,5,0" />
-                            <uiElements:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind HistoryModel.RefreshItems}" Margin="0,0,5,0" />
+                        <uiElements:SoundByteButton Glyph="&#xE768;" Label="Play All" Click="{x:Bind PlayAllItems}" Margin="0,0,20,0" />
+                        <uiElements:SoundByteButton Glyph="&#xE8B1;" Label="Shuffle Play" Click="{x:Bind PlayShuffleItems}" Margin="0,0,20,0" />
+                        <uiElements:SoundByteButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind HistoryModel.RefreshItems}" Margin="0,0,20,0" />
                         </StackPanel>
                 </StackPanel>
             </GridView.Header>
