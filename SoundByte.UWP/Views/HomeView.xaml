@@ -12,7 +12,14 @@
     <Page.Resources>
         <!-- Data Template for stream items -->
         <DataTemplate x:Key="StreamItem">
-            <elements:SoundByteStreamItem Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Track="{Binding Track}" TrackType="{Binding Type}" Created="{Binding CreatedAt}" Playlist="{Binding Playlist}" />
+            <elements:SoundByteStreamItem Width="Auto" 
+                                          HorizontalContentAlignment="Stretch"
+                                          HorizontalAlignment="Stretch" 
+                                          VerticalAlignment="Stretch" 
+                                          Track="{Binding Track}" 
+                                          TrackType="{Binding Type}" 
+                                          Created="{Binding CreatedAt}" 
+                                          Playlist="{Binding Playlist}" />
         </DataTemplate>
     </Page.Resources>
     <Grid Background="{ThemeResource ShellBackground}" x:Name="RootGrid">
@@ -72,6 +79,11 @@
                             <elements:CircleButton Glyph="&#xE72C;" Label="Refresh" Click="{x:Bind ViewModel.RefreshStreamItems}" Margin="0,0,5,0" />
                         </StackPanel>
                     </ListView.Header>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
                     <interactivity:Interaction.Behaviors>
                         <behaviors:FadeHeaderBehavior />
                     </interactivity:Interaction.Behaviors>

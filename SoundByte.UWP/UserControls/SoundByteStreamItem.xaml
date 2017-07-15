@@ -3,8 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
-    xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
-    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors">
+    xmlns:userControls="using:SoundByte.UWP.UserControls">
     <Grid>
         <!-- Used to show and hide each element -->
         <VisualStateManager.VisualStateGroups>
@@ -35,90 +34,142 @@
         </VisualStateManager.VisualStateGroups>
 
         <!-- Track View -->
-        <control:DropShadowPanel x:Name="TrackView"
-                                 BlurRadius="25"
-                                 Height="180"
-                                 HorizontalAlignment="Stretch"
-                                 Margin="0,10,0,10"
-                                 Visibility="Collapsed"
-                                 ShadowOpacity="0.8"
-                                 OffsetY="5"
-                                 Color="Black"
-                                 OffsetX="0"
-                                 x:DeferLoadStrategy="Lazy">
-            <Grid>
+        <Grid x:Name="TrackView"
+              Height="180"
+              HorizontalAlignment="Stretch"
+              Margin="0,10,0,10"
+              x:DeferLoadStrategy="Lazy">
 
-                <!-- Transparent element that covers background canvas, makes image darker so white text and icons are easy to see -->
-                <Grid Canvas.ZIndex="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{StaticResource TrackBlurBrush}" />
-                <!-- Background Image -->
-                <control:ImageEx Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
-                                 PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
-                                 IsCacheEnabled="True"
-                                 PlaceholderStretch="UniformToFill"
-                                 VerticalAlignment="Center"
-                                 HorizontalAlignment="Center"
-                                 Canvas.ZIndex="1"
-                                 IsHitTestVisible="False"
-                                 Stretch="UniformToFill">
-                   
-                </control:ImageEx>
-                <!-- Item Image -->
-                <control:DropShadowPanel Canvas.ZIndex="5"
+            <!-- Item Image -->
+            <control:DropShadowPanel Canvas.ZIndex="5"
                                          HorizontalAlignment="Left"
-                                         BlurRadius="35"
-                                         ShadowOpacity="0.9"
+                                         BlurRadius="15"
+                                         ShadowOpacity="0.6"
                                          OffsetX="0"
                                          IsTabStop="False"
                                          IsHitTestVisible="False"
                                          Margin="10"
                                          OffsetY="5"
                                          Color="Black">
-                    <Grid>
-                        <control:ImageEx Width="160" 
-                                         Height="160" 
-                                         IsCacheEnabled="True"
-                                         Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
-                                         PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
-                                         PlaceholderStretch="UniformToFill"
-                                         VerticalAlignment="Stretch"
-                                         HorizontalAlignment="Stretch"
-                                         IsHitTestVisible="False"
-                                         Stretch="Uniform" />
-                        <TextBlock Text="&#xE768;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Foreground="White" />
+                <control:ImageEx Width="160" 
+                                     Height="160" 
+                                     IsCacheEnabled="True"
+                                     Source="{x:Bind Path=Track, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"  
+                                     PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
+                                     PlaceholderStretch="UniformToFill"
+                                     VerticalAlignment="Stretch"
+                                     HorizontalAlignment="Stretch"
+                                     IsHitTestVisible="False"
+                                     Stretch="Uniform" />
+            </control:DropShadowPanel>
 
-                        <Grid RequestedTheme="Dark" Background="#66000000" Padding="5" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                            <TextBlock RequestedTheme="Dark" Text="{x:Bind Track.Duration, Mode=OneWay, Converter={StaticResource TimeStampConverter}}" FontSize="12" FontWeight="SemiLight" />
-                        </Grid>
-
-                    </Grid>
-                </control:DropShadowPanel>
-                <!-- Basic Item Detail -->
-                <StackPanel Orientation="Vertical" 
+            <!-- Basic Item Detail -->
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Top"
                         HorizontalAlignment="Left"
                         Canvas.ZIndex="5"
                         Margin="190,20,0,20">
-                    <TextBlock RequestedTheme="Dark" Text="{x:Bind Track.Title, Mode=OneWay}" FontSize="22" Margin="0,0,0,2" TextWrapping="NoWrap" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" />
-                    <TextBlock RequestedTheme="Dark" Text="{x:Bind Track.User.Username, Mode=OneWay}" FontSize="16" Opacity="0.8" FontWeight="Normal" />
 
-                    <TextBlock RequestedTheme="Dark" Text="{x:Bind Created, Mode=OneWay, Converter={StaticResource ModernDateTimeConverter}}" FontSize="15" Opacity="0.6" FontWeight="SemiLight" Margin="0,8,0,5" />
+                <!-- Holds the 'reported by' / 'posted by text' -->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Posted by" 
+                               FontSize="14" 
+                               Opacity="0.7"
+                               FontWeight="SemiLight" />
 
-
-                    <!-- Plays -->
-                    <StackPanel Orientation="Horizontal"  Margin="0,6,0,0">
-                        <TextBlock RequestedTheme="Dark" Text="&#xE768;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="14" Opacity="0.8" />
-                        <TextBlock RequestedTheme="Dark" Text="{x:Bind Path=Track.PlaybackCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
-                        <TextBlock RequestedTheme="Dark" Text="Plays" Margin="5,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
-                    </StackPanel>
-
-                    <!-- Likes -->
-                    <StackPanel Orientation="Horizontal"  Margin="0,5,0,0">
-                        <TextBlock RequestedTheme="Dark" Text="&#xE006;" FontFamily="Segoe MDL2 Assets" Margin="0,4,6,0" FontSize="14" Opacity="0.8" />
-                        <TextBlock RequestedTheme="Dark" Text="{x:Bind Path=Track.LikesCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
-                        <TextBlock RequestedTheme="Dark" Text="Likes" Margin="5,0,0,0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Opacity="0.8" FontWeight="SemiLight"/>
-                    </StackPanel>
+                    <TextBlock Text="{x:Bind Track.User.Username, Mode=OneWay}"
+                               FontSize="14" 
+                               FontWeight="SemiBold"
+                               Opacity="0.8" 
+                               Margin="3,0,0,0"/>
                 </StackPanel>
-            </Grid>
-        </control:DropShadowPanel>
+
+                <!-- User who uploaded this track -->
+                <TextBlock Text="{x:Bind Track.User.Username, Mode=OneWay}" 
+                            Margin="0,18,0,0"
+                            FontSize="16" 
+                            Opacity="0.8" 
+                            FontWeight="Normal" />
+
+                <!-- track title -->
+                <TextBlock Text="{x:Bind Track.Title, Mode=OneWay}" 
+                           FontSize="26" 
+                           Margin="0,0,0,2" 
+                           TextWrapping="NoWrap" 
+                           FontWeight="SemiBold" 
+                           TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+
+            <!-- Extended Detail -->
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Left"
+                        Canvas.ZIndex="5"
+                        VerticalAlignment="Bottom"
+                        Margin="190,20,0,20">
+                
+                <!-- Plays -->
+                <TextBlock Text="&#xE768;" 
+                           FontFamily="Segoe MDL2 Assets" 
+                           Margin="0,4,6,0" 
+                           FontSize="14" 
+                           Opacity="0.8" />
+                <TextBlock Text="{x:Bind Path=Track.PlaybackCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}" 
+                           HorizontalAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           VerticalAlignment="Top" 
+                           FontSize="15" 
+                           Opacity="0.8" 
+                           FontWeight="SemiBold"/>
+
+                <!-- Likes -->
+                <TextBlock Text="&#xE006;" 
+                           FontFamily="Segoe MDL2 Assets"
+                           Margin="15,4,6,0" 
+                           FontSize="14" 
+                           Opacity="0.8" />
+                <TextBlock Text="{x:Bind Path=Track.LikesCount, Converter={StaticResource FormattedValueConverter}, Mode=OneWay}" 
+                           HorizontalAlignment="Left" 
+                           TextWrapping="Wrap" 
+                           VerticalAlignment="Top" 
+                           FontSize="15" 
+                           Opacity="0.8" 
+                           FontWeight="SemiBold"/>
+                
+            </StackPanel>
+            
+            <!-- Right Content -->
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        Canvas.ZIndex="5"
+                        Margin="20">
+                <TextBlock Text="{x:Bind Created, Mode=OneWay, Converter={StaticResource ModernDateTimeConverter}}" 
+                           FontSize="14" 
+                           Opacity="0.7" 
+                           TextAlignment="Right"
+                           FontWeight="SemiLight" />
+                
+                
+                <TextBlock Text="{x:Bind Track.Duration, Mode=OneWay, Converter={StaticResource TimeStampConverter}}" 
+                           Margin="0,18,0,0"
+                           TextAlignment="Right"
+                           FontSize="16" 
+                           Opacity="0.8" 
+                           FontWeight="Normal" />
+
+            </StackPanel>
+
+            <!-- Extended Right Detail -->
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Right"
+                        Canvas.ZIndex="5"
+                        VerticalAlignment="Bottom"
+                        Margin="20">
+                <userControls:CircleButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,5,0" Click="{x:Bind ShareTrack}" />
+                <userControls:CircleButton Glyph="&#xE142;" Label="Add to Playlist"  Margin="0,0,0,0" Click="{x:Bind AddTrackToPlaylist}" />
+
+            </StackPanel>
+        </Grid>
 
         <!-- Playlist View -->
         <control:DropShadowPanel x:Name="PlaylistView"
@@ -145,7 +196,7 @@
                                  Canvas.ZIndex="1"
                                  IsHitTestVisible="False"
                                  Stretch="UniformToFill">
-                    
+
                 </control:ImageEx>
                 <!-- Item Image -->
                 <control:DropShadowPanel Canvas.ZIndex="5"

@@ -7,7 +7,9 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //*********************************************************
 
+using System;
 using Windows.UI.Xaml;
+using SoundByte.UWP.Dialogs;
 
 namespace SoundByte.UWP.UserControls
 {
@@ -67,6 +69,16 @@ namespace SoundByte.UWP.UserControls
             set { SetValue(PlaylistProperty, value); }
         }
         #endregion
+
+        public async void ShareTrack()
+        {
+            await new ShareDialog(Track).ShowAsync();
+        }
+
+        public async void AddTrackToPlaylist()
+        {
+            await new PlaylistDialog(Track).ShowAsync();
+        }
 
         public SoundByteStreamItem()
         {
