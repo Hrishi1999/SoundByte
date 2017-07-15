@@ -428,7 +428,7 @@
             <!-- The left hand side menu items -->
             <ScrollViewer VerticalScrollBarVisibility="Auto"
                           Grid.Row="0"
-                          Margin="0,60,0,0"
+                          Margin="0,70,0,0"
                           x:Name="NavbarScrollViewer"
                           Canvas.ZIndex="10">
                 <!-- Stack all the objects on top of each other -->

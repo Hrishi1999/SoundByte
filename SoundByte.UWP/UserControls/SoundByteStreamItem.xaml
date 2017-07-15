@@ -164,7 +164,7 @@
                         HorizontalAlignment="Right"
                         Canvas.ZIndex="5"
                         VerticalAlignment="Bottom"
-                        Margin="20">
+                        Margin="20,20,20,10">
                 <userControls:SoundByteButton Glyph="&#xE72D;" Label="Share"  Margin="0,0,20,0" Click="{x:Bind ShareTrack}" />
                 <userControls:SoundByteButton Glyph="&#xE142;" Label="Add to Playlist"  Margin="0,0,0,0" Click="{x:Bind AddTrackToPlaylist}" />
 

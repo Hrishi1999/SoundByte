@@ -28,8 +28,8 @@
                     <VisualState.Setters>
                         <Setter Target="Header.Margin" Value="50,0" />
                         <Setter Target="TextHeader.FontSize" Value="55" />
-                        <Setter Target="TextHeader.Margin" Value="0,30,0,0"  />
-                        <Setter Target="MainPivot.Margin" Value="50,170,50,0"  />
+                        <Setter Target="TextHeader.Margin" Value="10,30,0,0"  />
+                        <Setter Target="MainPivot.Margin" Value="50,160,50,0"  />
                         <Setter Target="TextHeader.Opacity" Value="0.8" />
                         <Setter Target="DesktopCommandBar.Visibility" Value="Visible" />
                         <Setter Target="MobileGrid.Visibility" Value="Collapsed" />
@@ -72,7 +72,7 @@
                                 HorizontalAlignment="Stretch"
                                 x:Name="MainSearchBox" />
 
-            <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed"  Orientation="Horizontal" Margin="10,10,0,20" VerticalAlignment="Top">
+            <StackPanel x:Name="DesktopCommandBar" Visibility="Collapsed"  Orientation="Horizontal" Margin="10,10,0,10" VerticalAlignment="Top">
                 <uiElements:SoundByteButton  Margin="0,0,20,0" Label="Filter Results" Glyph="&#xE71C;" Click="{x:Bind ViewModel.ShowFilterMenu}" />
                 <uiElements:SoundByteButton  Margin="0,0,20,0" Label="Refresh" Glyph="&#xE72C;" Click="{x:Bind ViewModel.RefreshAll}" />
             </StackPanel>
@@ -81,7 +81,10 @@
         <!-- Main pivot that is used to view all the content -->
         <Pivot x:Name="MainPivot" Margin="10,110,10,0" >
 
-            <PivotItem x:Name="TrackPivot" Header="Tracks">
+            <PivotItem x:Name="TrackPivot">
+                <PivotItem.Header>
+                    <TextBlock Text="Tracks" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                </PivotItem.Header>
                 <Grid>
                     <!-- Used to display any errors that may occur when loading the content -->
                     <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="TracksError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -101,7 +104,10 @@
                 </Grid>
             </PivotItem>
             <!-- Display the searched playlist objects -->
-            <PivotItem x:Name="PlaylistPivot" Header="Playlists">
+            <PivotItem x:Name="PlaylistPivot">
+                <PivotItem.Header>
+                    <TextBlock Text="Playlists" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                </PivotItem.Header>
                 <Grid>
                     <!-- Used to display any errors that may occur when loading the content -->
                     <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="PlaylistsError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -121,7 +127,10 @@
                 </Grid>
             </PivotItem>
             <!-- Display the searched people objects -->
-            <PivotItem x:Name="PeoplePivot" Header="Users">
+            <PivotItem x:Name="PeoplePivot">
+                <PivotItem.Header>
+                    <TextBlock Text="Users" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                </PivotItem.Header>
                 <Grid>
                     <!-- Used to display any errors that may occur when loading the content -->
                     <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="PeopleError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -141,7 +150,10 @@
                 </Grid>
             </PivotItem>
 
-            <PivotItem x:Name="FanburstPivot" Header="Fanburst">
+            <PivotItem x:Name="FanburstPivot">
+                <PivotItem.Header>
+                    <TextBlock Text="Fanburst" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                </PivotItem.Header>
                 <Grid>
                     <!-- Used to display any errors that may occur when loading the content -->
                     <uiElements:InfoPane Opacity="0" Canvas.ZIndex="20" x:Name="FanburstError" Visibility="Collapsed" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />

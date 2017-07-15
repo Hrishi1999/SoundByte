@@ -70,7 +70,5 @@ namespace SoundByte.UWP.Views.Mobile
         private void NavigateUpload() => App.NavigateTo(typeof(UploadView));
 
         private void NavigateSettings() => App.NavigateTo(typeof(SettingsView));
-
-        private void NavigateAbout() => App.NavigateTo(typeof(AboutView));
     }
 }

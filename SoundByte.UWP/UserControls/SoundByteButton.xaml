@@ -20,7 +20,7 @@
                 <TextBlock OpticalMarginAlignment="TrimSideBearings" 
                            Text="{x:Bind Label, Mode=OneWay}"  
                            FontWeight="SemiLight" 
-                           Margin="8,-2,0,0"
+                           Margin="5,-2,0,0"
                            FontSize="16" 
                            VerticalAlignment="Center"
                            TextAlignment="Center"  />

@@ -153,7 +153,10 @@
                 <!-- Main Page Pivot -->
                 <Pivot x:Name="MainPivot" Margin="50,400,50,0" SelectedItem="{x:Bind ViewModel.SelectedPivotItem, Mode=TwoWay}" SelectionChanged="MainPivot_OnSelectionChanged">
                     <!-- About the user -->
-                    <PivotItem x:Name="AboutPivot" Header="About">
+                    <PivotItem x:Name="AboutPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="About" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <controls:MarkdownTextBlock TextWrapping="WrapWholeWords"
                                                     HorizontalAlignment="Stretch" 
                                                     VerticalAlignment="Stretch"
@@ -162,8 +165,10 @@
                     </PivotItem>
 
                     <!-- The users tracks -->
-                    <PivotItem Header="Tracks" 
-                               x:Name="TracksPivot">
+                    <PivotItem x:Name="TracksPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="Tracks" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <GridView x:Name="TracksView"
                                   Style="{StaticResource UserGridViewStyle}"
                                   ItemsSource="{x:Bind ViewModel.TracksList}"
@@ -182,8 +187,10 @@
                     </PivotItem>
 
                     <!-- The users likes -->
-                    <PivotItem Header="Likes" 
-                               x:Name="LikesPivot">
+                    <PivotItem x:Name="LikesPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="Likes" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <GridView x:Name="LikesView"
                                   Style="{StaticResource UserGridViewStyle}"
                                   ItemsSource="{x:Bind ViewModel.LikeItems}"
@@ -203,8 +210,10 @@
                     </PivotItem>
 
                     <!-- The users playlists / liked playlists -->
-                    <PivotItem Header="Playlists" 
-                               x:Name="PlaylistsPivot">
+                    <PivotItem x:Name="PlaylistsPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="Playlists" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <GridView x:Name="PlaylistsView" 
                                   Style="{StaticResource UserGridViewStyle}"
                                   ItemsSource="{x:Bind ViewModel.PlaylistItems}"
@@ -222,8 +231,10 @@
                                   animations:ReorderGridAnimation.Duration="150"/>
                     </PivotItem>
 
-                    <PivotItem Header="Followers"
-                               x:Name="FollowersPivot">
+                    <PivotItem x:Name="FollowersPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="Followers" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <GridView x:Name="FollowersView" 
                                   Style="{StaticResource UserGridViewStyle}"
                                   ItemTemplate="{StaticResource UserItem}"
@@ -241,8 +252,10 @@
                                   animations:ReorderGridAnimation.Duration="150" />
                     </PivotItem>
 
-                    <PivotItem Header="Followings" 
-                               x:Name="FollowingsPivot">
+                    <PivotItem x:Name="FollowingsPivot">
+                        <PivotItem.Header>
+                            <TextBlock Text="Followings" FontSize="18" Opacity="0.9" FontWeight="SemiBold" VerticalAlignment="Center" Padding="0,2" />
+                        </PivotItem.Header>
                         <GridView x:Name="FollowingsView" 
                                   Style="{StaticResource UserGridViewStyle}"
                                   ItemsSource="{x:Bind ViewModel.FollowingsList}" 

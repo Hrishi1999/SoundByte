@@ -218,28 +218,6 @@
                         </StackPanel>
                     </controls:DropShadowPanel>
                 </Button>
-
-                <Button Click="{x:Bind NavigateAbout}"
-                        HorizontalAlignment="Stretch" 
-                        HorizontalContentAlignment="Stretch"
-                        VerticalContentAlignment="Center"
-                        Margin="0,10,0,0" 
-                        Padding="0"
-                        BorderThickness="0">
-                    <controls:DropShadowPanel HorizontalAlignment="Stretch"
-                                              VerticalAlignment="Stretch"
-                                              BlurRadius="5" 
-                                              Margin="0"
-                                              ShadowOpacity="0.7"
-                                              OffsetX="0"
-                                              OffsetY="0"
-                                              Color="#FF333333">
-                        <StackPanel Orientation="Horizontal" Padding="15" Background="{ThemeResource ShellNavigationBackground}">
-                            <TextBlock Text="&#xE946;" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Margin="5,0,0,0"  FontSize="20" />
-                            <TextBlock Text="About" VerticalAlignment="Center" Margin="15,0,0,0" FontSize="16" />
-                        </StackPanel>
-                    </controls:DropShadowPanel>
-                </Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
