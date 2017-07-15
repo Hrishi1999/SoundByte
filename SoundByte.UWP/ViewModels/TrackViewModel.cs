@@ -337,24 +337,7 @@ namespace SoundByte.UWP.ViewModels
         /// </summary>
         public  async void ShareTrack() => await new Dialogs.ShareDialog(Service.CurrentTrack).ShowAsync();
 
-        public async void ShowCompactView()
-        {
-            var newView = CoreApplication.CreateNewView();
-            var compactViewId = 0;
-
-            await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-            {
-                var frame = new Frame();
-                frame.Navigate(typeof(Views.Overlay));
-
-                Window.Current.Content = frame;
-                Window.Current.Activate();
-
-                compactViewId = ApplicationView.GetForCurrentView().Id;
-            });
-
-            await ApplicationViewSwitcher.TryShowAsViewModeAsync(compactViewId, ApplicationViewMode.CompactOverlay);
-        }
+       
 
         /// <summary>
         /// Display the playlist picker if it exists

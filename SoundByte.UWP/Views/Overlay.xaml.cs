@@ -11,6 +11,7 @@ using System;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Toolkit.Uwp.UI.Animations;
 using SoundByte.UWP.Converters;
 using SoundByte.UWP.Helpers;
 using SoundByte.UWP.Services;
@@ -38,7 +39,10 @@ namespace SoundByte.UWP.Views
             // Set the accent color
             AccentHelper.UpdateAccentColor();
 
+            BackgroundImage.Blur(40).Start();
+
             BackgroundImage.Source = new BitmapImage(new Uri(ArtworkConverter.ConvertObjectToImage(ViewModel.Service.CurrentTrack)));
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

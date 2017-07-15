@@ -14,13 +14,17 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
 using Windows.Media;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Storage.Streams;
 using Windows.System;
+using Windows.UI.Core;
 using Windows.UI.Notifications;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Microsoft.Toolkit.Uwp;
 using SoundByte.Core.API.Endpoints;
 using SoundByte.UWP.Converters;
@@ -60,6 +64,9 @@ namespace SoundByte.UWP.Services
 
         // The volume icon text
         private string _volumeIcon = "\uE767";
+
+        private string _likeIcon = "\uEB51";
+
 
         public string TokenValue { get; set; }
 
@@ -154,6 +161,21 @@ namespace SoundByte.UWP.Services
             }
         }
 
+        public string LikeIcon
+        {
+            get => _likeIcon;
+            set
+            {
+                if (_likeIcon == value)
+                    return;
+
+                _likeIcon = value;
+                UpdateProperty();
+            }
+        }
+
+
+        
         /// <summary>
         /// Toggles the state between the track playing 
         /// and not playing
@@ -324,6 +346,42 @@ namespace SoundByte.UWP.Services
             }
         }
 
+        public async void LikeTrack()
+        {
+            if (CurrentTrack == null)
+                return;
+
+            // Check to see what the existing string is
+            if (LikeIcon == "\uEB52")
+            {
+                // Delete the like from the users likes and see if successful
+                if (await SoundByteService.Current.DeleteAsync("/e1/me/track_likes/" + CurrentTrack.Id))
+                {
+                    LikeIcon = "\uEB51";
+                    // Track Event
+                    TelemetryService.Current.TrackEvent("Unlike Track");
+                }
+                else
+                {
+                    LikeIcon = "\uEB52";
+                }
+            }
+            else
+            {
+                // Add a like to the users likes and see if successful
+                if (await SoundByteService.Current.PutAsync("/e1/me/track_likes/" + CurrentTrack.Id))
+                {
+                    LikeIcon = "\uEB52";
+                    // Track Event
+                    TelemetryService.Current.TrackEvent("Like Track");
+                }
+                else
+                {
+                    LikeIcon = "\uEB51";
+                }
+            }
+        }
+
         private async void CurrentItemChanged(MediaPlaybackList sender, CurrentMediaPlaybackItemChangedEventArgs args)
         {
             // If there is no new item, don't do anything
@@ -356,6 +414,15 @@ namespace SoundByte.UWP.Services
 
                 try
                 {
+                    LikeIcon = await SoundByteService.Current.ExistsAsync("/me/favorites/" + CurrentTrack.Id) ? "\uEB52" : "\uEB51";
+                }
+                catch
+                {
+                    LikeIcon = "\uEB51";
+                }
+
+                try
+                {
                     CurrentTrack.User = await SoundByteService.Current.GetAsync<User>($"/users/{CurrentTrack.User.Id}");
                 }
                 catch
@@ -364,6 +431,25 @@ namespace SoundByte.UWP.Services
                 }
 
             });
+        }
+
+        public async void ShowCompactView()
+        {
+            var newView = CoreApplication.CreateNewView();
+            var compactViewId = 0;
+
+            await newView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                var frame = new Frame();
+                frame.Navigate(typeof(Views.Overlay));
+
+                Window.Current.Content = frame;
+                Window.Current.Activate();
+
+                compactViewId = ApplicationView.GetForCurrentView().Id;
+            });
+
+            await ApplicationViewSwitcher.TryShowAsViewModeAsync(compactViewId, ApplicationViewMode.CompactOverlay);
         }
 
         private static async Task<string> GetCorrectApiKey()

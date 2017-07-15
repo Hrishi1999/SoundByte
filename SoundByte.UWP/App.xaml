@@ -51,8 +51,8 @@
                 x:Key="ButtonLightingBrush"
                 SpecularShine=".01"
                 SpecularAmount=".01"
-                DiffuseAmount="0.1"
-                Opacity=".4"
+                DiffuseAmount="0.3"
+                Opacity=".5"
                 lights:PointerPositionSpotLight.IsTarget="True"/>
 
             <brushes:LightingBrush
