@@ -267,13 +267,11 @@
         <!-- Desktop Now Playing Bar -->
         <Grid x:Name="NowPlaying" 
               VerticalAlignment="Bottom" 
-              Canvas.ZIndex="50" 
+              Canvas.ZIndex="4" 
               Height="64" 
-              HorizontalAlignment="Stretch" 
-              Background="{ThemeResource ShellNavigationBackground}">
+              HorizontalAlignment="Stretch">
 
-            <!-- Blur image background -->
-            <controls:ImageEx IsCacheEnabled="True" 
+      <!--      <controls:ImageEx IsCacheEnabled="True" 
                               PlaceholderSource="ms-appx:///Assets/PlaceholderBackground.png"
                               PlaceholderStretch="UniformToFill"
                               Source="{x:Bind Service.CurrentTrack, Converter={StaticResource ArtworkConverter}, Mode=OneWay}"
@@ -284,14 +282,12 @@
                               IsHitTestVisible="False"
                               Canvas.ZIndex="20">
             </controls:ImageEx>
-
-            <!-- Fade the background so white text is easy to read -->
             <Grid Canvas.ZIndex="30" 
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch" 
                   Background="{StaticResource TrackBlurBrush}"
                   IsHitTestVisible="False"
-                  Margin="0" />
+                  Margin="0" /> -->
 
             <Grid Canvas.ZIndex="50">
                 <Grid.ColumnDefinitions>
@@ -328,8 +324,18 @@
                         </controls:DropShadowPanel>
 
                         <StackPanel Grid.Column="0" Margin="64,5,5,5" VerticalAlignment="Center">
-                            <TextBlock Text="{x:Bind Service.CurrentTrack.Title, Mode=OneWay}" FontSize="16" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Foreground="White" Margin="0,0,10,0"  />
-                            <TextBlock Text="{x:Bind Service.CurrentTrack.User.Username, Mode=OneWay}" Opacity="0.6" FontSize="12" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Foreground="White"  />
+                            <TextBlock Text="{x:Bind Service.CurrentTrack.Title, Mode=OneWay}" 
+                                       FontSize="16" 
+                                       FontWeight="SemiBold"
+                                       TextWrapping="NoWrap" 
+                                       TextTrimming="CharacterEllipsis" 
+                                       Margin="0,0,10,0"  />
+                            <TextBlock Text="{x:Bind Service.CurrentTrack.User.Username, Mode=OneWay}" 
+                                       Opacity="0.6" 
+                                       FontSize="12" 
+                                       FontWeight="SemiLight"
+                                       TextWrapping="NoWrap" 
+                                       TextTrimming="CharacterEllipsis"  />
                         </StackPanel>
                     </Grid>
                 </Button>
@@ -338,11 +344,9 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
-
                     </Grid.ColumnDefinitions>
 
                     <!-- Time -->
-
                     <Grid Margin="20,0" Grid.Column="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
@@ -350,34 +354,52 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <TextBlock Grid.Column="0" VerticalAlignment="Center"  Foreground="White" HorizontalAlignment="Left" Text="{x:Bind Service.TimeListened, Mode=OneWay}"  Opacity="0.9" FontSize="14" />
-                        <Slider Grid.Column="1" ThumbToolTipValueConverter="{StaticResource SliderValueConverter}" VerticalAlignment="Center" PointerCaptureLost="{x:Bind Service.PlayingSliderChange}" Margin="30,9,30,0" Value="{x:Bind Service.CurrentTimeValue, Mode=TwoWay}" Maximum="{x:Bind Service.MaxTimeValue, Mode=OneWay}" Foreground="White" Style="{StaticResource MainSliderStyle}" RequestedTheme="Dark"/>
-                        <TextBlock Grid.Column="2" VerticalAlignment="Center"  Foreground="White" HorizontalAlignment="Right" Text="{x:Bind Service.TimeRemaining, Mode=OneWay}"  Opacity="0.9" FontSize="14" />
+                        <TextBlock Grid.Column="0" 
+                                   VerticalAlignment="Center"  
+                                   HorizontalAlignment="Left" 
+                                   Text="{x:Bind Service.TimeListened, Mode=OneWay}"  
+                                   Opacity="0.9" 
+                                   FontSize="14" />
+                        
+                        <Slider Grid.Column="1" 
+                                ThumbToolTipValueConverter="{StaticResource SliderValueConverter}" 
+                                VerticalAlignment="Center" 
+                                PointerCaptureLost="{x:Bind Service.PlayingSliderChange}" 
+                                Margin="30,9,30,0" 
+                                Value="{x:Bind Service.CurrentTimeValue, Mode=TwoWay}" 
+                                Maximum="{x:Bind Service.MaxTimeValue, Mode=OneWay}" />
+                        
+                        <TextBlock Grid.Column="2" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="{x:Bind Service.TimeRemaining, Mode=OneWay}"  
+                                   Opacity="0.9" 
+                                   FontSize="14" />
                     </Grid>
 
                     <!-- Controls -->
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="0" Margin="10,0">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="0" Margin="0,0">
 
 
-                        <Button Margin="5,0"  Foreground="White" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.SkipPrevious}" Width="42" Height="42">
+                        <Button Margin="5,0" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.SkipPrevious}" Width="42" Height="42">
                             <Button.Content>
                                 <TextBlock OpticalMarginAlignment="TrimSideBearings" Text="&#xE892;"  FontWeight="Light" FontSize="20" FontFamily="Segoe MDL2 Assets" AutomationProperties.Name="Back" TextAlignment="Center"  />
                             </Button.Content>
                         </Button>
 
-                        <Button Margin="5,0" Foreground="White" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.ChangePlaybackState}" Width="42" Height="42">
+                        <Button Margin="5,0" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.ChangePlaybackState}" Width="42" Height="42">
                             <Button.Content>
                                 <TextBlock OpticalMarginAlignment="TrimSideBearings" Text="{x:Bind Service.PlayButtonContent, Mode=OneWay}"  FontWeight="Light" FontSize="20" FontFamily="Segoe MDL2 Assets" AutomationProperties.Name="Back" TextAlignment="Center"  />
                             </Button.Content>
                         </Button>
 
-                        <Button Margin="5,0"  Foreground="White" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.SkipNext}" Width="42" Height="42">
+                        <Button Margin="5,0"  Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.SkipNext}" Width="42" Height="42">
                             <Button.Content>
                                 <TextBlock OpticalMarginAlignment="TrimSideBearings" Text="&#xE893;"  FontWeight="Light" FontSize="20" FontFamily="Segoe MDL2 Assets" AutomationProperties.Name="Next" TextAlignment="Center"  />
                             </Button.Content>
                         </Button>
 
-                        <Button Margin="5,0" Foreground="White" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Width="42" Height="42">
+                        <Button Margin="5,0" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Width="42" Height="42">
                             <Button.Content>
                                 <TextBlock OpticalMarginAlignment="TrimSideBearings" Text="{x:Bind Service.VolumeIcon, Mode=OneWay}"  FontWeight="Light" FontSize="20" FontFamily="Segoe MDL2 Assets" AutomationProperties.Name="Back" TextAlignment="Center"  />
                             </Button.Content>
@@ -396,27 +418,15 @@
                             </Button.Flyout>
                         </Button>
 
-                        <Button Margin="5,0"  Foreground="White" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.LikeTrack}" Width="42" Height="42">
+                        <Button Margin="5,0" Style="{StaticResource CircleButtonStyle}" Background="{x:Null}" Click="{x:Bind Service.LikeTrack}" Width="42" Height="42">
                             <Button.Content>
                                 <TextBlock OpticalMarginAlignment="TrimSideBearings" Text="{x:Bind Service.LikeIcon, Mode=OneWay}"  FontWeight="Light" FontSize="20" FontFamily="Segoe MDL2 Assets" AutomationProperties.Name="Next" TextAlignment="Center"  />
                             </Button.Content>
                         </Button>
-
                     </StackPanel>
-
-
                 </Grid>
             </Grid>
         </Grid>
-
-        <!-- Shadow for now playing bar -->
-        <Canvas x:Name="NowplayingShadow"
-                Height="64" 
-                Canvas.ZIndex="48"
-                Opacity="0.8"
-                Margin="-5,0"
-                VerticalAlignment="Bottom" 
-                HorizontalAlignment="Stretch" />
 
         <!-- Holds all the left hand side bar content -->
         <Grid x:Name="SplitViewPane" 
@@ -541,61 +551,63 @@
                                  Tag="&#xE713;" 
                                  Content="Settings" 
                                  Checked="NavigateSettings"  />
+
+                    <!-- Let the user login to their account -->
+                    <RadioButton x:Name="LoginTab" 
+                                 FocusVisualPrimaryThickness="0"
+                                 FocusVisualSecondaryThickness="0"
+                                 FocusVisualMargin="0"
+                                 Canvas.ZIndex="15"
+                                 Grid.Row="1"
+                                 HorizontalAlignment="Stretch" 
+                                 GroupName="NavPaneButtons" 
+                                 Style="{StaticResource NavigationButtonStyle}" 
+                                 Tag="&#xE77B;"
+                                 Content="Login" 
+                                 Checked="NavigateLogin" />
+
+                    <!-- The users profile -->
+                    <Button x:Name="UserButton" 
+                            Canvas.ZIndex="15"
+                            Grid.Row="1"
+                            Background="{StaticResource ButtonLightingBrush}"
+                            FocusVisualPrimaryThickness="0"
+                            FocusVisualSecondaryThickness="0"
+                            FocusVisualMargin="0"
+                            BorderBrush="{StaticResource ButtonLightingBrush}"
+                            HorizontalContentAlignment="Stretch"
+                            VerticalContentAlignment="Stretch"
+                            Padding="0"
+                            Click="NavigateUserProfile"
+                            Margin="0"
+                            BorderThickness="1"
+                            Height="48" 
+                            HorizontalAlignment="Stretch">
+                        <Grid HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch"
+                              Margin="19,0,0,0">
+                            <Ellipse HorizontalAlignment="Left" 
+                                     Width="28"
+                                     Margin="8.5,0,0,0"
+                                     Height="28"
+                                     VerticalAlignment="Center" >
+                                <Ellipse.Fill>
+                                    <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind SoundByteService.CurrentUser, Converter={StaticResource ArtworkImageSourceConverter}, Mode=OneWay}" />
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                            <TextBlock Text="{x:Bind SoundByteService.CurrentUser.Username, Mode=OneWay}"
+                                       FontWeight="Normal" 
+                                       TextTrimming="CharacterEllipsis"
+                                       VerticalAlignment="Center" 
+                                       Opacity="1"
+                                       Margin="67,0,0,0"/>
+                        </Grid>
+                    </Button>
                 </StackPanel>
             </ScrollViewer>
 
-            <!-- Let the user login to their account -->
-            <RadioButton x:Name="LoginTab" 
-                         FocusVisualPrimaryThickness="0"
-                         FocusVisualSecondaryThickness="0"
-                         FocusVisualMargin="0"
-                         Canvas.ZIndex="15"
-                         Grid.Row="1"
-                         HorizontalAlignment="Stretch" 
-                         GroupName="NavPaneButtons" 
-                         Style="{StaticResource NavigationButtonStyle}" 
-                         Tag="&#xE77B;"
-                         Content="Login" 
-                         Checked="NavigateLogin" />
-
-            <!-- The users profile -->
-            <Button x:Name="UserButton" 
-                    Canvas.ZIndex="15"
-                    Grid.Row="1"
-                    Background="{StaticResource ButtonLightingBrush}"
-                    FocusVisualPrimaryThickness="0"
-                    FocusVisualSecondaryThickness="0"
-                    FocusVisualMargin="0"
-                    BorderBrush="{StaticResource ButtonLightingBrush}"
-                    HorizontalContentAlignment="Stretch"
-                    VerticalContentAlignment="Stretch"
-                    Padding="0"
-                    Click="NavigateUserProfile"
-                    Margin="0"
-                    BorderThickness="1"
-                    Height="48" 
-                    HorizontalAlignment="Stretch">
-                <Grid HorizontalAlignment="Stretch"
-                      VerticalAlignment="Stretch"
-                      Margin="30,0,10,0">
-                    <Ellipse HorizontalAlignment="Left" 
-                             Width="28"
-                             Margin="6.5,0,0,0"
-                             Height="28"
-                             VerticalAlignment="Center" >
-                        <Ellipse.Fill>
-                            <ImageBrush Stretch="UniformToFill" ImageSource="{x:Bind SoundByteService.CurrentUser, Converter={StaticResource ArtworkImageSourceConverter}, Mode=OneWay}" />
-                        </Ellipse.Fill>
-                    </Ellipse>
-
-                    <TextBlock Text="{x:Bind SoundByteService.CurrentUser.Username, Mode=OneWay}"
-                               FontWeight="Normal" 
-                               TextTrimming="CharacterEllipsis"
-                               VerticalAlignment="Center" 
-                               Opacity="0.6"
-                               Margin="57,0,0,0"/>
-                </Grid>
-            </Button>
+          
 
             <!-- We select this in code when the tab is not known -->
             <RadioButton Grid.Row="0" x:Name="UnknownTab" Visibility="Collapsed" GroupName="NavPaneButtons"  />
@@ -615,7 +627,7 @@
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"
-               Margin="0,350,0,64"
+               Margin="350,32,0,64"
                Padding="0" />
 
         <!-- Is displayed when performing tasks that take a long time -->

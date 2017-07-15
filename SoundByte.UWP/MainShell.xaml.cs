@@ -89,7 +89,6 @@ namespace SoundByte.UWP
             // Create the blur for desktop
             if (App.IsDesktop)
             {
-                CreateNowPlayingShadow();
                 CreateShellFrameShadow();
             }
             else
@@ -118,11 +117,9 @@ namespace SoundByte.UWP
             // Mobile Specific stuff
             if (App.IsMobile)
             {
-                CreateNowPlayingShadow();
                 RootFrame.Margin = new Thickness {Left = 0, Right = 0, Top = 0, Bottom = 64};
                 SplitViewPane.Visibility = Visibility.Collapsed;
                 MobileNavigation.Visibility = Visibility.Visible;
-                NowplayingShadow.Visibility = Visibility.Visible;
                 NowPlaying.Visibility = Visibility.Collapsed;
             }
             else
@@ -512,17 +509,17 @@ namespace SoundByte.UWP
                     SplitViewPane.Visibility = Visibility.Visible;
                     if (Service.CurrentTrack == null)
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
-                        LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
+                        LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
 
                         HideNowPlayingBar();
                     }
                     else
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
-                        LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
+                        LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
                         ShowNowPlayingBar();
                     }
                 }
@@ -551,16 +548,15 @@ namespace SoundByte.UWP
         {
             UnknownTab.IsChecked = true;
             NowPlaying.Visibility = Visibility.Collapsed;
-            NowplayingShadow.Visibility = App.IsMobile ? Visibility.Visible : Visibility.Collapsed;
             SplitViewPane.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 0 };
         }
 
         private void ShowNowPlayingBar()
         {
+            ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
+            ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
             NowPlaying.Visibility = Visibility.Visible;
-            NowplayingShadow.Visibility = Visibility.Visible;
             SplitViewPane.Margin = new Thickness { Left = 0, Right = 0, Top = 0, Bottom = 64 };
-            CreateNowPlayingShadow();
         }
 
         private void SearchBox_SearchSubmitted(object sender, RoutedEventArgs e)
@@ -585,60 +581,28 @@ namespace SoundByte.UWP
             if (App.IsXbox)
             {
                 // Hide buttons we don't want to expose on the xbox version
-                NotificationsTab.Visibility = Visibility.Collapsed;
                 SearchTab.Visibility = Visibility.Collapsed;
             }
         }
 
         private void ShowLogoutContent()
         {
-            HomeTab.Visibility = Visibility.Collapsed;
+            HomeTab.Visibility = Visibility.Visible;
             LikesTab.Visibility = Visibility.Collapsed;
             SetsTab.Visibility = Visibility.Collapsed;
             NotificationsTab.Visibility = Visibility.Collapsed;
             HistoryTab.Visibility = Visibility.Collapsed;
             LoginTab.Visibility = Visibility.Visible;
             UserButton.Visibility = Visibility.Collapsed;
-
             MobileHomeTab.IsEnabled = false;
-
 
             if (App.IsXbox)
             {
-                // Hide buttons we don't want to expose on the xbox version
-                NotificationsTab.Visibility = Visibility.Collapsed;
                 SearchTab.Visibility = Visibility.Collapsed;
             }
         }
 
         #region Composition
-
-        private void CreateNowPlayingShadow()
-        {
-            // Get the compositor for this window
-            var compositor = ElementCompositionPreview.GetElementVisual(this).Compositor;
-            // Get the mobile menu
-            var nowPlayingVisual = ElementCompositionPreview.GetElementVisual(NowplayingShadow);
-
-            var nowPlayingSpriteVisual = compositor.CreateSpriteVisual();
-
-            var nowPlayingDropShadow = compositor.CreateDropShadow();
-            nowPlayingDropShadow.Offset = new Vector3(0, -3, 0);
-            nowPlayingDropShadow.BlurRadius = 35;
-            nowPlayingDropShadow.Color = new Color { A = 180, R = 0, G = 0, B = 0 };
-
-            nowPlayingSpriteVisual.Shadow = nowPlayingDropShadow;
-
-            // Set the element visual
-            ElementCompositionPreview.SetElementChildVisual(NowplayingShadow, nowPlayingSpriteVisual);
-
-            // Make sure size of glass host and glass visual always stay in sync
-            var nowPlayingAnimation = compositor.CreateExpressionAnimation("nowPlayingVisual.Size");
-            nowPlayingAnimation.SetReferenceParameter("nowPlayingVisual", nowPlayingVisual);
-
-            nowPlayingSpriteVisual.StartAnimation("Size", nowPlayingAnimation);
-        }
-
         private void CreateShellFrameShadow()
         {
             // Get the compositor for this window
@@ -651,8 +615,8 @@ namespace SoundByte.UWP
             // Apply the shadow effects
             var shellDropShadow = compositor.CreateDropShadow();
             shellDropShadow.Offset = new Vector3(0, 0, 0);
-            shellDropShadow.BlurRadius = 16;
-            shellDropShadow.Color = new Color { A = 110, R = 0, G = 0, B = 0 };
+            shellDropShadow.BlurRadius = 20;
+            shellDropShadow.Color = new Color { A = 52, R = 0, G = 0, B = 0 };
 
             // Set the element visual
             shellFrameShadowVisual.Shadow = shellDropShadow;
