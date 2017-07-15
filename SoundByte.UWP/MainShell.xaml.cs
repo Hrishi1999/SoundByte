@@ -327,6 +327,13 @@ namespace SoundByte.UWP
             RootFrame.Navigate(typeof(HomeView));
         }
 
+        private void NavigateDonate(object sender, RoutedEventArgs e)
+        {
+            if (BlockNavigation) return;
+
+            RootFrame.Navigate(typeof(DonateView));
+        }
+
         private void NavigateSettings(object sender, RoutedEventArgs e)
         {
             if (BlockNavigation) return;
@@ -347,6 +354,8 @@ namespace SoundByte.UWP
 
             RootFrame.Navigate(typeof(HistoryView));
         }
+
+     
 
         private void NavigateLikes(object sender, RoutedEventArgs e)
         {
@@ -426,6 +435,10 @@ namespace SoundByte.UWP
                     UnknownTab.IsChecked = true;
                     NowPlayingTab.IsChecked = true;
                     break;
+                case "DonateView":
+                    DonateTab.IsChecked = true;
+                    MobileUnkownTab.IsChecked = true;
+                    break;
                 case "LikesView":
                     LikesTab.IsChecked = true;
                     MobileUnkownTab.IsChecked = true;
@@ -499,16 +512,16 @@ namespace SoundByte.UWP
                     SplitViewPane.Visibility = Visibility.Visible;
                     if (Service.CurrentTrack == null)
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 0 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 0 };
 
                         HideNowPlayingBar();
                     }
                     else
                     {
-                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
-                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 32, Bottom = 64 };
+                        ShellFrame.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
+                        ShellFrameShadow.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
                         LoadingRing.Margin = new Thickness { Left = 350, Right = 0, Top = 0, Bottom = 64 };
                         ShowNowPlayingBar();
                     }

@@ -207,6 +207,7 @@
     <Compile Include="Models\StreamModel.cs" />
     <Compile Include="Models\UserFollowersModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MonitizeService.cs" />
     <Compile Include="Services\PlaybackService.cs" />
     <Compile Include="Services\SettingsService.cs" />
     <Compile Include="Services\SoundByteService.cs" />
@@ -236,6 +237,9 @@
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\TrackViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\Application\DonateView.xaml.cs">
+      <DependentUpon>DonateView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CoreApp\BlankPage.xaml.cs">
       <DependentUpon>BlankPage.xaml</DependentUpon>
     </Compile>
@@ -364,6 +368,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SoundByteStreamItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Application\DonateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

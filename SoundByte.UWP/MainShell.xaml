@@ -518,6 +518,18 @@
                                  Checked="NavigateNotifications"  />
 
                     <!-- Navigate to the settings page -->
+                    <RadioButton x:Name="DonateTab" 
+                                 FocusVisualPrimaryThickness="0"
+                                 FocusVisualSecondaryThickness="0"
+                                 FocusVisualMargin="0"
+                                 HorizontalAlignment="Stretch" 
+                                 GroupName="NavPaneButtons"
+                                 Style="{StaticResource NavigationButtonStyle}" 
+                                 Tag="&#xE8EC;" 
+                                 Content="Donate" 
+                                 Checked="NavigateDonate"  />
+
+                    <!-- Navigate to the settings page -->
                     <RadioButton x:Name="SettingsTab" 
                                  FocusVisualPrimaryThickness="0"
                                  FocusVisualSecondaryThickness="0"
@@ -592,7 +604,7 @@
         <Canvas x:Name="ShellFrameShadow"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"
-                Margin="0,350,32,64"
+                Margin="0,350,0,64"
                 Canvas.ZIndex="5" />
         
         <!-- Main Page Content will be rendered here -->
@@ -602,7 +614,7 @@
                Navigated="ShellFrame_Navigated"
                HorizontalAlignment="Stretch"
                Canvas.ZIndex="10"
-               Margin="0,350,32,64"
+               Margin="0,350,0,64"
                Padding="0" />
 
         <!-- Is displayed when performing tasks that take a long time -->
